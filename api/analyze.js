@@ -5,7 +5,7 @@ export default async function handler(req, res) {
 
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
-    return res.status(500).json({ error: 'مفتاح GEMINI_API_KEY غير مضاف في إعدادات Vercel (Environment Variables)' });
+    return res.status(500).json({ error: 'مفتاح GEMINI_API_KEY غير مضاف في إعدادات Vercel' });
   }
 
   try {
@@ -36,28 +36,45 @@ export default async function handler(req, res) {
 4. في أوجه القصور الحرجة، اذكر لكل قصور: الخلل، أثره على المبيعات، خطوات المعالجة، ومثال تطبيقي مكتوب وجاهز للنسخ باسم النشاط.
 5. أرجع JSON صالح 100% فقط بدون أي نص خارجي أو علامات markdown.`;
 
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${apiKey}`,
-      {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${apiKey}`;
+    const payload = JSON.stringify({
+      systemInstruction: { parts: [{ text: systemInstruction }] },
+      contents: [{ parts: [{ text: prompt }] }],
+      generationConfig: {
+        responseMimeType: 'application/json',
+        temperature: 0.45
+      }
+    });
+
+    let response;
+    let data;
+
+    // إعادة المحاولة تلقائياً حتى 3 مرات عند وجود ضغط مؤقت (503 أو 429)
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      response = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          systemInstruction: { parts: [{ text: systemInstruction }] },
-          contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: {
-            responseMimeType: 'application/json',
-            temperature: 0.45
-          }
-        })
-      }
-    );
+        body: payload
+      });
+      data = await response.json().catch(() => ({}));
 
-    const data = await response.json();
-    if (!response.ok) {
-      return res.status(response.status).json({ error: data?.error?.message || 'Gemini API Error', raw: data });
+      if (response.ok) {
+        return res.status(200).json(data);
+      }
+      if ((response.status === 503 || response.status === 429) && attempt < 3) {
+        await new Promise((r) => setTimeout(r, 1500));
+        continue;
+      }
+      break;
     }
-    return res.status(200).json(data);
+
+    const isBusy = response?.status === 503 || response?.status === 429;
+    return res.status(response?.status || 500).json({
+      error: isBusy
+        ? 'يوجد ضغط مؤقت على خادم الذكاء الاصطناعي حالياً، يرجى الضغط على زر الفحص مرة أخرى بعد ثوانٍ.'
+        : (data?.error?.message || 'حدث خطأ أثناء الاتصال بخدمة التحليل')
+    });
   } catch (err) {
-    return res.status(500).json({ error: 'Failed to analyze', details: err.message });
+    return res.status(500).json({ error: 'تعذر إتمام التحليل حالياً، حاول مرة أخرى.', details: err.message });
   }
 }
