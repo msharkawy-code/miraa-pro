@@ -67,7 +67,7 @@ function buildProviderQueue(engine) {
   const all = [];
   if (geminiKey) {
     all.push({ type: 'gemini', model: 'gemini-3.8-flash', key: geminiKey, label: 'Gemini 3.8 Flash' });
-    all.push({ type: 'gemini', model: 'gemini-2.5-flash-lite', key: geminiKey, label: 'Gemini 2.5 Flash Lite' });
+    all.push({ type: 'gemini', model: 'gemini-3.5-flash-lite', key: geminiKey, label: 'gemini-3.5-flash-lite' });
   }
   if (groqKey) {
     all.push({ type: 'groq', model: 'llama-3.3-70b-versatile', key: groqKey, label: 'Groq Llama 3.3 70B' });
