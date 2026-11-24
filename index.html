@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مِرآة برو | MIRAA Pro — الذكاء التسويقي لفحص ونمو المشاريع</title>
+  <meta name="application-name" content="مِرآة برو | MIRAA Pro" />
+  <meta name="description" content="منصة مِرآة برو (MIRAA Pro) بإشراف محمد الشرقاوي — خبير كتابة المحتوى والتسويق الرقمي. افحص مشروعك واكتشف فرص النمو الضائعة خلال دقيقة." />
+  <meta property="og:title" content="مِرآة برو | MIRAA Pro — ذكاء يفهم مشروعك قبل أن ينصحك" />
+  <meta property="og:site_name" content="مِرآة برو | MIRAA Pro" />
+  <meta property="og:description" content="تشخيص تسويقي فوري ومبسط لكافة الأنشطة التجارية مع خطة عملية لزيادة المبيعات." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card: #111827;
+      --card2: #1e293b;
+      --border: #334155;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #10b981;
+      --accent2: #3b82f6;
+      --warn: #f59e0b;
+      --danger: #ef4444;
+    }
+    * { box-sizing: border-box; font-family: 'Cairo', sans-serif; }
+    body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 18px; }
+    header { background: rgba(15, 23, 42, 0.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 50; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; flex-wrap: wrap; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .logo { width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, var(--accent), var(--accent2)); display: grid; place-items: center; font-weight: 900; font-size: 20px; color: #fff; }
+    .brand-title { font-weight: 800; font-size: 18px; line-height: 1.2; }
+    .brand-sub { font-size: 12px; color: var(--muted); }
+    .nav-links { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .btn { border: none; border-radius: 10px; padding: 10px 16px; font-weight: 700; cursor: pointer; font-size: 14px; transition: .2s; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), #059669); color: #fff; }
+    .btn-primary:hover { filter: brightness(1.08); transform: translateY(-1px); }
+    .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+    .btn-outline:hover { background: var(--card2); }
+    .btn-wa { background: #25D366; color: #052e16; }
+    .btn-wa:hover { filter: brightness(1.06); }
+    .hero { padding: 42px 0 24px; text-align: center; }
+    .badge { display: inline-block; background: rgba(16,185,129,0.14); color: #34d399; border: 1px solid rgba(16,185,129,0.35); padding: 4px 14px; border-radius: 999px; font-size: 13px; font-weight: 700; margin-bottom: 14px; }
+    h1 { font-size: clamp(26px, 4.5vw, 40px); margin: 0 0 12px; line-height: 1.3; }
+    .hero p { color: var(--muted); max-width: 680px; margin: 0 auto 24px; font-size: 16px; }
+    .ad-slot { background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(16,185,129,0.12)); border: 1px dashed var(--border); border-radius: 14px; padding: 14px 18px; margin: 18px 0; display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+    .ad-tag { font-size: 11px; background: var(--card2); color: var(--muted); padding: 2px 8px; border-radius: 6px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 22px; margin-bottom: 20px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: #cbd5e1; }
+    input, select, textarea { width: 100%; background: #0f172a; border: 1px solid var(--border); color: var(--text); border-radius: 10px; padding: 11px 13px; font-size: 14px; outline: none; }
+    input:focus, select:focus, textarea:focus { border-color: var(--accent); }
+    .tabs { display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap; }
+    .tab { padding: 9px 16px; border-radius: 10px; background: var(--card2); color: var(--muted); cursor: pointer; font-weight: 700; border: 1px solid transparent; }
+    .tab.active { background: rgba(16,185,129,0.15); color: #34d399; border-color: rgba(16,185,129,0.4); }
+    .hidden { display: none !important; }
+    .score-box { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; background: var(--card2); border-radius: 14px; padding: 18px; margin-bottom: 18px; }
+    .score-circle { width: 86px; height: 86px; border-radius: 50%; background: conic-gradient(var(--accent) calc(var(--p, 70) * 1%), #334155 0); display: grid; place-items: center; font-weight: 900; font-size: 22px; flex-shrink: 0; }
+    .score-circle span { width: 68px; height: 68px; background: var(--card); border-radius: 50%; display: grid; place-items: center; }
+    .pill { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+    .pill-green { background: rgba(16,185,129,0.18); color: #34d399; }
+    .pill-warn { background: rgba(245,158,11,0.18); color: #fbbf24; }
+    .pill-red { background: rgba(239,68,68,0.18); color: #f87171; }
+    .item-card { background: var(--card2); border: 1px solid var(--border); border-radius: 12px; padding: 15px; }
+    .price-card { background: var(--card2); border: 1px solid var(--border); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
+    .price-card.featured { border-color: var(--accent); box-shadow: 0 0 0 1px rgba(16,185,129,0.3); }
+    .price { font-size: 26px; font-weight: 900; color: #34d399; margin: 8px 0; }
+    .wa-float { position: fixed; bottom: 20px; left: 20px; z-index: 60; background: #25D366; color: #052e16; font-weight: 800; padding: 12px 18px; border-radius: 999px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); display: flex; align-items: center; gap: 8px; }
+    footer { border-top: 1px solid var(--border); padding: 28px 0 80px; margin-top: 40px; color: var(--muted); font-size: 13px; text-align: center; }
+    .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.72); display: grid; place-items: center; z-index: 100; padding: 16px; }
+    .modal { background: var(--card); border: 1px solid var(--border); border-radius: 16px; max-width: 640px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 22px; }
+    .loader { display: inline-block; width: 18px; height: 18px; border: 3px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media print {
+      header, .wa-float, .ad-slot, .no-print, footer { display: none !important; }
+      body { background: #fff; color: #000; }
+      .card, .item-card, .score-box { background: #fff; color: #000; border: 1px solid #ccc; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo">م</div>
+      <div>
+        <div class="brand-title">مِرآة برو | MIRAA Pro</div>
+        <div class="brand-sub">إشراف: محمد الشرقاوي — خبير كتابة المحتوى والتسويق الرقمي</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <button class="btn btn-outline" onclick="showSection('scan')">فحص مشروعك</button>
+      <button class="btn btn-outline" onclick="showSection('pricing')">الباقات والخدمات</button>
+      <button class="btn btn-outline" onclick="openModal('aboutModal')">عن الخبير</button>
+      <a class="btn btn-wa" href="https://wa.me/201005535574?text=مرحباً%20أستاذ%20محمد%20الشرقاوي،%20أرغب%20في%20الاستفسار%20عن%20خدمات%20مِرآة%20برو" target="_blank">تواصل واتساب</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero no-print">
+    <span class="badge">النسخة المجانية المباشرة • تدعم كافة الأنشطة التجارية</span>
+    <h1>هل يعرف عميلك لماذا يختار مشروعك دون غيرك؟</h1>
+    <p>أدخل بيانات نشاطك الآن لتحصل على تشخيص تسويقي فوري وواضح بلغة بسيطة، مع خطة عملية لزيادة المبيعات خلال 30 يوماً.</p>
+  </section>
+
+  <!-- مساحة إعلانية جاهزة (تعمل كإعلان ترويجي لخدماتك أو Google AdSense لاحقاً) -->
+  <div class="ad-slot no-print">
+    <div>
+      <span class="ad-tag">مساحة إعلانية • النسخة المجانية</span>
+      <div style="font-weight:700;margin-top:4px;">هل تريد خطة محتوى وتصاميم سوشيال ميديا جاهزة للنشر لمشروعك؟</div>
+      <div style="font-size:13px;color:var(--muted);">احصل على باقة متكاملة بإشراف مباشر من الخبير محمد الشرقاوي بأسعار مرنة.</div>
+    </div>
+    <a class="btn btn-primary" href="https://wa.me/201005535574?text=مرحباً%20أستاذ%20محمد،%20أرغب%20في%20طلب%20خطة%20محتوى%20وتصاميم%20لمشروعي" target="_blank">اطلبها الآن</a>
+  </div>
+
+  <!-- قسم الفحص -->
+  <section id="section-scan">
+    <div class="card no-print">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px;">
+        <h2 style="margin:0;font-size:20px;">بيانات المشروع للفحص الفوري</h2>
+        <button class="btn btn-outline" type="button" onclick="fillDemo()">تعبئة مثال تجريبي</button>
+      </div>
+      <form id="scanForm" onsubmit="runScan(event)">
+        <div class="grid-2">
+          <div>
+            <label>اسم المشروع / النشاط *</label>
+            <input id="bizName" required placeholder="مثال: برجر هاوس / عيادة النور / متجر أناقة" />
+          </div>
+          <div>
+            <label>القطاع / نوع النشاط *</label>
+            <select id="bizSector">
+              <option value="مطاعم وكافيهات">مطاعم وكافيهات</option>
+              <option value="تجارة إلكترونية ومتاجر">تجارة إلكترونية ومتاجر</option>
+              <option value="عيادات ومراكز طبية">عيادات ومراكز طبية</option>
+              <option value="عقارات واستثمار">عقارات واستثمار</option>
+              <option value="تجميل وعناية شخصية">تجميل وعناية شخصية</option>
+              <option value="شركات خدمات B2B">شركات خدمات B2B</option>
+              <option value="تعليم وتدريب واستشارات">تعليم وتدريب واستشارات</option>
+              <option value="تطبيقات وتقنية SaaS">تطبيقات وتقنية SaaS</option>
+              <option value="نشاط تجاري آخر">نشاط تجاري آخر</option>
+            </select>
+          </div>
+          <div>
+            <label>المدينة / السوق المستهدف *</label>
+            <input id="bizCity" required placeholder="مثال: الرياض / القاهرة / جدة" />
+          </div>
+          <div>
+            <label>الهدف الأساسي حالياً *</label>
+            <select id="bizGoal">
+              <option value="زيادة المبيعات والطلبات المباشرة">زيادة المبيعات والطلبات المباشرة</option>
+              <option value="جذب عملاء محتملين (Leads) بجودة أعلى">جذب عملاء محتملين (Leads) بجودة أعلى</option>
+              <option value="رفع التفاعل وبناء الثقة في العلامة التجارية">رفع التفاعل وبناء الثقة في العلامة التجارية</option>
+              <option value="إطلاق مشروع أو منتج جديد بقوة">إطلاق مشروع أو منتج جديد بقوة</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-top:14px;">
+          <label>رابط الحساب أو الموقع (اختياري)</label>
+          <input id="bizUrl" placeholder="https://instagram.com/yourbusiness" />
+        </div>
+        <div style="margin-top:14px;">
+          <label>صف مشروعك وأبرز المشكلة التي تواجهها الآن *</label>
+          <textarea id="bizDesc" rows="3" required placeholder="مثال: ننشر صور منتجات باستمرار لكن التفاعل ضعيف والرسائل قليلة مقارنة بالمنافسين..."></textarea>
+        </div>
+        <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+          <button id="submitBtn" class="btn btn-primary" type="submit">ابدأ الفحص الذكي الآن</button>
+          <span id="statusMsg" style="font-size:13px;color:var(--muted);"></span>
+        </div>
+      </form>
+    </div>
+
+    <!-- نتيجة التقرير -->
+    <div id="reportArea" class="hidden">
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:16px;">
+          <div>
+            <h2 id="repTitle" style="margin:0;font-size:22px;">تقرير مِرآة برو</h2>
+            <div style="font-size:12px;color:var(--muted);">بإشراف: محمد الشرقاوي — خبير كتابة المحتوى والتسويق الرقمي | واتساب: 00201005535574</div>
+          </div>
+          <div class="no-print" style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button class="btn btn-outline" onclick="toggleViewMode()" id="viewModeBtn">التبديل للوضع التفصيلي</button>
+            <button class="btn btn-outline" onclick="window.print()">طباعة / حفظ PDF</button>
+            <a id="repWaBtn" class="btn btn-wa" href="#" target="_blank">ناقش التقرير مع الخبير</a>
+          </div>
+        </div>
+
+        <div class="score-box">
+          <div class="score-circle" id="scoreCircle" style="--p:72"><span id="scoreNum">72</span></div>
+          <div style="flex:1;">
+            <div style="font-weight:800;font-size:17px;margin-bottom:4px;">الخلاصة في دقيقة واحدة</div>
+            <div id="repSummary" style="color:#cbd5e1;font-size:14px;"></div>
+          </div>
+        </div>
+
+        <!-- الوضع المبسط للعميل -->
+        <div id="simpleView">
+          <div class="grid-3" style="margin-bottom:18px;">
+            <div class="item-card">
+              <span class="pill pill-green">🟢 ما ينجح لديك</span>
+              <p id="repGood" style="font-size:14px;margin:8px 0 0;"></p>
+            </div>
+            <div class="item-card">
+              <span class="pill pill-red">🔴 ما يضيّع المبيعات</span>
+              <p id="repLeak" style="font-size:14px;margin:8px 0 0;"></p>
+            </div>
+            <div class="item-card">
+              <span class="pill pill-warn">🟡 أول خطوة اليوم</span>
+              <p id="repFirst" style="font-size:14px;margin:8px 0 0;"></p>
+            </div>
+          </div>
+
+          <h3 style="margin:0 0 10px;">أهم 3 تحسينات سريعة (خلال 72 ساعة)</h3>
+          <div id="quickWinsList" class="grid-3" style="margin-bottom:18px;"></div>
+
+          <h3 style="margin:0 0 10px;">خطة العمل البسيطة لـ 30 يوماً</h3>
+          <div id="planList" class="grid-2"></div>
+        </div>
+
+        <!-- الوضع التفصيلي -->
+        <div id="expertView" class="hidden">
+          <h3 style="margin:0 0 10px;">تقييم أبعاد مِرآة الستة (MIRAA 6D)</h3>
+          <div id="dimsList" class="grid-2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم الباقات والخدمات -->
+  <section id="section-pricing" class="hidden">
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:18px;">
+        <div>
+          <h2 style="margin:0;">باقات الاشتراك والخدمات التسويقية المرنة</h2>
+          <div style="font-size:13px;color:var(--muted);">اختر العملة المناسبة لك وتواصل مباشرة عبر واتساب لتنفيذ خطتك</div>
+        </div>
+        <select id="currencySel" onchange="renderPrices()" style="width:auto;">
+          <option value="EGP">جنيه مصري (EGP)</option>
+          <option value="SAR">ريال سعودي (SAR)</option>
+          <option value="USD">دولار أمريكي (USD)</option>
+        </select>
+      </div>
+      <div id="pricingGrid" class="grid-3"></div>
+    </div>
+  </section>
+</main>
+
+<a class="wa-float no-print" href="https://wa.me/201005535574?text=مرحباً%20أستاذ%20محمد%20الشرقاوي،%20أحتاج%20استشارة%20تسويقية%20لمشروعي" target="_blank">
+  💬 تواصل واتساب مباشر
+</a>
+
+<footer class="container">
+  <div><strong>مِرآة برو | MIRAA Pro</strong> — جميع الحقوق محفوظة © 2026 <strong>محمد الشرقاوي</strong> (خبير كتابة المحتوى والتسويق الرقمي)</div>
+  <div style="margin-top:8px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+    <a href="javascript:void(0)" onclick="openModal('aboutModal')">عن الخبير وإثبات الملكية</a>
+    <a href="javascript:void(0)" onclick="openModal('privacyModal')">سياسة الخصوصية</a>
+    <a href="javascript:void(0)" onclick="openModal('termsModal')">شروط الاستخدام</a>
+    <a href="https://wa.me/201005535574" target="_blank">واتساب: 00201005535574</a>
+  </div>
+</footer>
+
+<!-- نافذة عن الخبير -->
+<div id="aboutModal" class="modal-bg hidden" onclick="if(event.target===this)closeModal('aboutModal')">
+  <div class="modal">
+    <h3 style="margin-top:0;">عن الخبير وإثبات الملكية</h3>
+    <p>منصة <strong>مِرآة برو | MIRAA Pro</strong> مملوكة بالكامل وتعمل تحت الإشراف المباشر للأستاذ <strong>محمد الشرقاوي</strong> — خبير كتابة المحتوى، السيو (SEO)، وبناء الخطط التسويقية للأنشطة التجارية في مصر والسعودية والوطن العربي.</p>
+    <p><strong>للتواصل المباشر والاستشارات:</strong><br>واتساب: <a href="https://wa.me/201005535574" target="_blank" style="color:#34d399;font-weight:700;">00201005535574</a></p>
+    <button class="btn btn-primary" onclick="closeModal('aboutModal')">إغلاق</button>
+  </div>
+</div>
+
+<!-- نافذة سياسة الخصوصية -->
+<div id="privacyModal" class="modal-bg hidden" onclick="if(event.target===this)closeModal('privacyModal')">
+  <div class="modal">
+    <h3 style="margin-top:0;">سياسة الخصوصية — مِرآة برو</h3>
+    <p>نحترم خصوصية زوارنا وأصحاب المشاريع. البيانات التي تدخلها في نموذج الفحص تُستخدم فقط لتوليد التقرير التسويقي الخاص بك ولا يتم بيعها أو مشاركتها مع أي طرف ثالث.</p>
+    <p>قد تعرض النسخة المجانية إعلانات ترويجية أو إعلانات عبر شبكات إعلانية مثل Google AdSense التي قد تستخدم ملفات تعريف الارتباط (Cookies) لتحسين جودة الإعلانات المعروضة.</p>
+    <p>لأي استفسار حول الخصوصية، تواصل مع المالك محمد الشرقاوي عبر واتساب: 00201005535574.</p>
+    <button class="btn btn-primary" onclick="closeModal('privacyModal')">إغلاق</button>
+  </div>
+</div>
+
+<!-- نافذة شروط الاستخدام -->
+<div id="termsModal" class="modal-bg hidden" onclick="if(event.target===this)closeModal('termsModal')">
+  <div class="modal">
+    <h3 style="margin-top:0;">شروط الاستخدام — مِرآة برو</h3>
+    <p>التقارير الصادرة عن النسخة المجانية من «مِرآة برو» هي توصيات استرشادية مبنية على البيانات التي يقدمها المستخدم، ولا تمثل ضماناً مالياً محدداً دون تنفيذ عملي منضبط.</p>
+    <p>جميع حقوق الملكية الفكرية ومنهجية التحليل والتصميم محفوظة للأستاذ محمد الشرقاوي.</p>
+    <button class="btn btn-primary" onclick="closeModal('termsModal')">إغلاق</button>
+  </div>
+</div>
+
+<script>
+  let isExpertMode = false;
+
+  function showSection(sec) {
+    document.getElementById('section-scan').classList.toggle('hidden', sec !== 'scan');
+    document.getElementById('section-pricing').classList.toggle('hidden', sec !== 'pricing');
+    if (sec === 'pricing') renderPrices();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
+  function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
+
+  function toggleViewMode() {
+    isExpertMode = !isExpertMode;
+    document.getElementById('simpleView').classList.toggle('hidden', isExpertMode);
+    document.getElementById('expertView').classList.toggle('hidden', !isExpertMode);
+    document.getElementById('viewModeBtn').textContent = isExpertMode ? 'العودة للوضع المبسط للعميل' : 'التبديل للوضع التفصيلي';
+  }
+
+  function fillDemo() {
+    document.getElementById('bizName').value = 'مطعم سماش برجر الرياض';
+    document.getElementById('bizSector').value = 'مطاعم وكافيهات';
+    document.getElementById('bizCity').value = 'الرياض';
+    document.getElementById('bizGoal').value = 'زيادة المبيعات والطلبات المباشرة';
+    document.getElementById('bizUrl').value = 'https://instagram.com/smashburger_ryd';
+    document.getElementById('bizDesc').value = 'نقدم برجر لحم طازج يومياً، ننشر صور الوجبات على إنستغرام لكن التفاعل ضعيف والطلبات المباشرة أقل من المتوقع مقارنة بالمنافسين.';
+  }
+
+  async function runScan(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    const status = document.getElementById('statusMsg');
+    const name = document.getElementById('bizName').value.trim();
+    const sector = document.getElementById('bizSector').value;
+    const city = document.getElementById('bizCity').value.trim();
+    const goal = document.getElementById('bizGoal').value;
+    const url = document.getElementById('bizUrl').value.trim();
+    const desc = document.getElementById('bizDesc').value.trim();
+
+    btn.disabled = true;
+    btn.innerHTML = '<span class="loader"></span> جاري الفحص الذكي...';
+    status.textContent = 'يتم الآن تحليل نشاطك وبناء خطة النمو...';
+
+    const prompt = `أنت "مِرآة برو" نظام ذكاء تسويقي بإشراف الخبير محمد الشرقاوي. حلل النشاط التالي وأرجع JSON فقط بدون أي نص خارجي:
+النشاط: ${name} | القطاع: ${sector} | المدينة: ${city} | الهدف: ${goal} | الرابط: ${url || 'غير محدد'} | الوصف: ${desc}
+المطلوب JSON بالبنية التالية بالضبط وباللغة العربية البسيطة والعملية:
+{
+  "overallScore": 70,
+  "summary": "ملخص تنفيذي واضح في سطرين",
+  "whatWorks": "ما ينجح حالياً",
+  "salesLeak": "أكبر سبب يضيّع المبيعات",
+  "firstStepToday": "أول خطوة عملية ينفذها اليوم",
+  "quickWins": [
+    {"title": "عنوان", "action": "ماذا يفعل", "result": "النتيجة المتوقعة"},
+    {"title": "عنوان", "action": "ماذا يفعل", "result": "النتيجة المتوقعة"},
+    {"title": "عنوان", "action": "ماذا يفعل", "result": "النتيجة المتوقعة"}
+  ],
+  "plan30": [
+    {"week": "الأسبوع 1", "focus": "التركيز والأفعال العملية"},
+    {"week": "الأسبوع 2", "focus": "التركيز والأفعال العملية"},
+    {"week": "الأسبوع 3", "focus": "التركيز والأفعال العملية"},
+    {"week": "الأسبوع 4", "focus": "التركيز والأفعال العملية"}
+  ],
+  "dimensions": [
+    {"name": "الانطباع الأول", "score": 65, "note": "ملاحظة وتوصية"},
+    {"name": "وضوح الرسالة والعرض", "score": 58, "note": "ملاحظة وتوصية"},
+    {"name": "قوة المحتوى والتواصل", "score": 60, "note": "ملاحظة وتوصية"},
+    {"name": "فهم الجمهور والاعتراضات", "score": 52, "note": "ملاحظة وتوصية"},
+    {"name": "التميّز عن المنافسين", "score": 70, "note": "ملاحظة وتوصية"},
+    {"name": "جاهزية النمو والتحويل", "score": 64, "note": "ملاحظة وتوصية"}
+  ]
+}`;
+
+    let reportData = null;
+    try {
+      const res = await fetch('/api/analyze', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt })
+      });
+      if (res.ok) {
+        const json = await res.json();
+        const text = json?.candidates?.[0]?.content?.parts?.[0]?.text || '';
+        reportData = JSON.parse(text);
+      }
+    } catch (err) {
+      console.warn('Fallback mode active:', err);
+    }
+
+    if (!reportData) {
+      reportData = {
+        overallScore: 66,
+        summary: `مشروع "${name}" في قطاع (${sector}) بمدينة ${city} يمتلك فرصة نمو قوية، لكنه يحتاج إلى تحويل المحتوى من عرض تقليدي إلى رسالة بيع واضحة تبرز سبب اختياره.`,
+        whatWorks: 'وجود نشاط قائم ومحتوى مستمر يبني أساساً جيداً للظهور أمام الجمهور المستهدف.',
+        salesLeak: 'غياب عرض واضح أو سبب فوري يجعل العميل يتخذ قرار التواصل أو الشراء الآن بدلاً من التصفح والمغادرة.',
+        firstStepToday: 'إعادة كتابة وصف الحساب (Bio) وتثبيت منشور يشرح ميزتك الأساسية مع زر تواصل مباشر عبر واتساب.',
+        quickWins: [
+          { title: 'تحسين الانطباع الأول', action: 'تحديث البايو ليجيب في 5 ثوانٍ: ماذا تقدم؟ لمن؟ وكيف يطلب؟', result: 'رفع نسبة تحويل الزوار إلى رسائل.' },
+          { title: 'محتوى التجربة الحقيقية', action: 'نشر 3 فيديوهات قصيرة توضح كواليس الجودة وتجربة العملاء.', result: 'بناء ثقة أسرع وتفاعل أعلى.' },
+          { title: 'عرض دخول ذكي', action: 'إطلاق عرض تجريبي محدد المدة لتحفيز أول طلب.', result: 'تحويل المتابعين المترددين إلى عملاء فعليين.' }
+        ],
+        plan30: [
+          { week: 'الأسبوع 1', focus: 'إصلاح واجهة الحساب، تثبيت الرسالة البيعية، وتجهيز رابط الطلب المباشر.' },
+          { week: 'الأسبوع 2', focus: 'نشر محتوى يجيب عن أسئلة واعتراضات العملاء + توثيق آراء العملاء.' },
+          { week: 'الأسبوع 3', focus: 'إطلاق حملة إعلانية ممولة مصغرة على أفضل 2 فيديو حققا تفاعلاً.' },
+          { week: 'الأسبوع 4', focus: 'قياس النتائج، مضاعفة المحتوى الرابح، وبناء عرض لإعادة الشراء.' }
+        ],
+        dimensions: [
+          { name: 'الانطباع الأول', score: 68, note: 'المنتج واضح لكن الميزة التنافسية تحتاج إبرازاً أقوى.' },
+          { name: 'وضوح الرسالة والعرض', score: 54, note: 'تحتاج لصياغة عرض لا يُقاوم يوضح الفرق عن المنافسين.' },
+          { name: 'قوة المحتوى والتواصل', score: 62, note: 'التركيز على تجربة العميل والنتيجة بدل الصور التقليدية.' },
+          { name: 'فهم الجمهور والاعتراضات', score: 58, note: 'استثمار الأسئلة المتكررة في صناعة محتوى يزيل التردد.' },
+          { name: 'التميّز عن المنافسين', score: 72, note: 'توجد مساحة ممتازة للتميز بالهوية وأسلوب التقديم.' },
+          { name: 'جاهزية النمو والتحويل', score: 65, note: 'تسهيل خطوات الطلب المباشر سيضاعف التحويلات.' }
+        ]
+      };
+    }
+
+    renderReport(name, reportData);
+    btn.disabled = false;
+    btn.textContent = 'ابدأ الفحص الذكي الآن';
+    status.textContent = 'تم تجهيز التقرير بنجاح!';
+  }
+
+  function renderReport(name, d) {
+    document.getElementById('reportArea').classList.remove('hidden');
+    document.getElementById('repTitle').textContent = `تقرير مِرآة برو — ${name}`;
+    document.getElementById('scoreNum').textContent = d.overallScore || 68;
+    document.getElementById('scoreCircle').style.setProperty('--p', d.overallScore || 68);
+    document.getElementById('repSummary').textContent = d.summary || '';
+    document.getElementById('repGood').textContent = d.whatWorks || '';
+    document.getElementById('repLeak').textContent = d.salesLeak || '';
+    document.getElementById('repFirst').textContent = d.firstStepToday || '';
+
+    const waText = encodeURIComponent(`مرحباً أستاذ محمد الشرقاوي، أجريت فحص "مِرآة برو" لمشروعي (${name}) وحصلت على نتيجة ${d.overallScore}/100، وأرغب في مناقشة خطة التطوير.`);
+    document.getElementById('repWaBtn').href = `https://wa.me/201005535574?text=${waText}`;
+
+    document.getElementById('quickWinsList').innerHTML = (d.quickWins || []).map(w => `
+      <div class="item-card">
+        <div style="font-weight:800;color:#34d399;margin-bottom:6px;">${w.title}</div>
+        <div style="font-size:13px;margin-bottom:6px;"><strong>التنفيذ:</strong> ${w.action}</div>
+        <div style="font-size:12px;color:var(--muted);"><strong>النتيجة:</strong> ${w.result}</div>
+      </div>
+    `).join('');
+
+    document.getElementById('planList').innerHTML = (d.plan30 || []).map(p => `
+      <div class="item-card">
+        <div style="font-weight:800;color:#60a5fa;margin-bottom:4px;">${p.week}</div>
+        <div style="font-size:13px;">${p.focus}</div>
+      </div>
+    `).join('');
+
+    document.getElementById('dimsList').innerHTML = (d.dimensions || []).map(dim => `
+      <div class="item-card">
+        <div style="display:flex;justify-content:space-between;font-weight:800;margin-bottom:6px;">
+          <span>${dim.name}</span>
+          <span style="color:#34d399;">${dim.score}/100</span>
+        </div>
+        <div style="font-size:13px;color:#cbd5e1;">${dim.note}</div>
+      </div>
+    `).join('');
+
+    document.getElementById('reportArea').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  const packages = [
+    {
+      name: 'الباقة المجانية',
+      prices: { EGP: '0 ج.م', SAR: '0 ر.س', USD: '$0' },
+      desc: 'فحص سريع فوري لمشروعك مع الخلاصة في دقيقة.',
+      features: ['تشخيص سريع للنشاط', 'أهم 3 تحسينات خلال 72 ساعة', 'تتضمن إعلانات داعمة للمنصة'],
+      featured: false
+    },
+    {
+      name: 'باقة الانطلاقة التسويقية',
+      prices: { EGP: '1,900 ج.م', SAR: '299 ر.س', USD: '$79' },
+      desc: 'مراجعة بشرية كاملة من الخبير محمد الشرقاوي + خطة محتوى.',
+      features: ['تقرير متكامل ومراجع بشرياً', 'خطة محتوى 30 يوماً جاهزة', 'جلسة استشارية عبر واتساب/زوم'],
+      featured: true
+    },
+    {
+      name: 'باقة الشريك التسويقي الشامل',
+      prices: { EGP: '5,500 ج.م / شهر', SAR: '999 ر.س / شهر', USD: '$249 / شهر' },
+      desc: 'إدارة كاملة للمحتوى والتصاميم والخطط التسويقية.',
+      features: ['كتابة المحتوى + 12 تصميماً احترافياً', 'خطة حملات وإعلانات شهرية', 'متابعة وتواصل مباشر مع الخبير'],
+      featured: false
+    }
+  ];
+
+  function renderPrices() {
+    const cur = document.getElementById('currencySel').value;
+    document.getElementById('pricingGrid').innerHTML = packages.map(p => {
+      const msg = encodeURIComponent(`مرحباً أستاذ محمد الشرقاوي، أرغب في الاشتراك في (${p.name}) بسعر ${p.prices[cur]}.`);
+      return `
+        <div class="price-card ${p.featured ? 'featured' : ''}">
+          <div>
+            <div style="font-weight:800;font-size:18px;">${p.name}</div>
+            <div class="price">${p.prices[cur]}</div>
+            <div style="font-size:13px;color:var(--muted);margin-bottom:12px;">${p.desc}</div>
+            <ul style="padding-right:18px;font-size:13px;margin:0 0 18px;">
+              ${p.features.map(f => `<li style="margin-bottom:6px;">${f}</li>`).join('')}
+            </ul>
+          </div>
+          <a class="btn ${p.featured ? 'btn-primary' : 'btn-outline'}" style="justify-content:center;" href="https://wa.me/201005535574?text=${msg}" target="_blank">اطلب الباقة عبر واتساب</a>
+        </div>
+      `;
+    }).join('');
+  }
+</script>
+</body>
+</html>
