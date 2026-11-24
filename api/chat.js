@@ -3,13 +3,8 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) {
-    return res.status(500).json({ error: 'مفتاح GEMINI_API_KEY غير مضاف في إعدادات Vercel' });
-  }
-
   try {
-    const { messages, reportContext } = req.body || {};
+    const { messages, reportContext, engine = 'auto' } = req.body || {};
     if (!messages || !Array.isArray(messages) || messages.length === 0) {
       return res.status(400).json({ error: 'Messages array is required' });
     }
@@ -17,55 +12,102 @@ export default async function handler(req, res) {
     let contextText = '';
     if (reportContext && reportContext.name) {
       contextText = `
-معلومات التقرير الذي أجراه العميل للتو على المنصة:
-- اسم النشاط: ${reportContext.name}
-- القطاع: ${reportContext.sector || ''}
-- المدينة: ${reportContext.city || ''}
-- النتيجة العامة: ${reportContext.overallScore || ''}/100
-- الملخص التنفيذي: ${reportContext.summary || ''}
-استخدم هذه المعلومات لتخصيص إجاباتك بدقة لمشروع العميل إذا سأل عن تقريره أو نشاطه.`;
+بيانات تقرير العميل الحالي:
+- النشاط: ${reportContext.name} (${reportContext.sector || ''} - ${reportContext.city || ''})
+- التقييم: ${reportContext.overallScore || ''}/100
+- الملخص: ${reportContext.summary || ''}`;
     }
 
-    const systemInstruction = `أنت المساعد الذكي الرسمي لبرنامج "مِرآة برو | MIRAA Pro"، بإشراف الخبير محمد الشرقاوي (خبير كتابة المحتوى والتسويق الرقمي).
-مهمتك: الإجابة على جميع أسئلة العملاء باللغة العربية الفصحى البسيطة والواضحة (أو بلهجة مهنية قريبة ومريحة) بدقة واختصار مفيد.
-مجالاتك:
-1. شرح نتائج تقرير مِرآة 6D ومساعدة العميل على فهم أوجه القصور وكيفية تنفيذ التوصيات.
-2. الإجابة على أسئلة التسويق الرقمي، كتابة المحتوى، السيو (SEO)، السوشيال ميديا، الإعلانات، وزيادة المبيعات لكافة الأنشطة التجارية.
-3. تعريف العميل بخدمات وباقات مِرآة برو والخبير محمد الشرقاوي عند السؤال عنها، وتوجيهه للتواصل المباشر عبر واتساب على الرقم 00201005535574 إذا رغب في تنفيذ خطة محتوى أو تصاميم أو استشارة شخصية.
-قواعد الرد:
-- كن مباشراً، عملياً، وواضحاً بدون إطالة مملة (لأن العميل قد يستمع للرد صوتياً).
-- تجنب الرموز المعقدة أو التنسيقات الطويلة غير الضرورية حتى يكون الرد سلساً عند القراءة الصوتية.
-- لا تختلق معلومات غير موجودة.${contextText}`;
+    const systemInstruction = `أنت "مِرآة برو"، المساعد التسويقي الذكي السريع بإشراف الخبير محمد الشرقاوي.
+أجب باللغة العربية الواضحة والمباشرة بإيجاز ذكي (3 إلى 5 أسطر) لتكون الإجابة سريعة القراءة والاستماع الصوتي.
+ساعد العميل في فهم تقريره، تحليل منافسيه، وزيادة مبيعاته، ووجهه لواتساب الخبير (00201005535574) عند طلب تنفيذ أو باقات.${contextText}`;
 
-    const contents = messages.slice(-12).map(m => ({
+    const providers = buildChatQueue(engine);
+    if (providers.length === 0) {
+      return res.status(500).json({ error: 'لم يتم إضافة أي مفتاح API في Vercel.' });
+    }
+
+    let lastError = 'ضغط مؤقت على الخادم';
+    for (const p of providers) {
+      try {
+        const reply = await callChatProvider(p, systemInstruction, messages.slice(-8));
+        if (reply) {
+          return res.status(200).json({ reply, usedModel: p.label });
+        }
+      } catch (err) {
+        lastError = err.message || lastError;
+      }
+    }
+
+    return res.status(503).json({
+      error: 'يوجد ضغط مؤقت على خوادم الذكاء الاصطناعي، أعد إرسال سؤالك بعد ثوانٍ.'
+    });
+  } catch (err) {
+    return res.status(500).json({ error: 'تعذر الاتصال بالمساعد الذكي حالياً.' });
+  }
+}
+
+function buildChatQueue(engine) {
+  const geminiKey = process.env.GEMINI_API_KEY;
+  const groqKey = process.env.GROQ_API_KEY;
+  const openaiKey = process.env.OPENAI_API_KEY;
+
+  const all = [];
+  // For ultra-fast chat, prioritize Groq if available, then Gemini
+  if (groqKey) all.push({ type: 'groq', model: 'llama-3.3-70b-versatile', key: groqKey, label: 'Groq Fast' });
+  if (geminiKey) {
+    all.push({ type: 'gemini', model: 'gemini-3.8-flash', key: geminiKey, label: 'Gemini 3.8 Flash' });
+    all.push({ type: 'gemini', model: 'gemini-2.5-flash-lite', key: geminiKey, label: 'Gemini Lite' });
+  }
+  if (openaiKey) all.push({ type: 'openai', model: 'gpt-4o-mini', key: openaiKey, label: 'GPT-4o Mini' });
+
+  if (engine === 'openai' && openaiKey) {
+    return [{ type: 'openai', model: 'gpt-4o-mini', key: openaiKey, label: 'GPT-4o Mini' }, ...all.filter(x => x.type !== 'openai')];
+  }
+  if (engine === 'gemini-lite' && geminiKey) {
+    return [{ type: 'gemini', model: 'gemini-2.5-flash-lite', key: geminiKey, label: 'Gemini Lite' }, ...all.filter(x => x.model !== 'gemini-2.5-flash-lite')];
+  }
+  return all;
+}
+
+async function callChatProvider(p, systemInstruction, msgs) {
+  if (p.type === 'gemini') {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${p.model}:generateContent?key=${p.key}`;
+    const contents = msgs.map(m => ({
       role: m.role === 'user' ? 'user' : 'model',
       parts: [{ text: String(m.text || '') }]
     }));
-
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${apiKey}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          systemInstruction: { parts: [{ text: systemInstruction }] },
-          contents,
-          generationConfig: {
-            temperature: 0.6,
-            maxOutputTokens: 600
-          }
-        })
-      }
-    );
-
-    const data = await response.json();
-    if (!response.ok) {
-      return res.status(response.status).json({ error: data?.error?.message || 'Gemini API Error' });
-    }
-
-    const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text || 'عذراً، لم أتمكن من صياغة رد الآن. حاول مرة أخرى.';
-    return res.status(200).json({ reply });
-  } catch (err) {
-    return res.status(500).json({ error: 'حدث خطأ أثناء الاتصال بالمساعد الذكي', details: err.message });
+    const r = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        systemInstruction: { parts: [{ text: systemInstruction }] },
+        contents,
+        generationConfig: { temperature: 0.6, maxOutputTokens: 420 }
+      })
+    });
+    const d = await r.json().catch(() => ({}));
+    if (r.ok) return d?.candidates?.[0]?.content?.parts?.[0]?.text;
+    throw new Error(d?.error?.message || `Gemini ${r.status}`);
   }
+
+  const endpoint = p.type === 'openai'
+    ? 'https://api.openai.com/v1/chat/completions'
+    : 'https://api.groq.com/openai/v1/chat/completions';
+  const r = await fetch(endpoint, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${p.key}` },
+    body: JSON.stringify({
+      model: p.model,
+      temperature: 0.6,
+      max_tokens: 420,
+      messages: [
+        { role: 'system', content: systemInstruction },
+        ...msgs.map(m => ({ role: m.role === 'user' ? 'user' : 'assistant', content: String(m.text || '') }))
+      ]
+    })
+  });
+  const d = await r.json().catch(() => ({}));
+  if (r.ok) return d?.choices?.[0]?.message?.content;
+  throw new Error(d?.error?.message || `${p.type} ${r.status}`);
 }
