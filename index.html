@@ -97,6 +97,7 @@
     </div>
     <div class="nav-links">
       <button class="btn btn-outline" onclick="showSection('scan')">فحص مشروعك</button>
+      <button class="btn btn-outline" onclick="scrollToAboutProgram()">عن البرنامج</button>
       <button class="btn btn-outline" onclick="showSection('pricing')">الباقات والخدمات</button>
       <button class="btn btn-outline" onclick="openModal('aboutModal')">عن الخبير</button>
       <a class="btn btn-wa" href="https://wa.me/201005535574?text=مرحباً%20أستاذ%20محمد%20الشرقاوي،%20أرغب%20في%20الاستفسار%20عن%20خدمات%20مِرآة%20برو" target="_blank">تواصل واتساب</a>
@@ -109,6 +110,44 @@
     <span class="badge">الإصدار المطور V2 • تشخيص عميق يكشف أوجه القصور ويعالجها بأمثلة جاهزة</span>
     <h1>اكتشف لماذا تتوقف مبيعات مشروعك... وكيف تعالجها باحتراف</h1>
     <p>لا نقدم نصائح عامة مكررة. أدخل تفاصيل نشاطك لتحصل على تشخيص دقيق لأوجه القصور الحقيقية، مع خطوات المعالجة الاحترافية وأمثلة تطبيقية جاهزة للتنفيذ.</p>
+  </section>
+
+
+  <!-- قسم تعريف البرنامج وما يقدمه للعملاء -->
+  <section id="about-program" class="card no-print" style="border-color: rgba(16,185,129,0.35); background: linear-gradient(180deg, #111827 0%, #0f172a 100%);">
+    <div style="text-align:center; max-width:760px; margin:0 auto 20px;">
+      <span class="pill pill-green" style="margin-bottom:8px;">تعريف البرنامج</span>
+      <h2 style="margin:0 0 8px; font-size:22px;">ما هو برنامج «مِرآة برو | MIRAA Pro»؟</h2>
+      <p style="margin:0; color:var(--muted); font-size:14px;">
+        <strong>مِرآة برو</strong> هو نظام ذكاء تسويقي وتشخيصي متكامل بإشراف الخبير <strong>محمد الشرقاوي</strong>، صُمم لمساعدة أصحاب المشاريع والأنشطة التجارية على رؤية أعمالهم بعين العميل، واكتشاف الأسباب الحقيقية لضعف التفاعل أو المبيعات، ثم تقديم حلول عملية قابلة للتنفيذ الفوري.
+      </p>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:18px;">
+      <div class="item-card">
+        <div style="font-weight:800; color:#34d399; margin-bottom:6px;">🎯 1. كشف أوجه القصور الحرجة</div>
+        <div style="font-size:13px; color:#cbd5e1;">يحدد بدقة أين تتسرب مبيعاتك، ولماذا يتردد العميل في الشراء منك رغم جودة منتجك أو خدمتك.</div>
+      </div>
+      <div class="item-card">
+        <div style="font-weight:800; color:#34d399; margin-bottom:6px;">🛠️ 2. معالجة احترافية بأمثلة جاهزة</div>
+        <div style="font-size:13px; color:#cbd5e1;">لا يكتفي بذكر المشكلة بنصائح عامة، بل يمنحك خطوات الحل ومثالاً تطبيقياً مكتوباً وجاهزاً للنسخ باسم مشروعك.</div>
+      </div>
+      <div class="item-card">
+        <div style="font-weight:800; color:#34d399; margin-bottom:6px;">✨ 3. إعادة صياغة رسالتك (قبل وبعد)</div>
+        <div style="font-size:13px; color:#cbd5e1;">يقارن بين أسلوبك التسويقي التقليدي وبين صياغة بيعية احترافية توضح ميزتك التنافسية في 5 ثوانٍ.</div>
+      </div>
+      <div class="item-card">
+        <div style="font-weight:800; color:#34d399; margin-bottom:6px;">📅 4. خطة نمو عملية لـ 30 يوماً</div>
+        <div style="font-size:13px; color:#cbd5e1;">خارطة طريق واضحة مقسمة على 4 أسابيع مع مؤشرات قياس (KPIs) وتقييم شامل لأبعاد مِرآة الستة (6D).</div>
+      </div>
+    </div>
+
+    <div style="background:rgba(59,130,246,0.08); border:1px solid rgba(59,130,246,0.25); border-radius:12px; padding:14px; font-size:13px; color:#cbd5e1; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+      <div>
+        <strong style="color:#60a5fa;">لمن صُمم هذا البرنامج؟</strong> لأصحاب المطاعم والكافيهات، المتاجر الإلكترونية، العيادات، العقارات، شركات الخدمات، وكل صاحب نشاط يريد تحويل تسويقه إلى مبيعات حقيقية.
+      </div>
+      <button class="btn btn-primary" type="button" onclick="document.getElementById('bizName').focus(); document.getElementById('section-scan').scrollIntoView({behavior:'smooth'});">ابدأ فحص مشروعك مجاناً</button>
+    </div>
   </section>
 
   <div class="ad-slot no-print">
@@ -324,6 +363,14 @@
 
 <script>
   let isExpertMode = false;
+
+  function scrollToAboutProgram() {
+    showSection('scan');
+    setTimeout(() => {
+      const el = document.getElementById('about-program');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }, 50);
+  }
 
   function showSection(sec) {
     document.getElementById('section-scan').classList.toggle('hidden', sec !== 'scan');
