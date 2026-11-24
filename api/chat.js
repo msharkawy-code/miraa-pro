@@ -57,7 +57,7 @@ function buildChatQueue(engine) {
   if (groqKey) all.push({ type: 'groq', model: 'llama-3.3-70b-versatile', key: groqKey, label: 'Groq Fast' });
   if (geminiKey) {
     all.push({ type: 'gemini', model: 'gemini-3.8-flash', key: geminiKey, label: 'Gemini 3.8 Flash' });
-    all.push({ type: 'gemini', model: 'gemini-2.5-flash-lite', key: geminiKey, label: 'Gemini Lite' });
+    all.push({ type: 'gemini', model: 'gemini-3.5-flash-lite', key: geminiKey, label: 'Gemini Lite' });
   }
   if (openaiKey) all.push({ type: 'openai', model: 'gpt-4o-mini', key: openaiKey, label: 'GPT-4o Mini' });
 
