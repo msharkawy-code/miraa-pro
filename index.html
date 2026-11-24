@@ -3,158 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مِرآة برو | MIRAA Pro — التشخيص التسويقي الاحترافي لنمو المشاريع</title>
+  <title>مِرآة برو | MIRAA Pro — ذكاء تسويقي يفهم مشروعك قبل أن يقترح عليك</title>
   <meta name="application-name" content="مِرآة برو | MIRAA Pro" />
-  <meta name="description" content="منصة مِرآة برو (MIRAA Pro) بإشراف محمد الشرقاوي — خبير كتابة المحتوى والتسويق الرقمي. تشخيص تسويقي عميق يكشف أوجه القصور ويعالجها بخطة عملية." />
-  <meta property="og:title" content="مِرآة برو | MIRAA Pro — ذكاء يفهم مشروعك قبل أن ينصحك" />
+  <meta name="description" content="منصة مِرآة برو (MIRAA Pro) بإشراف محمد الشرقاوي — خبير كتابة المحتوى والتسويق الرقمي. فحص تسويقي عميق عبر منهجية MIRAA 6D مع خريطة رادار وتوصيات عملية." />
+  <meta property="og:title" content="مِرآة برو | MIRAA Pro — ذكاء يفهم مشروعك قبل أن يقترح عليك" />
   <meta property="og:site_name" content="مِرآة برو | MIRAA Pro" />
-  <meta property="og:description" content="تشخيص تسويقي عميق ومبسط لكافة الأنشطة التجارية يكشف أوجه القصور ويعالجها بأمثلة جاهزة." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0b1120;
-      --card: #111827;
-      --card2: #1e293b;
-      --border: #334155;
-      --text: #f8fafc;
-      --muted: #94a3b8;
+      --bg: #f1f5f9;
+      --dark: #0f172a;
+      --dark2: #1e293b;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --muted: #64748b;
       --accent: #10b981;
-      --accent2: #3b82f6;
+      --accent-dark: #059669;
       --warn: #f59e0b;
       --danger: #ef4444;
+      --blue: #2563eb;
     }
     * { box-sizing: border-box; font-family: 'Cairo', sans-serif; }
-    body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.7; }
+    body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.75; }
     a { color: inherit; text-decoration: none; }
-    .container { max-width: 1080px; margin: 0 auto; padding: 0 18px; }
-    header { background: rgba(15, 23, 42, 0.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 50; }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; flex-wrap: wrap; gap: 12px; }
+    .container { max-width: 1020px; margin: 0 auto; padding: 0 16px; }
+
+    /* الهيدر الداكن الأنيق مثل النسخة الأولى */
+    .top-bar { background: linear-gradient(135deg, #0b1324, #132238); color: #fff; padding: 14px 0; position: sticky; top: 0; z-index: 50; box-shadow: 0 4px 20px rgba(15,23,42,0.18); }
+    .nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
     .brand { display: flex; align-items: center; gap: 10px; }
-    .logo { width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, var(--accent), var(--accent2)); display: grid; place-items: center; font-weight: 900; font-size: 20px; color: #fff; }
-    .brand-title { font-weight: 800; font-size: 18px; line-height: 1.2; }
-    .brand-sub { font-size: 12px; color: var(--muted); }
+    .logo { width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #10b981, #059669); display: grid; place-items: center; font-weight: 900; font-size: 20px; color: #fff; }
+    .brand-title { font-weight: 900; font-size: 18px; display: flex; align-items: center; gap: 6px; }
+    .gold-tag { background: rgba(245,158,11,0.18); color: #fbbf24; border: 1px solid rgba(245,158,11,0.4); font-size: 11px; padding: 1px 8px; border-radius: 999px; font-weight: 800; }
+    .brand-sub { font-size: 12px; color: #94a3b8; }
     .nav-links { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-    .btn { border: none; border-radius: 10px; padding: 10px 16px; font-weight: 700; cursor: pointer; font-size: 14px; transition: .2s; display: inline-flex; align-items: center; gap: 6px; }
-    .btn-primary { background: linear-gradient(135deg, var(--accent), #059669); color: #fff; }
-    .btn-primary:hover { filter: brightness(1.08); transform: translateY(-1px); }
-    .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
-    .btn-outline:hover { background: var(--card2); }
-    .btn-wa { background: #25D366; color: #052e16; }
-    .btn-wa:hover { filter: brightness(1.06); }
-    .hero { padding: 38px 0 20px; text-align: center; }
-    .badge { display: inline-block; background: rgba(16,185,129,0.14); color: #34d399; border: 1px solid rgba(16,185,129,0.35); padding: 4px 14px; border-radius: 999px; font-size: 13px; font-weight: 700; margin-bottom: 14px; }
-    h1 { font-size: clamp(25px, 4.3vw, 38px); margin: 0 0 10px; line-height: 1.3; }
-    .hero p { color: var(--muted); max-width: 700px; margin: 0 auto 20px; font-size: 15px; }
-    .ad-slot { background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(16,185,129,0.12)); border: 1px dashed var(--border); border-radius: 14px; padding: 14px 18px; margin: 16px 0; display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
-    .ad-tag { font-size: 11px; background: var(--card2); color: var(--muted); padding: 2px 8px; border-radius: 6px; }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 22px; margin-bottom: 20px; }
-    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 14px; }
-    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
-    label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: #cbd5e1; }
-    input, select, textarea { width: 100%; background: #0f172a; border: 1px solid var(--border); color: var(--text); border-radius: 10px; padding: 11px 13px; font-size: 14px; outline: none; }
-    input:focus, select:focus, textarea:focus { border-color: var(--accent); }
+
+    .btn { border: none; border-radius: 10px; padding: 9px 15px; font-weight: 700; cursor: pointer; font-size: 13px; transition: .2s; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-dark); }
+    .btn-dark-outline { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16); color: #fff; }
+    .btn-dark-outline:hover { background: rgba(255,255,255,0.16); }
+    .btn-light-outline { background: #fff; border: 1px solid var(--border); color: var(--text); }
+    .btn-light-outline:hover { background: #f8fafc; }
+    .btn-wa { background: #25D366; color: #052e16; font-weight: 800; }
+
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 22px; margin: 18px 0; box-shadow: 0 2px 10px rgba(15,23,42,0.04); }
+    .section-title { font-size: 20px; font-weight: 900; margin: 0 0 14px; display: flex; align-items: center; gap: 10px; }
+    .section-title::before { content: ''; width: 5px; height: 24px; background: var(--accent); border-radius: 999px; display: inline-block; }
+
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+
+    .ad-slot { background: linear-gradient(135deg, #ecfdf5, #eff6ff); border: 1px dashed #94a3b8; border-radius: 14px; padding: 14px 18px; margin: 16px 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .ad-tag { font-size: 11px; background: #e2e8f0; color: #475569; padding: 2px 8px; border-radius: 6px; font-weight: 700; }
+
+    label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 5px; color: #334155; }
+    input, select, textarea { width: 100%; background: #f8fafc; border: 1px solid #cbd5e1; color: var(--text); border-radius: 10px; padding: 11px 13px; font-size: 14px; outline: none; }
+    input:focus, select:focus, textarea:focus { border-color: var(--accent); background: #fff; }
     .hidden { display: none !important; }
-    .score-box { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; background: var(--card2); border-radius: 14px; padding: 18px; margin-bottom: 18px; }
-    .score-circle { width: 88px; height: 88px; border-radius: 50%; background: conic-gradient(var(--accent) calc(var(--p, 70) * 1%), #334155 0); display: grid; place-items: center; font-weight: 900; font-size: 22px; flex-shrink: 0; }
-    .score-circle span { width: 70px; height: 70px; background: var(--card); border-radius: 50%; display: grid; place-items: center; }
-    .pill { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; }
-    .pill-green { background: rgba(16,185,129,0.18); color: #34d399; }
-    .pill-warn { background: rgba(245,158,11,0.18); color: #fbbf24; }
-    .pill-red { background: rgba(239,68,68,0.18); color: #f87171; }
-    .item-card { background: var(--card2); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
-    .gap-card { background: var(--card2); border: 1px solid var(--border); border-right: 4px solid var(--danger); border-radius: 12px; padding: 16px; margin-bottom: 14px; }
-    .example-box { background: rgba(16,185,129,0.09); border: 1px solid rgba(16,185,129,0.3); border-radius: 10px; padding: 12px; margin-top: 10px; font-size: 13px; }
-    .before-after { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-bottom: 18px; }
-    .ba-before { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.3); border-radius: 12px; padding: 15px; }
-    .ba-after { background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.35); border-radius: 12px; padding: 15px; }
-    .price-card { background: var(--card2); border: 1px solid var(--border); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
-    .price-card.featured { border-color: var(--accent); box-shadow: 0 0 0 1px rgba(16,185,129,0.3); }
-    .price { font-size: 26px; font-weight: 900; color: #34d399; margin: 8px 0; }
-    .wa-float { position: fixed; bottom: 20px; left: 20px; z-index: 60; background: #25D366; color: #052e16; font-weight: 800; padding: 12px 18px; border-radius: 999px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); display: flex; align-items: center; gap: 8px; }
-    footer { border-top: 1px solid var(--border); padding: 28px 0 80px; margin-top: 40px; color: var(--muted); font-size: 13px; text-align: center; }
-    .modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,0.72); display: grid; place-items: center; z-index: 100; padding: 16px; }
-    .modal { background: var(--card); border: 1px solid var(--border); border-radius: 16px; max-width: 640px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 22px; }
-    .loader { display: inline-block; width: 18px; height: 18px; border: 3px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 0.8s linear infinite; }
+
+    /* بطاقات التقرير الفخمة */
+    .report-banner { background: linear-gradient(135deg, #0f172a, #1e293b); color: #fff; border-radius: 18px; padding: 22px; margin-bottom: 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .score-circle { width: 90px; height: 90px; border-radius: 50%; background: conic-gradient(#10b981 calc(var(--p, 70) * 1%), #334155 0); display: grid; place-items: center; font-weight: 900; font-size: 24px; flex-shrink: 0; }
+    .score-circle span { width: 72px; height: 72px; background: #0f172a; border-radius: 50%; display: grid; place-items: center; color: #fff; }
+
+    .status-banner { padding: 10px 14px; border-radius: 10px; font-size: 13px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+    .status-ai { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
+    .status-warn { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+
+    .bar-row { margin-bottom: 12px; }
+    .bar-head { display: flex; justify-content: space-between; font-size: 13px; font-weight: 800; margin-bottom: 4px; }
+    .bar-track { height: 10px; background: #e2e8f0; border-radius: 999px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #10b981, #059669); }
+
+    .dim-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-bottom: 14px; }
+    .dim-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .dim-num { width: 30px; height: 30px; border-radius: 8px; background: #0f172a; color: #fff; display: inline-grid; place-items: center; font-weight: 800; font-size: 14px; margin-left: 8px; }
+    .score-pill { padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 800; }
+    .pill-high { background: #dcfce7; color: #166534; }
+    .pill-mid { background: #fef3c7; color: #92400e; }
+    .pill-low { background: #fee2e2; color: #991b1b; }
+
+    .evidence-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 13px; margin-bottom: 10px; font-size: 14px; }
+    .rec-box { background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 12px; padding: 13px; font-size: 14px; color: #064e3b; }
+
+    .gap-card { background: #fff; border: 1px solid #fecaca; border-right: 5px solid #ef4444; border-radius: 14px; padding: 16px; margin-bottom: 14px; }
+    .example-box { background: #f0fdf4; border: 1px dashed #10b981; border-radius: 10px; padding: 12px; margin-top: 10px; font-size: 13px; }
+
+    .ba-before { background: #fef2f2; border: 1px solid #fecaca; border-radius: 12px; padding: 15px; }
+    .ba-after { background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 12px; padding: 15px; }
+
+    .price-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
+    .price-card.featured { border: 2px solid var(--accent); box-shadow: 0 8px 24px rgba(16,185,129,0.12); }
+    .price { font-size: 26px; font-weight: 900; color: var(--accent-dark); margin: 8px 0; }
+
+    .wa-float { position: fixed; bottom: 18px; left: 18px; z-index: 60; background: #25D366; color: #052e16; font-weight: 800; padding: 12px 18px; border-radius: 999px; box-shadow: 0 8px 20px rgba(0,0,0,0.22); display: flex; align-items: center; gap: 8px; }
+    footer { text-align: center; padding: 28px 0 80px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); margin-top: 30px; }
+    .modal-bg { position: fixed; inset: 0; background: rgba(15,23,42,0.7); display: grid; place-items: center; z-index: 100; padding: 16px; }
+    .modal { background: #fff; border-radius: 16px; max-width: 600px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 22px; }
+    .loader { display: inline-block; width: 16px; height: 16px; border: 3px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 0.8s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
     @media print {
-      header, .wa-float, .ad-slot, .no-print, footer { display: none !important; }
-      body { background: #fff; color: #000; }
-      .card, .item-card, .gap-card, .score-box, .ba-before, .ba-after { background: #fff; color: #000; border: 1px solid #ccc; }
+      .top-bar, .wa-float, .ad-slot, .no-print, footer { display: none !important; }
+      body { background: #fff; }
+      .card, .dim-card, .gap-card { box-shadow: none; break-inside: avoid; }
     }
   </style>
 </head>
 <body>
 
-<header>
+<header class="top-bar">
   <div class="container nav">
     <div class="brand">
       <div class="logo">م</div>
       <div>
-        <div class="brand-title">مِرآة برو | MIRAA Pro</div>
-        <div class="brand-sub">إشراف: محمد الشرقاوي — خبير كتابة المحتوى والتسويق الرقمي</div>
+        <div class="brand-title">مِرآة برو <span class="gold-tag">MIRAA 6D</span></div>
+        <div class="brand-sub">بإشراف: محمد الشرقاوي — خبير كتابة المحتوى والتسويق الرقمي</div>
       </div>
     </div>
     <div class="nav-links">
-      <button class="btn btn-outline" onclick="showSection('scan')">فحص مشروعك</button>
-      <button class="btn btn-outline" onclick="scrollToAboutProgram()">عن البرنامج</button>
-      <button class="btn btn-outline" onclick="showSection('pricing')">الباقات والخدمات</button>
-      <button class="btn btn-outline" onclick="openModal('aboutModal')">عن الخبير</button>
-      <a class="btn btn-wa" href="https://wa.me/201005535574?text=مرحباً%20أستاذ%20محمد%20الشرقاوي،%20أرغب%20في%20الاستفسار%20عن%20خدمات%20مِرآة%20برو" target="_blank">تواصل واتساب</a>
+      <button class="btn btn-primary" onclick="showSection('scan')">فحص مشروعك</button>
+      <button class="btn btn-dark-outline" onclick="scrollToAbout()">عن البرنامج</button>
+      <button class="btn btn-dark-outline" onclick="showSection('pricing')">الباقات والخدمات</button>
+      <a class="btn btn-wa" href="https://wa.me/201005535574?text=مرحباً%20أستاذ%20محمد%20الشرقاوي،%20أرغب%20في%20الاستفسار%20عن%20خدمات%20مِرآة%20برو" target="_blank">واتساب مباشر</a>
     </div>
   </div>
 </header>
 
 <main class="container">
-  <section class="hero no-print">
-    <span class="badge">الإصدار المطور V2 • تشخيص عميق يكشف أوجه القصور ويعالجها بأمثلة جاهزة</span>
-    <h1>اكتشف لماذا تتوقف مبيعات مشروعك... وكيف تعالجها باحتراف</h1>
-    <p>لا نقدم نصائح عامة مكررة. أدخل تفاصيل نشاطك لتحصل على تشخيص دقيق لأوجه القصور الحقيقية، مع خطوات المعالجة الاحترافية وأمثلة تطبيقية جاهزة للتنفيذ.</p>
-  </section>
-
-
-  <!-- قسم تعريف البرنامج وما يقدمه للعملاء -->
-  <section id="about-program" class="card no-print" style="border-color: rgba(16,185,129,0.35); background: linear-gradient(180deg, #111827 0%, #0f172a 100%);">
-    <div style="text-align:center; max-width:760px; margin:0 auto 20px;">
-      <span class="pill pill-green" style="margin-bottom:8px;">تعريف البرنامج</span>
-      <h2 style="margin:0 0 8px; font-size:22px;">ما هو برنامج «مِرآة برو | MIRAA Pro»؟</h2>
-      <p style="margin:0; color:var(--muted); font-size:14px;">
-        <strong>مِرآة برو</strong> هو نظام ذكاء تسويقي وتشخيصي متكامل بإشراف الخبير <strong>محمد الشرقاوي</strong>، صُمم لمساعدة أصحاب المشاريع والأنشطة التجارية على رؤية أعمالهم بعين العميل، واكتشاف الأسباب الحقيقية لضعف التفاعل أو المبيعات، ثم تقديم حلول عملية قابلة للتنفيذ الفوري.
-      </p>
-    </div>
-
-    <div class="grid-2" style="margin-bottom:18px;">
-      <div class="item-card">
-        <div style="font-weight:800; color:#34d399; margin-bottom:6px;">🎯 1. كشف أوجه القصور الحرجة</div>
-        <div style="font-size:13px; color:#cbd5e1;">يحدد بدقة أين تتسرب مبيعاتك، ولماذا يتردد العميل في الشراء منك رغم جودة منتجك أو خدمتك.</div>
-      </div>
-      <div class="item-card">
-        <div style="font-weight:800; color:#34d399; margin-bottom:6px;">🛠️ 2. معالجة احترافية بأمثلة جاهزة</div>
-        <div style="font-size:13px; color:#cbd5e1;">لا يكتفي بذكر المشكلة بنصائح عامة، بل يمنحك خطوات الحل ومثالاً تطبيقياً مكتوباً وجاهزاً للنسخ باسم مشروعك.</div>
-      </div>
-      <div class="item-card">
-        <div style="font-weight:800; color:#34d399; margin-bottom:6px;">✨ 3. إعادة صياغة رسالتك (قبل وبعد)</div>
-        <div style="font-size:13px; color:#cbd5e1;">يقارن بين أسلوبك التسويقي التقليدي وبين صياغة بيعية احترافية توضح ميزتك التنافسية في 5 ثوانٍ.</div>
-      </div>
-      <div class="item-card">
-        <div style="font-weight:800; color:#34d399; margin-bottom:6px;">📅 4. خطة نمو عملية لـ 30 يوماً</div>
-        <div style="font-size:13px; color:#cbd5e1;">خارطة طريق واضحة مقسمة على 4 أسابيع مع مؤشرات قياس (KPIs) وتقييم شامل لأبعاد مِرآة الستة (6D).</div>
-      </div>
-    </div>
-
-    <div style="background:rgba(59,130,246,0.08); border:1px solid rgba(59,130,246,0.25); border-radius:12px; padding:14px; font-size:13px; color:#cbd5e1; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+  <!-- تعريف البرنامج -->
+  <section id="about-program" class="card no-print">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:14px;">
       <div>
-        <strong style="color:#60a5fa;">لمن صُمم هذا البرنامج؟</strong> لأصحاب المطاعم والكافيهات، المتاجر الإلكترونية، العيادات، العقارات، شركات الخدمات، وكل صاحب نشاط يريد تحويل تسويقه إلى مبيعات حقيقية.
+        <span style="background:#dcfce7;color:#166534;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:800;">الإصدار الاحترافي V3 • مدعوم بـ Gemini AI</span>
+        <h1 style="margin:8px 0 4px;font-size:24px;">مِرآة برو — ذكاء تسويقي يفهم مشروعك قبل أن يقترح عليك</h1>
+        <p style="margin:0;color:var(--muted);font-size:14px;">نظام تشخيص تسويقي متكامل بإشراف الخبير <strong>محمد الشرقاوي</strong>، يفحص مشروعك عبر <strong>6 أبعاد دقيقة (MIRAA 6D)</strong> ليكشف لك أين تتسرب مبيعاتك ويمنحك خطة معالجة عملية بأمثلة جاهزة.</p>
       </div>
-      <button class="btn btn-primary" type="button" onclick="document.getElementById('bizName').focus(); document.getElementById('section-scan').scrollIntoView({behavior:'smooth'});">ابدأ فحص مشروعك مجاناً</button>
+    </div>
+    <div class="grid-3">
+      <div style="background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:12px;">
+        <div style="font-weight:800;color:#059669;">📊 خريطة الأبعاد الستة (6D)</div>
+        <div style="font-size:13px;color:var(--muted);">تقييم بصري بالرادار لكل محور مع الدليل المرصود والتوصية العملية.</div>
+      </div>
+      <div style="background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:12px;">
+        <div style="font-weight:800;color:#dc2626;">🎯 كشف أوجه القصور الحرجة</div>
+        <div style="font-size:13px;color:var(--muted);">تحديد الثغرات التي تضيّع المبيعات مع أمثلة مكتوبة جاهزة للنسخ.</div>
+      </div>
+      <div style="background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:12px;">
+        <div style="font-weight:800;color:#2563eb;">📅 خطة 30 يوماً + قبل وبعد</div>
+        <div style="font-size:13px;color:var(--muted);">إعادة صياغة رسالتك البيعية وخارطة طريق أسبوعية بمؤشرات قياس.</div>
+      </div>
     </div>
   </section>
 
+  <!-- مساحة إعلانية -->
   <div class="ad-slot no-print">
     <div>
       <span class="ad-tag">مساحة إعلانية • النسخة المجانية</span>
-      <div style="font-weight:700;margin-top:4px;">هل تريد خطة محتوى وتصاميم سوشيال ميديا جاهزة للنشر لمشروعك؟</div>
-      <div style="font-size:13px;color:var(--muted);">احصل على باقة متكاملة بإشراف مباشر من الخبير محمد الشرقاوي بأسعار مرنة.</div>
+      <div style="font-weight:800;margin-top:4px;">هل تريد خطة محتوى وتصاميم سوشيال ميديا جاهزة للنشر لمشروعك؟</div>
+      <div style="font-size:13px;color:var(--muted);">باقات مرنة بإشراف مباشر من الخبير محمد الشرقاوي — واتساب: 00201005535574</div>
     </div>
     <a class="btn btn-primary" href="https://wa.me/201005535574?text=مرحباً%20أستاذ%20محمد،%20أرغب%20في%20طلب%20خطة%20محتوى%20وتصاميم%20لمشروعي" target="_blank">اطلبها الآن</a>
   </div>
@@ -163,32 +172,32 @@
   <section id="section-scan">
     <div class="card no-print">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px;">
-        <h2 style="margin:0;font-size:20px;">بيانات المشروع للتشخيص الدقيق</h2>
-        <button class="btn btn-outline" type="button" onclick="fillDemo()">تعبئة مثال تجريبي</button>
+        <h2 class="section-title" style="margin:0;">أدخل بيانات مشروعك للفحص الاحترافي</h2>
+        <button class="btn btn-light-outline" type="button" onclick="fillDemo()">تعبئة مثال تجريبي</button>
       </div>
       <form id="scanForm" onsubmit="runScan(event)">
         <div class="grid-2">
           <div>
             <label>اسم المشروع / النشاط *</label>
-            <input id="bizName" required placeholder="مثال: برجر هاوس / عيادة النور / متجر أناقة" />
+            <input id="bizName" required placeholder="مثال: عنوان الخزائن / سماش برجر / عيادة النور" />
           </div>
           <div>
             <label>القطاع / نوع النشاط *</label>
             <select id="bizSector">
               <option value="مطاعم وكافيهات">مطاعم وكافيهات</option>
+              <option value="أثاث وديكور وخزائن">أثاث وديكور وخزائن</option>
               <option value="تجارة إلكترونية ومتاجر">تجارة إلكترونية ومتاجر</option>
               <option value="عيادات ومراكز طبية">عيادات ومراكز طبية</option>
               <option value="عقارات واستثمار">عقارات واستثمار</option>
               <option value="تجميل وعناية شخصية">تجميل وعناية شخصية</option>
               <option value="شركات خدمات B2B">شركات خدمات B2B</option>
               <option value="تعليم وتدريب واستشارات">تعليم وتدريب واستشارات</option>
-              <option value="تطبيقات وتقنية SaaS">تطبيقات وتقنية SaaS</option>
               <option value="نشاط تجاري آخر">نشاط تجاري آخر</option>
             </select>
           </div>
           <div>
-            <label>المدينة / السوق المستهدف *</label>
-            <input id="bizCity" required placeholder="مثال: الرياض / القاهرة / جدة" />
+            <label>المدينة / المناطق المستهدفة *</label>
+            <input id="bizCity" required placeholder="مثال: مكة، الطائف، الباحة / الرياض / القاهرة" />
           </div>
           <div>
             <label>شريحة الأسعار *</label>
@@ -202,112 +211,125 @@
             <label>الهدف الأساسي حالياً *</label>
             <select id="bizGoal">
               <option value="زيادة المبيعات والطلبات المباشرة">زيادة المبيعات والطلبات المباشرة</option>
+              <option value="تحويل المتابعين لزيارات ميدانية للفروع">تحويل المتابعين لزيارات ميدانية للفروع</option>
               <option value="جذب عملاء محتملين (Leads) بجودة أعلى">جذب عملاء محتملين (Leads) بجودة أعلى</option>
               <option value="رفع التفاعل وبناء الثقة في العلامة التجارية">رفع التفاعل وبناء الثقة في العلامة التجارية</option>
-              <option value="إطلاق مشروع أو منتج جديد بقوة">إطلاق مشروع أو منتج جديد بقوة</option>
             </select>
           </div>
           <div>
-            <label>القنوات التسويقية الحالية</label>
-            <input id="bizChannels" placeholder="مثال: إنستغرام، تيك توك، إعلانات ممولة، واتساب" />
+            <label>الفئة المستهدفة / القنوات الحالية</label>
+            <input id="bizChannels" placeholder="مثال: العائلات والمقبلين على الزواج — إنستغرام وتيك توك" />
           </div>
         </div>
-        <div class="grid-2" style="margin-top:14px;">
+        <div class="grid-2" style="margin-top:12px;">
           <div>
             <label>رابط الحساب أو الموقع (اختياري)</label>
             <input id="bizUrl" placeholder="https://instagram.com/yourbusiness" />
           </div>
           <div>
-            <label>ما الذي يميزك حالياً أو من أبرز منافسك؟ (اختياري)</label>
-            <input id="bizEdge" placeholder="مثال: توصيل أسرع / خامات طبيعية / منافسنا الرئيسي X" />
+            <label>ما الذي يميزك حالياً أو من أبرز منافسك؟</label>
+            <input id="bizEdge" placeholder="مثال: جودة التصنيع والضمان / توصيل سريع" />
           </div>
         </div>
-        <div style="margin-top:14px;">
-          <label>صف مشروعك وأبرز المشكلة التي تواجهها الآن بالتفصيل *</label>
-          <textarea id="bizDesc" rows="3" required placeholder="كلما كان الوصف أدق، كان التشخيص أقوى. مثال: ننشر صور منتجات باستمرار ونصرف على إعلانات إنستغرام لكن الرسائل تسأل عن السعر فقط ولا تشتري..."></textarea>
+        <div style="margin-top:12px;">
+          <label>صف مشروعك وأبرز المشكلة التي تواجهها بالتفصيل *</label>
+          <textarea id="bizDesc" rows="3" required placeholder="كلما كان الوصف أدق، كان الفحص أعمق وأقرب للواقع..."></textarea>
         </div>
-        <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
-          <button id="submitBtn" class="btn btn-primary" type="submit">ابدأ التشخيص الاحترافي الآن</button>
+        <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+          <button id="submitBtn" class="btn btn-primary" style="padding:12px 24px;font-size:15px;" type="submit">ابدأ فحص مِرآة 6D الآن</button>
           <span id="statusMsg" style="font-size:13px;color:var(--muted);"></span>
         </div>
       </form>
     </div>
 
-    <!-- نتيجة التقرير -->
+    <!-- التقرير الكامل -->
     <div id="reportArea" class="hidden">
-      <div class="card">
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:16px;">
-          <div>
-            <h2 id="repTitle" style="margin:0;font-size:22px;">تقرير مِرآة برو التشخيصي</h2>
-            <div style="font-size:12px;color:var(--muted);">بإشراف: محمد الشرقاوي — خبير كتابة المحتوى والتسويق الرقمي | واتساب: 00201005535574</div>
-          </div>
-          <div class="no-print" style="display:flex;gap:8px;flex-wrap:wrap;">
-            <button class="btn btn-outline" onclick="toggleViewMode()" id="viewModeBtn">عرض تقييم الأبعاد الستة (6D)</button>
-            <button class="btn btn-outline" onclick="window.print()">طباعة / حفظ PDF</button>
-            <a id="repWaBtn" class="btn btn-wa" href="#" target="_blank">نفّذ الخطة مع الخبير</a>
-          </div>
-        </div>
+      <div id="aiStatusBanner" class="status-banner status-ai"></div>
 
-        <div class="score-box">
+      <div class="report-banner">
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
           <div class="score-circle" id="scoreCircle" style="--p:70"><span id="scoreNum">70</span></div>
-          <div style="flex:1;">
-            <div style="font-weight:800;font-size:17px;margin-bottom:4px;">التشخيص التنفيذي (الحقيقة التسويقية لمشروعك)</div>
-            <div id="repSummary" style="color:#cbd5e1;font-size:14px;"></div>
+          <div>
+            <div style="font-size:12px;color:#34d399;font-weight:800;">تقرير مِرآة برو التشخيصي (MIRAA 6D)</div>
+            <h2 id="repTitle" style="margin:2px 0;font-size:22px;">اسم المشروع</h2>
+            <div style="font-size:12px;color:#94a3b8;">إشراف: محمد الشرقاوي — خبير كتابة المحتوى والتسويق الرقمي | واتساب: 00201005535574</div>
           </div>
         </div>
-
-        <!-- الوضع المبسط العميق للعميل -->
-        <div id="simpleView">
-          <div class="grid-3" style="margin-bottom:20px;">
-            <div class="item-card">
-              <span class="pill pill-green">🟢 نقطة قوة حقيقية</span>
-              <p id="repGood" style="font-size:14px;margin:8px 0 0;"></p>
-            </div>
-            <div class="item-card">
-              <span class="pill pill-red">🔴 أكبر تسريب للمبيعات</span>
-              <p id="repLeak" style="font-size:14px;margin:8px 0 0;"></p>
-            </div>
-            <div class="item-card">
-              <span class="pill pill-warn">🟡 أول إجراء اليوم</span>
-              <p id="repFirst" style="font-size:14px;margin:8px 0 0;"></p>
-            </div>
-          </div>
-
-          <h3 style="margin:0 0 12px;color:#f87171;">أوجه القصور الحرجة وكيفية معالجتها باحتراف</h3>
-          <div id="gapsList" style="margin-bottom:22px;"></div>
-
-          <h3 style="margin:0 0 12px;color:#34d399;">إعادة صياغة الرسالة البيعية والعرض (قبل وبعد)</h3>
-          <div class="before-after">
-            <div class="ba-before">
-              <div style="font-weight:800;color:#f87171;margin-bottom:6px;">❌ الأسلوب التقليدي الحالي (الذي يضعف التحويل)</div>
-              <div id="baBeforeText" style="font-size:14px;"></div>
-            </div>
-            <div class="ba-after">
-              <div style="font-weight:800;color:#34d399;margin-bottom:6px;">✅ الصياغة الاحترافية المقترحة لمشروعك (جاهزة للاستخدام)</div>
-              <div id="baAfterText" style="font-size:14px;"></div>
-            </div>
-          </div>
-
-          <h3 style="margin:0 0 12px;color:#60a5fa;">خطة المعالجة والنمو خلال 30 يوماً (بمؤشرات قياس واضحة)</h3>
-          <div id="planList" class="grid-2"></div>
+        <div class="no-print" style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button class="btn btn-dark-outline" onclick="window.print()">طباعة / حفظ PDF</button>
+          <a id="repWaBtn" class="btn btn-wa" href="#" target="_blank">ناقش التقرير مع الخبير</a>
         </div>
+      </div>
 
-        <!-- الوضع التفصيلي 6D -->
-        <div id="expertView" class="hidden">
-          <h3 style="margin:0 0 12px;">تقييم أبعاد مِرآة الستة (MIRAA 6D) — الدليل والمعالجة</h3>
-          <div id="dimsList" class="grid-2"></div>
+      <!-- 1. الملخص التنفيذي -->
+      <div class="card">
+        <h3 class="section-title">الملخص التنفيذي — أين يقف المشروع؟</h3>
+        <p id="repSummary" style="font-size:15px;color:#334155;margin:0;"></p>
+      </div>
+
+      <!-- 2. خريطة الأبعاد الستة + توزيع الدرجات -->
+      <div class="grid-2">
+        <div class="card" style="text-align:center;">
+          <h3 class="section-title" style="justify-content:center;">خريطة الأبعاد الستة (MIRAA 6D)</h3>
+          <div id="radarContainer" style="display:flex;justify-content:center;align-items:center;"></div>
         </div>
+        <div class="card">
+          <h3 class="section-title">توزيع الدرجات حسب المحور</h3>
+          <div id="barsContainer"></div>
+        </div>
+      </div>
+
+      <!-- 3. تفاصيل المحاور الستة (الدليل المرصود + التشخيص + التوصية العملية) -->
+      <div class="card" style="background:transparent;border:none;padding:0;box-shadow:none;">
+        <h3 class="section-title">التشخيص التفصيلي للمحاور الستة</h3>
+        <div id="dimsList"></div>
+      </div>
+
+      <!-- 4. أوجه القصور الحرجة والمعالجة الاحترافية -->
+      <div class="card">
+        <h3 class="section-title">أوجه القصور الحرجة وكيفية معالجتها باحتراف</h3>
+        <div id="gapsList"></div>
+      </div>
+
+      <!-- 5. قبل وبعد -->
+      <div class="card">
+        <h3 class="section-title">إعادة صياغة الرسالة البيعية والعرض (قبل وبعد)</h3>
+        <div class="grid-2">
+          <div class="ba-before">
+            <div style="font-weight:800;color:#b91c1c;margin-bottom:6px;">❌ الأسلوب التقليدي الحالي</div>
+            <div id="baBeforeText" style="font-size:14px;"></div>
+          </div>
+          <div class="ba-after">
+            <div style="font-weight:800;color:#065f46;margin-bottom:6px;">✅ الصياغة الاحترافية المقترحة لمشروعك</div>
+            <div id="baAfterText" style="font-size:14px;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. خطة 30 يوماً -->
+      <div class="card">
+        <h3 class="section-title">خارطة طريق النمو خلال 30 يوماً</h3>
+        <div id="planList" class="grid-2"></div>
+      </div>
+
+      <!-- دعوة احترافية للتواصل مع الخبير -->
+      <div class="report-banner no-print" style="margin-top:20px;">
+        <div>
+          <div style="font-weight:900;font-size:18px;color:#34d399;">هل تريد تحويل هذا التقرير إلى مبيعات فعلية لمشروعك؟</div>
+          <div style="font-size:13px;color:#cbd5e1;">تواصل مباشرة مع الخبير <strong>محمد الشرقاوي</strong> لتنفيذ خطة المحتوى والتصاميم والحملات الإعلانية بباقات مرنة.</div>
+        </div>
+        <a id="repWaBtn2" class="btn btn-wa" style="padding:12px 20px;font-size:15px;" href="#" target="_blank">تواصل عبر واتساب الآن</a>
       </div>
     </div>
   </section>
 
-  <!-- قسم الباقات والخدمات -->
+  <!-- قسم الباقات -->
   <section id="section-pricing" class="hidden">
     <div class="card">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:18px;">
         <div>
-          <h2 style="margin:0;">باقات الاشتراك والخدمات التسويقية المرنة</h2>
-          <div style="font-size:13px;color:var(--muted);">اختر العملة المناسبة لك وتواصل مباشرة عبر واتساب لتنفيذ خطتك</div>
+          <h2 class="section-title" style="margin:0;">باقات الاشتراك والخدمات التسويقية المرنة</h2>
+          <div style="font-size:13px;color:var(--muted);">اختر العملة المناسبة وتواصل مباشرة عبر واتساب</div>
         </div>
         <select id="currencySel" onchange="renderPrices()" style="width:auto;">
           <option value="EGP">جنيه مصري (EGP)</option>
@@ -327,27 +349,16 @@
 <footer class="container">
   <div><strong>مِرآة برو | MIRAA Pro</strong> — جميع الحقوق محفوظة © 2026 <strong>محمد الشرقاوي</strong> (خبير كتابة المحتوى والتسويق الرقمي)</div>
   <div style="margin-top:8px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
-    <a href="javascript:void(0)" onclick="openModal('aboutModal')">عن الخبير وإثبات الملكية</a>
     <a href="javascript:void(0)" onclick="openModal('privacyModal')">سياسة الخصوصية</a>
     <a href="javascript:void(0)" onclick="openModal('termsModal')">شروط الاستخدام</a>
     <a href="https://wa.me/201005535574" target="_blank">واتساب: 00201005535574</a>
   </div>
 </footer>
 
-<div id="aboutModal" class="modal-bg hidden" onclick="if(event.target===this)closeModal('aboutModal')">
-  <div class="modal">
-    <h3 style="margin-top:0;">عن الخبير وإثبات الملكية</h3>
-    <p>منصة <strong>مِرآة برو | MIRAA Pro</strong> مملوكة بالكامل وتعمل تحت الإشراف المباشر للأستاذ <strong>محمد الشرقاوي</strong> — خبير كتابة المحتوى، السيو (SEO)، وبناء الخطط التسويقية للأنشطة التجارية في مصر والسعودية والوطن العربي.</p>
-    <p><strong>للتواصل المباشر والاستشارات:</strong><br>واتساب: <a href="https://wa.me/201005535574" target="_blank" style="color:#34d399;font-weight:700;">00201005535574</a></p>
-    <button class="btn btn-primary" onclick="closeModal('aboutModal')">إغلاق</button>
-  </div>
-</div>
-
 <div id="privacyModal" class="modal-bg hidden" onclick="if(event.target===this)closeModal('privacyModal')">
   <div class="modal">
     <h3 style="margin-top:0;">سياسة الخصوصية — مِرآة برو</h3>
-    <p>نحترم خصوصية زوارنا وأصحاب المشاريع. البيانات التي تدخلها في نموذج الفحص تُستخدم فقط لتوليد التقرير التسويقي الخاص بك ولا يتم بيعها أو مشاركتها مع أي طرف ثالث.</p>
-    <p>قد تعرض النسخة المجانية إعلانات ترويجية أو إعلانات عبر شبكات إعلانية مثل Google AdSense.</p>
+    <p>نحترم خصوصية زوارنا وأصحاب المشاريع. البيانات التي تدخلها تُستخدم فقط لتوليد التقرير التسويقي الخاص بك ولا يتم بيعها أو مشاركتها مع أي طرف ثالث.</p>
     <button class="btn btn-primary" onclick="closeModal('privacyModal')">إغلاق</button>
   </div>
 </div>
@@ -355,50 +366,39 @@
 <div id="termsModal" class="modal-bg hidden" onclick="if(event.target===this)closeModal('termsModal')">
   <div class="modal">
     <h3 style="margin-top:0;">شروط الاستخدام — مِرآة برو</h3>
-    <p>التقارير الصادرة عن النسخة المجانية من «مِرآة برو» هي توصيات استرشادية مبنية على البيانات التي يقدمها المستخدم، ولا تمثل ضماناً مالياً محدداً دون تنفيذ عملي منضبط.</p>
-    <p>جميع حقوق الملكية الفكرية محفوظة للأستاذ محمد الشرقاوي.</p>
+    <p>جميع حقوق الملكية الفكرية ومنهجية MIRAA 6D محفوظة للأستاذ محمد الشرقاوي.</p>
     <button class="btn btn-primary" onclick="closeModal('termsModal')">إغلاق</button>
   </div>
 </div>
 
 <script>
-  let isExpertMode = false;
-
-  function scrollToAboutProgram() {
+  function scrollToAbout() {
     showSection('scan');
-    setTimeout(() => {
-      const el = document.getElementById('about-program');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }, 50);
+    setTimeout(() => document.getElementById('about-program').scrollIntoView({ behavior: 'smooth' }), 50);
   }
-
   function showSection(sec) {
     document.getElementById('section-scan').classList.toggle('hidden', sec !== 'scan');
     document.getElementById('section-pricing').classList.toggle('hidden', sec !== 'pricing');
     if (sec === 'pricing') renderPrices();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
   function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
   function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
 
-  function toggleViewMode() {
-    isExpertMode = !isExpertMode;
-    document.getElementById('simpleView').classList.toggle('hidden', isExpertMode);
-    document.getElementById('expertView').classList.toggle('hidden', !isExpertMode);
-    document.getElementById('viewModeBtn').textContent = isExpertMode ? 'العودة للتقرير التشخيصي الكامل' : 'عرض تقييم الأبعاد الستة (6D)';
+  function fillDemo() {
+    document.getElementById('bizName').value = 'عنوان الخزائن';
+    document.getElementById('bizSector').value = 'أثاث وديكور وخزائن';
+    document.getElementById('bizCity').value = 'مكة، الطائف، الباحة';
+    document.getElementById('bizPrice').value = 'متوسطة (قيمة مقابل سعر)';
+    document.getElementById('bizGoal').value = 'تحويل المتابعين لزيارات ميدانية للفروع';
+    document.getElementById('bizChannels').value = 'العائلات والمقبلين على الزواج — إنستغرام وتيك توك';
+    document.getElementById('bizUrl').value = 'https://instagram.com/enwan_closets';
+    document.getElementById('bizEdge').value = 'معارض فعلية في 3 مدن وتفصيل حسب الطلب بجودة عالية';
+    document.getElementById('bizDesc').value = 'لدينا معارض ومنتجات عالية الجودة لكن التفاعل على السوشيال ميديا ضعيف ولا يتحول إلى زيارات ميدانية كافية للفروع.';
   }
 
-  function fillDemo() {
-    document.getElementById('bizName').value = 'مطعم سماش برجر الرياض';
-    document.getElementById('bizSector').value = 'مطاعم وكافيهات';
-    document.getElementById('bizCity').value = 'الرياض';
-    document.getElementById('bizPrice').value = 'متوسطة (قيمة مقابل سعر)';
-    document.getElementById('bizGoal').value = 'زيادة المبيعات والطلبات المباشرة';
-    document.getElementById('bizChannels').value = 'إنستغرام، تيك توك، وتطبيقات التوصيل';
-    document.getElementById('bizUrl').value = 'https://instagram.com/smashburger_ryd';
-    document.getElementById('bizEdge').value = 'لحم طازج يُفرم يومياً وخبز بريوش خاص';
-    document.getElementById('bizDesc').value = 'ننشر صور الوجبات باستمرار على إنستغرام، ونطلق إعلانات ممولة أحياناً، لكن التفاعل ضعيف جداً والطلبات المباشرة قليلة مقارنة بمطاعم البرجر المنافسة في نفس الحي.';
+  function cleanJsonText(text) {
+    return text.replace(/```json/gi, '').replace(/```/g, '').trim();
   }
 
   async function runScan(e) {
@@ -416,158 +416,182 @@
     const desc = document.getElementById('bizDesc').value.trim();
 
     btn.disabled = true;
-    btn.innerHTML = '<span class="loader"></span> جاري التشخيص العميق...';
-    status.textContent = 'يتم الآن فحص أوجه القصور وبناء خطة المعالجة الاحترافية...';
+    btn.innerHTML = '<span class="loader"></span> جاري الفحص العميق عبر Gemini AI...';
+    status.textContent = 'يتم الآن تحليل المحاور الستة وبناء التقرير التفصيلي...';
 
-    const prompt = `حلل النشاط التجاري التالي بدقة احترافية عالية:
+    const prompt = `حلل النشاط التالي وفق منهجية MIRAA 6D بدقة استشارية عالية:
 - اسم النشاط: ${name}
 - القطاع: ${sector}
-- المدينة/السوق: ${city}
+- المدن/السوق: ${city}
 - شريحة الأسعار: ${priceTier}
-- الهدف الحالي: ${goal}
-- القنوات الحالية: ${channels || 'غير محددة'}
+- الهدف: ${goal}
+- الجمهور والقنوات: ${channels || 'غير محددة'}
 - الرابط: ${url || 'غير محدد'}
-- الميزة أو المنافس: ${edge || 'غير محددة'}
-- الوصف والمشكلة الحالية: ${desc}
+- الميزة التنافسية: ${edge || 'غير محددة'}
+- الوصف والمشكلة: ${desc}
 
-أرجع JSON فقط بالبنية التالية بالضبط:
+أرجع JSON فقط بهذه البنية بالضبط:
 {
   "overallScore": 64,
-  "summary": "تشخيص تنفيذي صريح وعميق في 3 أسطر يشرح السبب الجذري للمشكلة الحالية وفرصة التحول",
-  "whatWorks": "نقطة قوة حقيقية ملموسة في النشاط يمكن البناء عليها",
-  "salesLeak": "أكبر ثغرة حقيقية تسببت في تسريب العملاء وضياع المبيعات",
-  "firstStepToday": "أول إجراء عملي محدد ينفذه صاحب المشروع اليوم خلال ساعة واحدة",
+  "summary": "ملخص تنفيذي غني ومفصل في 4 إلى 5 أسطر يذكر اسم النشاط ومدنه ويشرح الفجوة الرقمية الحقيقية واستراتيجية مِرآة لمعالجتها",
+  "dimensions": [
+    {"name": "الانطباع الأول", "score": 60, "status": "متوسط", "evidence": "الدليل المرصود بدقة", "recommendation": "التوصية العملية المحددة"},
+    {"name": "وضوح الرسالة", "score": 55, "status": "متوسط", "evidence": "الدليل المرصود بدقة", "recommendation": "التوصية العملية المحددة"},
+    {"name": "التواصل", "score": 45, "status": "ضعيف", "evidence": "الدليل المرصود بدقة", "recommendation": "التوصية العملية المحددة"},
+    {"name": "الجمهور", "score": 72, "status": "جيد", "evidence": "الدليل المرصود بدقة", "recommendation": "التوصية العملية المحددة"},
+    {"name": "المنافسة", "score": 52, "status": "متوسط", "evidence": "الدليل المرصود بدقة", "recommendation": "التوصية العملية المحددة"},
+    {"name": "النمو", "score": 65, "status": "جيد", "evidence": "الدليل المرصود بدقة", "recommendation": "التوصية العملية المحددة"}
+  ],
   "criticalGaps": [
-    {
-      "gap": "عنوان وجه القصور الأول بدقة",
-      "impact": "لماذا يضيّع هذا القصور المبيعات فعلياً؟",
-      "fix": "خطوات المعالجة الاحترافية المحددة (1، 2، 3)",
-      "example": "مثال تطبيقي مكتوب وجاهز للنسخ مخصص لـ ${name}"
-    },
-    {
-      "gap": "عنوان وجه القصور الثاني بدقة",
-      "impact": "لماذا يضيّع هذا القصور المبيعات فعلياً؟",
-      "fix": "خطوات المعالجة الاحترافية المحددة",
-      "example": "مثال تطبيقي مكتوب وجاهز للنسخ مخصص لـ ${name}"
-    },
-    {
-      "gap": "عنوان وجه القصور الثالث بدقة",
-      "impact": "لماذا يضيّع هذا القصور المبيعات فعلياً؟",
-      "fix": "خطوات المعالجة الاحترافية المحددة",
-      "example": "مثال تطبيقي مكتوب وجاهز للنسخ مخصص لـ ${name}"
-    }
+    {"gap": "عنوان وجه القصور 1", "impact": "كيف يضيّع المبيعات", "fix": "خطوات المعالجة", "example": "مثال تطبيقي مكتوب وجاهز باسم ${name}"},
+    {"gap": "عنوان وجه القصور 2", "impact": "كيف يضيّع المبيعات", "fix": "خطوات المعالجة", "example": "مثال تطبيقي مكتوب وجاهز باسم ${name}"},
+    {"gap": "عنوان وجه القصور 3", "impact": "كيف يضيّع المبيعات", "fix": "خطوات المعالجة", "example": "مثال تطبيقي مكتوب وجاهز باسم ${name}"}
   ],
   "beforeAfter": {
-    "before": "مثال للرسالة أو العرض التقليدي الضعيف الذي يقع فيه النشاط غالباً",
-    "after": "إعادة صياغة احترافية جذابة للرسالة/البايو/العرض مخصصة تماماً لـ ${name}"
+    "before": "الرسالة التقليدية الضعيفة الحالية",
+    "after": "الصياغة الاحترافية المقترحة باسم ${name}"
   },
   "plan30": [
-    {"week": "الأسبوع 1 — سد تسريب التحويل", "focus": "خطوات عملية محددة", "kpi": "مؤشر القياس المطلوب"},
-    {"week": "الأسبوع 2 — صناعة محتوى الإقناع", "focus": "خطوات عملية محددة", "kpi": "مؤشر القياس المطلوب"},
-    {"week": "الأسبوع 3 — اختبار العرض والحملة", "focus": "خطوات عملية محددة", "kpi": "مؤشر القياس المطلوب"},
-    {"week": "الأسبوع 4 — مضاعفة الرابح وإعادة الاستهداف", "focus": "خطوات عملية محددة", "kpi": "مؤشر القياس المطلوب"}
-  ],
-  "dimensions": [
-    {"name": "الانطباع الأول (First Impression)", "score": 60, "note": "التشخيص الدقيق + خطوة المعالجة"},
-    {"name": "وضوح العرض والقيمة (Value Proposition)", "score": 52, "note": "التشخيص الدقيق + خطوة المعالجة"},
-    {"name": "قوة المحتوى الإقناعي (Persuasion)", "score": 55, "note": "التشخيص الدقيق + خطوة المعالجة"},
-    {"name": "معالجة اعتراضات العميل (Objections)", "score": 48, "note": "التشخيص الدقيق + خطوة المعالجة"},
-    {"name": "التميّز التنافسي (Positioning)", "score": 66, "note": "التشخيص الدقيق + خطوة المعالجة"},
-    {"name": "مسار الشراء والتحويل (Conversion Funnel)", "score": 58, "note": "التشخيص الدقيق + خطوة المعالجة"}
+    {"week": "الأسبوع 1", "focus": "الإجراءات العملية", "kpi": "مؤشر القياس"},
+    {"week": "الأسبوع 2", "focus": "الإجراءات العملية", "kpi": "مؤشر القياس"},
+    {"week": "الأسبوع 3", "focus": "الإجراءات العملية", "kpi": "مؤشر القياس"},
+    {"week": "الأسبوع 4", "focus": "الإجراءات العملية", "kpi": "مؤشر القياس"}
   ]
 }`;
 
     let reportData = null;
+    let usedAI = false;
+    let apiErrorMsg = '';
+
     try {
       const res = await fetch('/api/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          prompt,
-          meta: { name, sector, city, goal, url, desc }
-        })
+        body: JSON.stringify({ prompt, meta: { name, sector, city, goal, url, desc } })
       });
+      const json = await res.json().catch(() => ({}));
       if (res.ok) {
-        const json = await res.json();
-        const text = json?.candidates?.[0]?.content?.parts?.[0]?.text || '';
-        reportData = JSON.parse(text);
+        const rawText = json?.candidates?.[0]?.content?.parts?.[0]?.text || '';
+        reportData = JSON.parse(cleanJsonText(rawText));
+        usedAI = true;
+      } else {
+        apiErrorMsg = json?.error || `HTTP ${res.status} — تأكد من وجود ملف api/analyze.js ومفتاح GEMINI_API_KEY في Vercel`;
       }
     } catch (err) {
-      console.warn('Fallback mode active:', err);
+      apiErrorMsg = 'تعذر الاتصال بمحرك الذكاء الاصطناعي (/api/analyze). تأكد من رفع مجلد api وإضافة GEMINI_API_KEY في Vercel.';
     }
 
     if (!reportData) {
       reportData = {
-        overallScore: 62,
-        summary: `مشروع "${name}" في قطاع (${sector}) بسوق ${city} يعاني من فجوة بين جودة ما يقدمه وبين طريقة عرضه للعميل؛ المحتوى الحالي يكتفي بالوصف ولا يمنح العميل سبباً فورياً لاختيارك دون المنافسين.`,
-        whatWorks: `وجود ميزة فعلية (${edge || 'جودة المنتج/الخدمة'}) مع حضور قائم على القنوات الرقمية.`,
-        salesLeak: 'غياب مسار واضح يحوّل المشاهد من مجرد متصفح إلى عميل يتواصل أو يطلب فوراً، مع تشابه الرسائل مع المنافسين.',
-        firstStepToday: 'إعادة كتابة وصف الحساب (Bio) وتثبيت منشور واحد يعرض ميزتك التنافسية + عرض دخول واضح + رابط تواصل مباشر.',
+        overallScore: 60,
+        summary: `يعاني "${name}" في قطاع (${sector}) بـ (${city}) من فجوة رقمية واضحة بين جودة ما يقدمه على أرض الواقع وبين طريقة عرضه على المنصات الرقمية، مما يضعف تحويل المتابعين إلى عملاء فعليين. تتركز استراتيجية مِرآة على تحويل المحتوى من العرض التقليدي إلى محتوى إقناعي يعزز الثقة ويعالج مخاوف العميل قبل اتخاذ قرار الشراء.`,
+        dimensions: [
+          { name: 'الانطباع الأول', score: 60, status: 'متوسط', evidence: 'المنتج واضح لكن الهوية والميزة التنافسية لا تظهران في أول 5 ثوانٍ.', recommendation: 'تحديث البايو وتثبيت 3 منشورات: قصتك، ميزتك، وتجارب عملاء حقيقيين.' },
+          { name: 'وضوح الرسالة', score: 52, status: 'متوسط', evidence: 'المحتوى يركز على وصف الخدمة أكثر من توضيح سبب اختيار العميل لك.', recommendation: 'صياغة عرض دخول واضح يربط ميزتك بنتيجة ملموسة للعميل.' },
+          { name: 'التواصل', score: 42, status: 'ضعيف', evidence: 'ضعف التفاعل على التعليقات وغياب دعوات واضحة لاتخاذ إجراء (Call to Action).', recommendation: 'تفعيل الرد السريع المخصص وتخصيص فقرة أسبوعية للإجابة عن أسئلة العملاء.' },
+          { name: 'الجمهور', score: 70, status: 'جيد', evidence: `استهداف جغرافي واضح في (${city}) لشريحة ذات قدرة شرائية جيدة.`, recommendation: `إطلاق محتوى مخصص يخاطب اهتمامات عملاء (${city}) بشكل مباشر.` },
+          { name: 'المنافسة', score: 50, status: 'متوسط', evidence: 'تشابه أسلوب العرض مع المنافسين يجعل العميل يقارن بالسعر فقط.', recommendation: 'إبراز الكواليس والجودة والضمان كعناصر تميز لا يمكن تقليدها بسهولة.' },
+          { name: 'النمو', score: 64, status: 'جيد', evidence: 'توجد فرص قوية غير مستغلة في الفيديو القصير وإعادة الاستهداف.', recommendation: 'اختبار حملة إعلانية مصغرة على أفضل 2 فيديو حققا أعلى تفاعل.' }
+        ],
         criticalGaps: [
-          {
-            gap: 'غياب سبب الشراء الفوري (Weak Value Proposition)',
-            impact: 'عندما يرى العميل صور منتجات فقط دون معرفة الفرق الحقيقي، يقارنك بالسعر فقط ويغادر للمنافس الأرخص أو الأشهر.',
-            fix: '1) اربط كل منشور بنتيجة أو تجربة يشعر بها العميل. 2) أبرز الميزة التنافسية في أول 3 ثوانٍ من أي فيديو أو سطر أول من المنشور.',
-            example: `بدل "اطلب الآن من ${name}" ← اكتب: "لماذا يعود عملاء ${city} إلى ${name}؟ لأننا نلتزم بـ (${edge || 'جودة استثنائية'}). جرّب عرضنا الأول اليوم واكتشف الفرق بنفسك."`
-          },
-          {
-            gap: 'إهمال معالجة اعتراضات العميل قبل الشراء',
-            impact: 'العميل يتردد بسبب أسئلة غير مجابة (الجودة، السعر، سرعة التنفيذ/التوصيل، الضمان) فيؤجل قرار الشراء ولا يعود.',
-            fix: '1) اجمع أكثر 5 أسئلة تتكرر في الرسائل. 2) حوّل كل سؤال إلى فيديو قصير أو منشور يثبت الإجابة عملياً بالدليل.',
-            example: `فيديو 20 ثانية: "أكثر سؤال يصلنا في ${name}: هل يستحق السعر؟ شاهد بنفسك كيف نجهّز طلبك خطوة بخطوة..."`
-          },
-          {
-            gap: 'احتكاك في مسار الطلب والتحويل (Conversion Friction)',
-            impact: 'ترك العميل يبحث عن طريقة الطلب أو الانتظار طويلاً للرد يضيّع أكثر من 50% من العملاء الجاهزين للشراء.',
-            fix: '1) ضع رابط واتساب مباشر برسالة جاهزة في البايو. 2) جهّز ردّاً سريعاً منظماً يحتوي على العرض وخطوة التأكيد في رسالتين فقط.',
-            example: `في البايو: "📍 ${city} | ⚡ طلب سريع عبر واتساب خلال دقيقة 👇 [رابطك المباشر]"`
-          }
+          { gap: 'غياب الميزة التنافسية الواضحة', impact: 'يجعل العميل يقارنك بالسعر فقط ويغادر للمنافس الأرخص.', fix: 'إبراز ميزتك الأساسية في أول سطر من كل منشور وأول 3 ثوانٍ من كل فيديو.', example: `في ${name} (${city})، نضمن لك (${edge || 'جودة استثنائية'}) مع متابعة كاملة حتى استلام طلبك.` },
+          { gap: 'ضعف الدعوة لاتخاذ إجراء (CTA)', impact: 'يشاهد العميل المحتوى ويعجب به ثم يغادر دون تواصل.', fix: 'إنهاء كل منشور بخطوة واحدة واضحة ومغرية عبر واتساب.', example: 'تواصل معنا الآن عبر واتساب واحصل على استشارة/عرض مخصص خلال دقائق.' }
         ],
         beforeAfter: {
-          before: `نقدم أفضل خدمات ومنتجات ${sector} في ${city} بجودة عالية وأسعار مناسبة. تواصل معنا الآن.`,
-          after: `في ${name} (${city}) نمنحك تجربة ${sector} مختلفة بفضل ${edge || 'اهتمامنا بأدق التفاصيل'}. اطلب عرض التجربة الأولى الآن عبر واتساب واستلم خلال وقت قياسي.`
+          before: `نقدم أفضل خدمات ${sector} في ${city} بجودة عالية وأسعار مناسبة.`,
+          after: `في ${name} (${city}) نصنع لك تجربة ${sector} مختلفة بفضل ${edge || 'اهتمامنا بالتفاصيل'}. تواصل معنا اليوم واكتشف الفرق بنفسك.`
         },
         plan30: [
-          { week: 'الأسبوع 1 — سد تسريب التحويل', focus: 'تحديث البايو، تثبيت منشور التعريف والعرض، وتجهيز ردود واتساب السريعة.', kpi: 'رفع نسبة النقر على رابط التواصل' },
-          { week: 'الأسبوع 2 — محتوى الإقناع وإزالة التردد', focus: 'نشر 3 فيديوهات كواليس وتجارب عملاء حقيقية تجيب عن أهم الاعتراضات.', kpi: 'زيادة عدد الرسائل والاستفسارات الجادة' },
-          { week: 'الأسبوع 3 — إطلاق عرض الدخول الذكي', focus: 'اختبار حملة إعلانية مصغرة على أفضل فيديو حقق تفاعلاً بعرض محدد المدة.', kpi: 'خفض تكلفة الرسالة/الطلب المباشر' },
-          { week: 'الأسبوع 4 — المضاعفة وإعادة الاستهداف', focus: 'إيقاف الإعلانات الضعيفة ومضاعفة الميزانية على المحتوى الأعلى مبيعاً.', kpi: 'تحقيق نمو ملموس في إجمالي المبيعات' }
-        ],
-        dimensions: [
-          { name: 'الانطباع الأول (First Impression)', score: 62, note: 'النشاط واضح لكنه لا يبرز الميزة التنافسية خلال أول 5 ثوانٍ. المعالجة: تحديث البايو والمنشورات المثبتة.' },
-          { name: 'وضوح العرض والقيمة (Value Proposition)', score: 54, note: 'العرض عام ويشبه المنافسين. المعالجة: صياغة عرض دخول محدد يبرز الفرق.' },
-          { name: 'قوة المحتوى الإقناعي (Persuasion)', score: 58, note: 'يغلب عليه العرض المباشر بدل إظهار التجربة والنتيجة. المعالجة: التحول لمحتوى القصة والدليل.' },
-          { name: 'معالجة اعتراضات العميل (Objections)', score: 50, note: 'أسئلة العملاء المتكررة غير مستثمرة في المحتوى. المعالجة: سلسلة منشورات تجيب على كل اعتراض.' },
-          { name: 'التميّز التنافسي (Positioning)', score: 68, note: 'توجد مساحة قوية للتميز في سوق ' + city + ' عبر إبراز الهوية وتجربة العميل.' },
-          { name: 'مسار الشراء والتحويل (Conversion Funnel)', score: 60, note: 'يحتاج لتقليل خطوات الطلب وتسهيل التواصل الفوري عبر واتساب.' }
+          { week: 'الأسبوع 1', focus: 'إصلاح واجهة الحساب وتثبيت الرسالة البيعية ورابط واتساب المباشر.', kpi: 'رفع النقرات على رابط التواصل' },
+          { week: 'الأسبوع 2', focus: 'نشر محتوى الكواليس وتجارب العملاء والإجابة على الأسئلة الشائعة.', kpi: 'زيادة الرسائل الجادة' },
+          { week: 'الأسبوع 3', focus: 'إطلاق عرض تجريبي وحملة ممولة مصغرة على أفضل محتوى.', kpi: 'خفض تكلفة العميل المحتمل' },
+          { week: 'الأسبوع 4', focus: 'قياس النتائج ومضاعفة الإعلان الرابح وبناء عرض لإعادة الشراء.', kpi: 'نمو فعلي في المبيعات' }
         ]
       };
     }
 
-    renderReport(name, reportData);
+    renderReport(name, reportData, usedAI, apiErrorMsg);
     btn.disabled = false;
-    btn.textContent = 'ابدأ التشخيص الاحترافي الآن';
-    status.textContent = 'تم تجهيز التقرير التشخيصي بنجاح!';
+    btn.textContent = 'ابدأ فحص مِرآة 6D الآن';
+    status.textContent = usedAI ? 'تم توليد التقرير بنجاح عبر Gemini AI!' : 'تم عرض التقرير الاحتياطي (راجع التنبيه أعلى التقرير).';
   }
 
-  function renderReport(name, d) {
+  function buildRadarSVG(dims) {
+    const size = 280, cx = 140, cy = 140, r = 95;
+    const n = dims.length || 6;
+    const getPt = (i, val) => {
+      const angle = (Math.PI * 2 * i) / n - Math.PI / 2;
+      const dist = (val / 100) * r;
+      return [cx + dist * Math.cos(angle), cy + dist * Math.sin(angle)];
+    };
+    let grid = '';
+    [25, 50, 75, 100].forEach(lvl => {
+      const pts = dims.map((_, i) => getPt(i, lvl).join(',')).join(' ');
+      grid += `<polygon points="${pts}" fill="none" stroke="#e2e8f0" stroke-width="1"/>`;
+    });
+    let axes = '', labels = '';
+    dims.forEach((d, i) => {
+      const [x, y] = getPt(i, 100);
+      axes += `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#e2e8f0" stroke-width="1"/>`;
+      const [lx, ly] = getPt(i, 122);
+      labels += `<text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="#334155">${d.name}</text>`;
+    });
+    const dataPts = dims.map((d, i) => getPt(i, d.score || 50));
+    const poly = dataPts.map(p => p.join(',')).join(' ');
+    const dots = dataPts.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="4" fill="#10b981" stroke="#fff" stroke-width="1.5"/>`).join('');
+    return `<svg viewBox="0 0 ${size} ${size}" width="280" height="280">${grid}${axes}<polygon points="${poly}" fill="rgba(16,185,129,0.22)" stroke="#10b981" stroke-width="2.5"/>${dots}${labels}</svg>`;
+  }
+
+  function renderReport(name, d, usedAI, errMsg) {
     document.getElementById('reportArea').classList.remove('hidden');
-    document.getElementById('repTitle').textContent = `تقرير مِرآة برو التشخيصي — ${name}`;
+    const banner = document.getElementById('aiStatusBanner');
+    if (usedAI) {
+      banner.className = 'status-banner status-ai';
+      banner.innerHTML = '<span>✅ تم توليد هذا التقرير بتحليل ذكي مباشر ومخصص عبر <strong>Gemini AI</strong>.</span>';
+    } else {
+      banner.className = 'status-banner status-warn';
+      banner.innerHTML = `<span>⚠️ يعمل الآن على الوضع الاحتياطي (تقرير عام) بسبب: <strong>${errMsg}</strong></span>`;
+    }
+
+    document.getElementById('repTitle').textContent = name;
     document.getElementById('scoreNum').textContent = d.overallScore || 64;
     document.getElementById('scoreCircle').style.setProperty('--p', d.overallScore || 64);
     document.getElementById('repSummary').textContent = d.summary || '';
-    document.getElementById('repGood').textContent = d.whatWorks || '';
-    document.getElementById('repLeak').textContent = d.salesLeak || '';
-    document.getElementById('repFirst').textContent = d.firstStepToday || '';
 
-    const waText = encodeURIComponent(`مرحباً أستاذ محمد الشرقاوي، أجريت فحص "مِرآة برو" لمشروعي (${name}) وحصلت على نتيجة ${d.overallScore}/100، وأرغب في معالجة أوجه القصور التي ظهرت في التقرير.`);
-    document.getElementById('repWaBtn').href = `https://wa.me/201005535574?text=${waText}`;
+    const waText = encodeURIComponent(`مرحباً أستاذ محمد الشرقاوي، أجريت فحص "مِرآة برو 6D" لمشروعي (${name}) وحصلت على ${d.overallScore}/100، وأرغب في مناقشة خطة التطوير.`);
+    const waLink = `https://wa.me/201005535574?text=${waText}`;
+    document.getElementById('repWaBtn').href = waLink;
+    document.getElementById('repWaBtn2').href = waLink;
+
+    const dims = d.dimensions || [];
+    document.getElementById('radarContainer').innerHTML = buildRadarSVG(dims);
+    document.getElementById('barsContainer').innerHTML = dims.map(dim => `
+      <div class="bar-row">
+        <div class="bar-head"><span>${dim.name}</span><span>${dim.score} / 100</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:${dim.score}%"></div></div>
+      </div>
+    `).join('');
+
+    document.getElementById('dimsList').innerHTML = dims.map((dim, i) => {
+      const pillClass = dim.score >= 70 ? 'pill-high' : (dim.score >= 50 ? 'pill-mid' : 'pill-low');
+      return `
+        <div class="dim-card">
+          <div class="dim-head">
+            <div style="font-weight:900;font-size:17px;"><span class="dim-num">${i + 1}</span>${dim.name}</div>
+            <span class="score-pill ${pillClass}">${dim.score} / 100</span>
+          </div>
+          <div class="evidence-box"><strong>الدليل المرصود:</strong><br>${dim.evidence || ''}</div>
+          <div style="font-size:13px;font-weight:800;margin-bottom:8px;color:#b45309;">التشخيص: ${dim.status || ''}</div>
+          <div class="rec-box"><strong>التوصية العملية:</strong><br>${dim.recommendation || ''}</div>
+        </div>
+      `;
+    }).join('');
 
     document.getElementById('gapsList').innerHTML = (d.criticalGaps || []).map((g, idx) => `
       <div class="gap-card">
-        <div style="font-weight:800;font-size:16px;color:#fca5a5;margin-bottom:6px;">${idx + 1}. ${g.gap}</div>
-        <div style="font-size:13px;margin-bottom:6px;"><strong>⚠️ لماذا يضيّع المبيعات:</strong> ${g.impact}</div>
-        <div style="font-size:13px;margin-bottom:6px;color:#e2e8f0;"><strong>🛠️ المعالجة الاحترافية:</strong> ${g.fix}</div>
+        <div style="font-weight:800;font-size:16px;color:#b91c1c;margin-bottom:6px;">${idx + 1}. ${g.gap}</div>
+        <div style="font-size:14px;margin-bottom:6px;"><strong>⚠️ كيف يضيّع المبيعات:</strong> ${g.impact}</div>
+        <div style="font-size:14px;margin-bottom:6px;"><strong>🛠️ المعالجة الاحترافية:</strong> ${g.fix}</div>
         <div class="example-box"><strong>✨ مثال تطبيقي جاهز لمشروعك:</strong><br>${g.example}</div>
       </div>
     `).join('');
@@ -576,20 +600,10 @@
     document.getElementById('baAfterText').textContent = d.beforeAfter?.after || '';
 
     document.getElementById('planList').innerHTML = (d.plan30 || []).map(p => `
-      <div class="item-card">
-        <div style="font-weight:800;color:#60a5fa;margin-bottom:4px;">${p.week}</div>
-        <div style="font-size:13px;margin-bottom:6px;">${p.focus}</div>
-        ${p.kpi ? `<div style="font-size:12px;color:#34d399;"><strong>🎯 مؤشر القياس:</strong> ${p.kpi}</div>` : ''}
-      </div>
-    `).join('');
-
-    document.getElementById('dimsList').innerHTML = (d.dimensions || []).map(dim => `
-      <div class="item-card">
-        <div style="display:flex;justify-content:space-between;font-weight:800;margin-bottom:6px;">
-          <span>${dim.name}</span>
-          <span style="color:#34d399;">${dim.score}/100</span>
-        </div>
-        <div style="font-size:13px;color:#cbd5e1;">${dim.note}</div>
+      <div style="background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:15px;">
+        <div style="font-weight:800;color:#2563eb;margin-bottom:4px;">${p.week}</div>
+        <div style="font-size:14px;margin-bottom:6px;">${p.focus}</div>
+        ${p.kpi ? `<div style="font-size:12px;color:#059669;font-weight:700;">🎯 مؤشر القياس: ${p.kpi}</div>` : ''}
       </div>
     `).join('');
 
@@ -597,27 +611,9 @@
   }
 
   const packages = [
-    {
-      name: 'الباقة المجانية',
-      prices: { EGP: '0 ج.م', SAR: '0 ر.س', USD: '$0' },
-      desc: 'تشخيص فوري لأوجه القصور في مشروعك مع أمثلة جاهزة.',
-      features: ['كشف أهم 3 أوجه قصور حرجة', 'إعادة صياغة الرسالة (قبل وبعد)', 'تتضمن إعلانات داعمة للمنصة'],
-      featured: false
-    },
-    {
-      name: 'باقة الانطلاقة التسويقية',
-      prices: { EGP: '1,900 ج.م', SAR: '299 ر.س', USD: '$79' },
-      desc: 'مراجعة بشرية كاملة من الخبير محمد الشرقاوي + خطة محتوى.',
-      features: ['تقرير متكامل ومراجع بشرياً', 'خطة محتوى 30 يوماً جاهزة', 'جلسة استشارية عبر واتساب/زوم'],
-      featured: true
-    },
-    {
-      name: 'باقة الشريك التسويقي الشامل',
-      prices: { EGP: '5,500 ج.م / شهر', SAR: '999 ر.س / شهر', USD: '$249 / شهر' },
-      desc: 'إدارة كاملة للمحتوى والتصاميم والخطط التسويقية.',
-      features: ['كتابة المحتوى + 12 تصميماً احترافياً', 'خطة حملات وإعلانات شهرية', 'متابعة وتواصل مباشر مع الخبير'],
-      featured: false
-    }
+    { name: 'الباقة المجانية', prices: { EGP: '0 ج.م', SAR: '0 ر.س', USD: '$0' }, desc: 'فحص سريع عبر منهجية MIRAA 6D.', features: ['خريطة الرادار 6D', 'كشف أهم أوجه القصور', 'تتضمن إعلانات داعمة للمنصة'], featured: false },
+    { name: 'باقة الانطلاقة التسويقية', prices: { EGP: '1,900 ج.م', SAR: '299 ر.س', USD: '$79' }, desc: 'مراجعة بشرية كاملة من الخبير محمد الشرقاوي + خطة محتوى.', features: ['تقرير متكامل ومراجع بشرياً', 'خطة محتوى 30 يوماً جاهزة', 'جلسة استشارية عبر واتساب/زوم'], featured: true },
+    { name: 'باقة الشريك التسويقي الشامل', prices: { EGP: '5,500 ج.م / شهر', SAR: '999 ر.س / شهر', USD: '$249 / شهر' }, desc: 'إدارة كاملة للمحتوى والتصاميم والخطط التسويقية.', features: ['كتابة المحتوى + 12 تصميماً احترافياً', 'خطة حملات وإعلانات شهرية', 'متابعة وتواصل مباشر مع الخبير'], featured: false }
   ];
 
   function renderPrices() {
@@ -634,7 +630,7 @@
               ${p.features.map(f => `<li style="margin-bottom:6px;">${f}</li>`).join('')}
             </ul>
           </div>
-          <a class="btn ${p.featured ? 'btn-primary' : 'btn-outline'}" style="justify-content:center;" href="https://wa.me/201005535574?text=${msg}" target="_blank">اطلب الباقة عبر واتساب</a>
+          <a class="btn ${p.featured ? 'btn-primary' : 'btn-light-outline'}" style="justify-content:center;" href="https://wa.me/201005535574?text=${msg}" target="_blank">اطلب الباقة عبر واتساب</a>
         </div>
       `;
     }).join('');

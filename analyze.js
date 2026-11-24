@@ -5,7 +5,7 @@ export default async function handler(req, res) {
 
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
-    return res.status(500).json({ error: 'GEMINI_API_KEY is missing in Environment Variables' });
+    return res.status(500).json({ error: 'مفتاح GEMINI_API_KEY غير مضاف في إعدادات Vercel (Environment Variables)' });
   }
 
   try {
@@ -27,14 +27,14 @@ export default async function handler(req, res) {
       }
     }
 
-    const systemInstruction = `أنت "مِرآة برو" (MIRAA Pro)، محرك تشخيص تسويقي واستراتيجي متقدم بإشراف الخبير محمد الشرقاوي.
-مهمتك: تقديم تشخيص تجاري وتسويقي عميق، دقيق، وصريح يكشف أوجه القصور الحقيقية ويعالجها بطريقة احترافية وعملية.
-قواعد صارمة لا يجوز مخالفتها:
-1. ممنوع تماماً النصائح العامة المكررة مثل: "انشر بانتظام"، "حسّن جودة الصور"، "استخدم هاشتاجات"، "تفاعل مع الجمهور".
-2. كل نقطة قصور يجب أن تكون مرتبطة مباشرة بنوع النشاط، المدينة، شريحة السعر، والوصف الذي كتبه العميل.
-3. لكل وجه قصور، اشرح: (أ) أين الخلل بالضبط، (ب) كيف يضيّع المبيعات فعلياً، (ج) خطوات المعالجة الاحترافية، (د) مثال تطبيقي جاهز ومكتوب خصيصاً لهذا النشاط.
-4. اكتب بلغة عربية واضحة، حازمة، وسهلة الفهم لصاحب المشروع (بلا مصطلحات إنجليزية معقدة غير مشروحة).
-5. أرجع JSON صالح 100% فقط بدون أي نص خارج الـ JSON.`;
+    const systemInstruction = `أنت "مِرآة برو" (MIRAA Pro)، محرك ذكاء تسويقي وتشخيصي متقدم بإشراف الخبير محمد الشرقاوي.
+مهمتك: تقديم تشخيص تجاري وتسويقي عميق، دقيق، ومفصل يجمع بين قوة التقرير الاستشاري الاحترافي والوضوح التام لصاحب المشروع.
+قواعد صارمة:
+1. ممنوع تماماً النصائح العامة المكررة مثل: "انشر بانتظام"، "حسّن جودة الصور"، "استخدم هاشتاجات".
+2. اربط كل جملة في التقرير مباشرة باسم النشاط، مدينته، قطاعه، شريحة أسعاره، وميزته أو مشكلته التي ذكرها.
+3. في الأبعاد الستة (MIRAA 6D)، اذكر لكل بُعد: الدرجة الدقيقة (0-100)، التشخيص (ممتاز / جيد / متوسط / ضعيف)، الدليل المرصود (مبني على وصف العميل وطبيعة السوق)، والتوصية العملية المحددة.
+4. في أوجه القصور الحرجة، اذكر لكل قصور: الخلل، أثره على المبيعات، خطوات المعالجة، ومثال تطبيقي مكتوب وجاهز للنسخ باسم النشاط.
+5. أرجع JSON صالح 100% فقط بدون أي نص خارجي أو علامات markdown.`;
 
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
@@ -46,14 +46,17 @@ export default async function handler(req, res) {
           contents: [{ parts: [{ text: prompt }] }],
           generationConfig: {
             responseMimeType: 'application/json',
-            temperature: 0.4
+            temperature: 0.45
           }
         })
       }
     );
 
     const data = await response.json();
-    return res.status(response.ok ? 200 : response.status).json(data);
+    if (!response.ok) {
+      return res.status(response.status).json({ error: data?.error?.message || 'Gemini API Error', raw: data });
+    }
+    return res.status(200).json(data);
   } catch (err) {
     return res.status(500).json({ error: 'Failed to analyze', details: err.message });
   }
