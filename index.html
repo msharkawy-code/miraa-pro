@@ -3,137 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مِرآة برو | MIRAA Pro — ذكاء تسويقي يفهم مشروعك قبل أن يقترح عليك</title>
-  <meta name="application-name" content="مِرآة برو | MIRAA Pro" />
-  <meta name="description" content="منصة مِرآة برو (MIRAA Pro) بإشراف محمد الشرقاوي — خبير كتابة المحتوى والتسويق الرقمي. فحص تسويقي عميق عبر منهجية MIRAA 6D مع خريطة رادار وتوصيات عملية." />
-  <meta property="og:title" content="مِرآة برو | MIRAA Pro — ذكاء يفهم مشروعك قبل أن يقترح عليك" />
-  <meta property="og:site_name" content="مِرآة برو | MIRAA Pro" />
+  <title>مِرآة برو V5 | MIRAA Pro — ذكاء تسويقي وتحليل منافسين متعدد النماذج</title>
+  <meta name="description" content="منصة مِرآة برو V5 بإشراف محمد الشرقاوي — فحص تسويقي عميق MIRAA 6D، دراسة تحليلية للمنافسين في نفس السوق والقطاع، وشات بوت عربي سريع." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f1f5f9;
-      --dark: #0f172a;
-      --dark2: #1e293b;
-      --card: #ffffff;
+      --bg: #f4f7fb;
+      --surface: #ffffff;
+      --navy: #091122;
+      --navy2: #12203a;
       --border: #e2e8f0;
       --text: #0f172a;
       --muted: #64748b;
-      --accent: #10b981;
-      --accent-dark: #059669;
-      --warn: #f59e0b;
-      --danger: #ef4444;
+      --emerald: #10b981;
+      --emerald-d: #059669;
       --blue: #2563eb;
+      --amber: #f59e0b;
+      --red: #ef4444;
+      --radius: 20px;
     }
     * { box-sizing: border-box; font-family: 'Cairo', sans-serif; }
-    body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.75; }
+    body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.75; overflow-x: hidden; }
     a { color: inherit; text-decoration: none; }
-    .container { max-width: 1020px; margin: 0 auto; padding: 0 16px; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
 
-    /* الهيدر الداكن الأنيق مثل النسخة الأولى */
-    .top-bar { background: linear-gradient(135deg, #0b1324, #132238); color: #fff; padding: 14px 0; position: sticky; top: 0; z-index: 50; box-shadow: 0 4px 20px rgba(15,23,42,0.18); }
+    /* Header */
+    .top-bar { background: rgba(9, 17, 34, 0.94); backdrop-filter: blur(12px); color: #fff; padding: 12px 0; position: sticky; top: 0; z-index: 50; border-bottom: 1px solid rgba(255,255,255,0.08); }
     .nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-    .brand { display: flex; align-items: center; gap: 10px; }
-    .logo { width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #10b981, #059669); display: grid; place-items: center; font-weight: 900; font-size: 20px; color: #fff; }
-    .brand-title { font-weight: 900; font-size: 18px; display: flex; align-items: center; gap: 6px; }
-    .gold-tag { background: rgba(245,158,11,0.18); color: #fbbf24; border: 1px solid rgba(245,158,11,0.4); font-size: 11px; padding: 1px 8px; border-radius: 999px; font-weight: 800; }
-    .brand-sub { font-size: 12px; color: #94a3b8; }
+    .brand { display: flex; align-items: center; gap: 11px; }
+    .logo { width: 44px; height: 44px; border-radius: 14px; background: linear-gradient(135deg, #10b981, #0ea5e9); display: grid; place-items: center; font-weight: 900; font-size: 21px; color: #fff; box-shadow: 0 6px 16px rgba(16,185,129,0.35); }
+    .brand-title { font-weight: 900; font-size: 18px; display: flex; align-items: center; gap: 7px; }
+    .badge-v5 { background: linear-gradient(135deg, rgba(245,158,11,0.22), rgba(16,185,129,0.22)); color: #fbbf24; border: 1px solid rgba(251,191,36,0.4); font-size: 11px; padding: 1px 9px; border-radius: 999px; font-weight: 800; }
+    .brand-sub { font-size: 11.5px; color: #94a3b8; }
     .nav-links { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 
-    .btn { border: none; border-radius: 10px; padding: 9px 15px; font-weight: 700; cursor: pointer; font-size: 13px; transition: .2s; display: inline-flex; align-items: center; gap: 6px; }
-    .btn-primary { background: var(--accent); color: #fff; }
-    .btn-primary:hover { background: var(--accent-dark); }
-    .btn-dark-outline { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.16); color: #fff; }
-    .btn-dark-outline:hover { background: rgba(255,255,255,0.16); }
-    .btn-light-outline { background: #fff; border: 1px solid var(--border); color: var(--text); }
-    .btn-light-outline:hover { background: #f8fafc; }
+    /* Buttons */
+    .btn { border: none; border-radius: 12px; padding: 9px 16px; font-weight: 700; cursor: pointer; font-size: 13px; transition: .2s; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-primary { background: linear-gradient(135deg, #10b981, #059669); color: #fff; box-shadow: 0 6px 16px rgba(16,185,129,0.25); }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(16,185,129,0.35); }
+    .btn-glass { background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.16); color: #fff; }
+    .btn-glass:hover { background: rgba(255,255,255,0.18); }
+    .btn-outline { background: #fff; border: 1px solid var(--border); color: var(--text); }
+    .btn-outline:hover { background: #f8fafc; border-color: #cbd5e1; }
     .btn-wa { background: #25D366; color: #052e16; font-weight: 800; }
 
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 22px; margin: 18px 0; box-shadow: 0 2px 10px rgba(15,23,42,0.04); }
-    .section-title { font-size: 20px; font-weight: 900; margin: 0 0 14px; display: flex; align-items: center; gap: 10px; }
-    .section-title::before { content: ''; width: 5px; height: 24px; background: var(--accent); border-radius: 999px; display: inline-block; }
+    /* Hero Banner */
+    .hero { background: radial-gradient(circle at top left, #173357, #091122 65%); color: #fff; border-radius: 24px; padding: 28px 24px; margin: 20px 0; position: relative; overflow: hidden; box-shadow: 0 18px 40px rgba(9,17,34,0.18); }
+    .hero::after { content: ''; position: absolute; width: 260px; height: 260px; background: radial-gradient(circle, rgba(16,185,129,0.22), transparent 70%); top: -60px; left: -40px; pointer-events: none; }
+    .hero-pill { display: inline-flex; align-items: center; gap: 6px; background: rgba(16,185,129,0.16); border: 1px solid rgba(16,185,129,0.4); color: #6ee7b7; padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 800; margin-bottom: 10px; }
+    .hero h1 { margin: 0 0 8px; font-size: 26px; line-height: 1.4; font-weight: 900; }
+    .hero p { margin: 0 0 18px; color: #cbd5e1; font-size: 14.5px; max-width: 760px; }
+    .hero-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+    .stat-box { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 12px 14px; }
+    .stat-box b { display: block; font-size: 14px; color: #fff; margin-bottom: 2px; }
+    .stat-box span { font-size: 12px; color: #94a3b8; }
 
-    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
-    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    /* Cards & Grids */
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin: 18px 0; box-shadow: 0 4px 18px rgba(15,23,42,0.04); }
+    .section-title { font-size: 19px; font-weight: 900; margin: 0 0 16px; display: flex; align-items: center; gap: 10px; }
+    .section-title::before { content: ''; width: 5px; height: 24px; background: linear-gradient(180deg, #10b981, #0ea5e9); border-radius: 999px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 14px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
 
-    .ad-slot { background: linear-gradient(135deg, #ecfdf5, #eff6ff); border: 1px dashed #94a3b8; border-radius: 14px; padding: 14px 18px; margin: 16px 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-    .ad-tag { font-size: 11px; background: #e2e8f0; color: #475569; padding: 2px 8px; border-radius: 6px; font-weight: 700; }
-
-    label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 5px; color: #334155; }
-    input, select, textarea { width: 100%; background: #f8fafc; border: 1px solid #cbd5e1; color: var(--text); border-radius: 10px; padding: 11px 13px; font-size: 14px; outline: none; }
-    input:focus, select:focus, textarea:focus { border-color: var(--accent); background: #fff; }
+    label { display: block; font-size: 13px; font-weight: 800; margin-bottom: 5px; color: #334155; }
+    input, select, textarea { width: 100%; background: #f8fafc; border: 1.5px solid #cbd5e1; color: var(--text); border-radius: 12px; padding: 11px 13px; font-size: 14px; outline: none; transition: .2s; }
+    input:focus, select:focus, textarea:focus { border-color: var(--emerald); background: #fff; box-shadow: 0 0 0 3px rgba(16,185,129,0.12); }
     .hidden { display: none !important; }
 
-    /* بطاقات التقرير الفخمة */
-    .report-banner { background: linear-gradient(135deg, #0f172a, #1e293b); color: #fff; border-radius: 18px; padding: 22px; margin-bottom: 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-    .score-circle { width: 90px; height: 90px; border-radius: 50%; background: conic-gradient(#10b981 calc(var(--p, 70) * 1%), #334155 0); display: grid; place-items: center; font-weight: 900; font-size: 24px; flex-shrink: 0; }
-    .score-circle span { width: 72px; height: 72px; background: #0f172a; border-radius: 50%; display: grid; place-items: center; color: #fff; }
+    /* AI Engine Selector Bar */
+    .engine-bar { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 14px; padding: 12px 14px; margin-top: 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
 
-    .status-banner { padding: 10px 14px; border-radius: 10px; font-size: 13px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+    /* Report Elements */
+    .status-banner { padding: 11px 16px; border-radius: 12px; font-size: 13px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
     .status-ai { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
     .status-warn { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
 
-    .bar-row { margin-bottom: 12px; }
-    .bar-head { display: flex; justify-content: space-between; font-size: 13px; font-weight: 800; margin-bottom: 4px; }
+    .report-banner { background: linear-gradient(135deg, #091122, #172b4d); color: #fff; border-radius: 20px; padding: 24px; margin-bottom: 18px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .score-ring { width: 96px; height: 96px; border-radius: 50%; background: conic-gradient(#10b981 calc(var(--p, 70) * 1%), #334155 0); display: grid; place-items: center; font-weight: 900; font-size: 25px; flex-shrink: 0; }
+    .score-ring span { width: 76px; height: 76px; background: #091122; border-radius: 50%; display: grid; place-items: center; color: #fff; }
+
+    .bar-row { margin-bottom: 13px; }
+    .bar-head { display: flex; justify-content: space-between; font-size: 13px; font-weight: 800; margin-bottom: 5px; }
     .bar-track { height: 10px; background: #e2e8f0; border-radius: 999px; overflow: hidden; }
-    .bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #10b981, #059669); }
+    .bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #10b981, #0ea5e9); }
+
+    /* Competitor Cards */
+    .comp-card { background: #f8fafc; border: 1px solid var(--border); border-top: 4px solid var(--blue); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+    .comp-tag { display: inline-block; font-size: 11px; font-weight: 800; padding: 2px 9px; border-radius: 999px; background: #dbeafe; color: #1e40af; width: fit-content; }
+    .market-gap-box { background: linear-gradient(135deg, #ecfdf5, #eff6ff); border: 1.5px solid #10b981; border-radius: 14px; padding: 16px; margin-top: 14px; }
 
     .dim-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 18px; margin-bottom: 14px; }
-    .dim-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-    .dim-num { width: 30px; height: 30px; border-radius: 8px; background: #0f172a; color: #fff; display: inline-grid; place-items: center; font-weight: 800; font-size: 14px; margin-left: 8px; }
+    .dim-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+    .dim-num { width: 30px; height: 30px; border-radius: 9px; background: #091122; color: #fff; display: inline-grid; place-items: center; font-weight: 800; font-size: 13px; margin-left: 8px; }
     .score-pill { padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 800; }
     .pill-high { background: #dcfce7; color: #166534; }
     .pill-mid { background: #fef3c7; color: #92400e; }
     .pill-low { background: #fee2e2; color: #991b1b; }
-
-    .evidence-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 13px; margin-bottom: 10px; font-size: 14px; }
-    .rec-box { background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 12px; padding: 13px; font-size: 14px; color: #064e3b; }
+    .evidence-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px; margin-bottom: 8px; font-size: 14px; }
+    .rec-box { background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 12px; padding: 12px; font-size: 14px; color: #064e3b; }
 
     .gap-card { background: #fff; border: 1px solid #fecaca; border-right: 5px solid #ef4444; border-radius: 14px; padding: 16px; margin-bottom: 14px; }
-    .example-box { background: #f0fdf4; border: 1px dashed #10b981; border-radius: 10px; padding: 12px; margin-top: 10px; font-size: 13px; }
+    .example-box { background: #f0fdf4; border: 1px dashed #10b981; border-radius: 10px; padding: 12px; margin-top: 10px; font-size: 13.5px; }
+    .ba-before { background: #fef2f2; border: 1px solid #fecaca; border-radius: 14px; padding: 16px; }
+    .ba-after { background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 14px; padding: 16px; }
 
-    .ba-before { background: #fef2f2; border: 1px solid #fecaca; border-radius: 12px; padding: 15px; }
-    .ba-after { background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 12px; padding: 15px; }
+    .price-card { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; }
+    .price-card.featured { border: 2px solid var(--emerald); box-shadow: 0 10px 28px rgba(16,185,129,0.14); }
+    .price { font-size: 26px; font-weight: 900; color: var(--emerald-d); margin: 8px 0; }
 
-    .price-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
-    .price-card.featured { border: 2px solid var(--accent); box-shadow: 0 8px 24px rgba(16,185,129,0.12); }
-    .price { font-size: 26px; font-weight: 900; color: var(--accent-dark); margin: 8px 0; }
-
-    .wa-float { position: fixed; bottom: 18px; left: 18px; z-index: 60; background: #25D366; color: #052e16; font-weight: 800; padding: 12px 18px; border-radius: 999px; box-shadow: 0 8px 20px rgba(0,0,0,0.22); display: flex; align-items: center; gap: 8px; }
-    footer { text-align: center; padding: 28px 0 80px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); margin-top: 30px; }
-    .modal-bg { position: fixed; inset: 0; background: rgba(15,23,42,0.7); display: grid; place-items: center; z-index: 100; padding: 16px; }
-    .modal { background: #fff; border-radius: 16px; max-width: 600px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 22px; }
-    .loader { display: inline-block; width: 16px; height: 16px; border: 3px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 0.8s linear infinite; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    @media print {
-      .top-bar, .wa-float, .ad-slot, .no-print, footer { display: none !important; }
-      body { background: #fff; }
-      .card, .dim-card, .gap-card { box-shadow: none; break-inside: avoid; }
-    }
-
-    /* شات بوت مِرآة برو (كتابة + صوت) */
-    .chat-fab { position: fixed; bottom: 18px; right: 18px; z-index: 65; background: linear-gradient(135deg, #0f172a, #1e293b); color: #fff; border: 2px solid #10b981; font-weight: 800; padding: 12px 18px; border-radius: 999px; box-shadow: 0 10px 25px rgba(15,23,42,0.3); cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 14px; transition: .2s; }
-    .chat-fab:hover { transform: translateY(-2px); background: #0f172a; }
-    .chat-window { position: fixed; bottom: 78px; right: 18px; width: 370px; max-width: calc(100vw - 32px); height: 530px; max-height: calc(100vh - 110px); background: #fff; border: 1px solid #cbd5e1; border-radius: 18px; box-shadow: 0 18px 45px rgba(15,23,42,0.28); z-index: 80; display: flex; flex-direction: column; overflow: hidden; }
-    .chat-header { background: linear-gradient(135deg, #0b1324, #132238); color: #fff; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-    .chat-messages { flex: 1; overflow-y: auto; padding: 14px; background: #f8fafc; display: flex; flex-direction: column; gap: 10px; }
-    .msg { max-width: 86%; padding: 10px 13px; border-radius: 14px; font-size: 13.5px; line-height: 1.65; white-space: pre-wrap; word-wrap: break-word; }
+    /* Ultra-Light Fast Chatbot */
+    .chat-fab { position: fixed; bottom: 18px; right: 18px; z-index: 65; background: linear-gradient(135deg, #091122, #172b4d); color: #fff; border: 2px solid #10b981; font-weight: 800; padding: 11px 18px; border-radius: 999px; box-shadow: 0 10px 26px rgba(9,17,34,0.32); cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 14px; }
+    .wa-float { position: fixed; bottom: 18px; left: 18px; z-index: 60; background: #25D366; color: #052e16; font-weight: 800; padding: 11px 16px; border-radius: 999px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 6px; font-size: 13.5px; }
+    .chat-window { position: fixed; bottom: 76px; right: 18px; width: 360px; max-width: calc(100vw - 32px); height: 500px; max-height: calc(100vh - 105px); background: #fff; border: 1px solid #cbd5e1; border-radius: 20px; box-shadow: 0 20px 50px rgba(9,17,34,0.28); z-index: 80; display: flex; flex-direction: column; overflow: hidden; }
+    .chat-header { background: #091122; color: #fff; padding: 12px 15px; display: flex; align-items: center; justify-content: space-between; }
+    .chat-messages { flex: 1; overflow-y: auto; padding: 12px; background: #f8fafc; display: flex; flex-direction: column; gap: 8px; }
+    .msg { max-width: 86%; padding: 9px 12px; border-radius: 14px; font-size: 13px; line-height: 1.6; white-space: pre-wrap; }
     .msg-user { align-self: flex-start; background: #10b981; color: #fff; border-bottom-right-radius: 4px; }
     .msg-bot { align-self: flex-end; background: #fff; color: #0f172a; border: 1px solid #e2e8f0; border-bottom-left-radius: 4px; }
-    .msg-speak-btn { background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; border-radius: 8px; padding: 2px 8px; font-size: 11px; font-weight: 700; cursor: pointer; margin-top: 6px; display: inline-flex; align-items: center; gap: 4px; }
-    .msg-speak-btn:hover { background: #e2e8f0; }
-    .chat-suggestions { padding: 8px 12px; background: #fff; border-top: 1px solid #e2e8f0; display: flex; gap: 6px; overflow-x: auto; }
-    .chip { background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; border-radius: 999px; padding: 4px 10px; font-size: 11.5px; font-weight: 700; cursor: pointer; white-space: nowrap; }
-    .chip:hover { background: #ecfdf5; border-color: #10b981; color: #065f46; }
-    .chat-input-bar { padding: 10px; background: #fff; border-top: 1px solid #e2e8f0; display: flex; gap: 6px; align-items: center; }
-    .chat-input-bar input { flex: 1; padding: 9px 12px; border-radius: 10px; font-size: 13.5px; }
-    .icon-btn { width: 38px; height: 38px; border-radius: 10px; border: 1px solid #cbd5e1; background: #f8fafc; cursor: pointer; display: grid; place-items: center; font-size: 16px; flex-shrink: 0; transition: .2s; }
-    .icon-btn:hover { background: #e2e8f0; }
-    .icon-btn.recording { background: #ef4444; color: #fff; border-color: #ef4444; animation: pulseMic 1s infinite; }
+    .msg-speak-btn { background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; border-radius: 7px; padding: 2px 7px; font-size: 11px; font-weight: 700; cursor: pointer; margin-top: 5px; }
+    .chat-suggestions { padding: 7px 10px; background: #fff; border-top: 1px solid #e2e8f0; display: flex; gap: 6px; overflow-x: auto; }
+    .chip { background: #f1f5f9; border: 1px solid #cbd5e1; color: #334155; border-radius: 999px; padding: 3px 10px; font-size: 11px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+    .chat-input-bar { padding: 9px; background: #fff; border-top: 1px solid #e2e8f0; display: flex; gap: 6px; align-items: center; }
+    .chat-input-bar input { flex: 1; padding: 8px 11px; border-radius: 10px; font-size: 13px; }
+    .icon-btn { width: 36px; height: 36px; border-radius: 10px; border: 1px solid #cbd5e1; background: #f8fafc; cursor: pointer; display: grid; place-items: center; font-size: 15px; flex-shrink: 0; }
+    .icon-btn.recording { background: #ef4444; color: #fff; border-color: #ef4444; }
     .icon-btn.send-btn { background: #10b981; color: #fff; border-color: #10b981; font-weight: 800; }
-    @keyframes pulseMic { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
-    @media print { .chat-fab, .chat-window { display: none !important; } }
 
+    footer { text-align: center; padding: 26px 0 80px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); margin-top: 30px; }
+    .loader { display: inline-block; width: 16px; height: 16px; border: 3px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 50%; animation: spin 0.7s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media print { .top-bar, .wa-float, .chat-fab, .chat-window, .no-print, footer { display: none !important; } body { background: #fff; } .card, .dim-card, .gap-card, .comp-card { box-shadow: none; break-inside: avoid; } }
   </style>
 </head>
 <body>
@@ -143,62 +143,39 @@
     <div class="brand">
       <div class="logo">م</div>
       <div>
-        <div class="brand-title">مِرآة برو <span class="gold-tag">MIRAA 6D</span></div>
-        <div class="brand-sub">بإشراف: محمد الشرقاوي — خبير كتابة المحتوى والتسويق الرقمي</div>
+        <div class="brand-title">مِرآة برو <span class="badge-v5">V5 • Multi-AI</span></div>
+        <div class="brand-sub">إشراف: محمد الشرقاوي — خبير كتابة المحتوى والتسويق الرقمي</div>
       </div>
     </div>
     <div class="nav-links">
       <button class="btn btn-primary" onclick="showSection('scan')">فحص مشروعك</button>
-      <button class="btn btn-dark-outline" onclick="scrollToAbout()">عن البرنامج</button>
-      <button class="btn btn-dark-outline" onclick="showSection('pricing')">الباقات والخدمات</button>
-      <button class="btn btn-dark-outline" onclick="toggleChat(true)">💬 اسأل مِرآة برو</button>
-      <a class="btn btn-wa" href="https://wa.me/201005535574?text=مرحباً%20أستاذ%20محمد%20الشرقاوي،%20أرغب%20في%20الاستفسار%20عن%20خدمات%20مِرآة%20برو" target="_blank">واتساب مباشر</a>
+      <button class="btn btn-glass" onclick="showSection('pricing')">الباقات</button>
+      <button class="btn btn-glass" onclick="toggleChat(true)">🤖 المساعد السريع</button>
+      <a class="btn btn-wa" href="https://wa.me/201005535574?text=مرحباً%20أستاذ%20محمد%20الشرقاوي،%20أرغب%20في%20استشارة%20تسويقية%20عبر%20مِرآة%20برو" target="_blank">واتساب مباشر</a>
     </div>
   </div>
 </header>
 
 <main class="container">
-  <!-- تعريف البرنامج -->
-  <section id="about-program" class="card no-print">
-    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:14px;">
-      <div>
-        <span style="background:#dcfce7;color:#166534;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:800;">الإصدار الاحترافي V4 • فحص 6D + مساعد ذكي مكتوب وصوتي</span>
-        <h1 style="margin:8px 0 4px;font-size:24px;">مِرآة برو — ذكاء تسويقي يفهم مشروعك قبل أن يقترح عليك</h1>
-        <p style="margin:0;color:var(--muted);font-size:14px;">نظام تشخيص تسويقي متكامل بإشراف الخبير <strong>محمد الشرقاوي</strong>، يفحص مشروعك عبر <strong>6 أبعاد دقيقة (MIRAA 6D)</strong> ليكشف لك أين تتسرب مبيعاتك ويمنحك خطة معالجة عملية بأمثلة جاهزة.</p>
-      </div>
-    </div>
-    <div class="grid-3">
-      <div style="background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:12px;">
-        <div style="font-weight:800;color:#059669;">📊 خريطة الأبعاد الستة (6D)</div>
-        <div style="font-size:13px;color:var(--muted);">تقييم بصري بالرادار لكل محور مع الدليل المرصود والتوصية العملية.</div>
-      </div>
-      <div style="background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:12px;">
-        <div style="font-weight:800;color:#dc2626;">🎯 كشف أوجه القصور الحرجة</div>
-        <div style="font-size:13px;color:var(--muted);">تحديد الثغرات التي تضيّع المبيعات مع أمثلة مكتوبة جاهزة للنسخ.</div>
-      </div>
-      <div style="background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:12px;">
-        <div style="font-weight:800;color:#2563eb;">📅 خطة 30 يوماً + قبل وبعد</div>
-        <div style="font-size:13px;color:var(--muted);">إعادة صياغة رسالتك البيعية وخارطة طريق أسبوعية بمؤشرات قياس.</div>
-      </div>
+  <!-- Hero -->
+  <section class="hero no-print">
+    <div class="hero-pill">⚡ الإصدار الخامس V5 • محرك متعدد النماذج + دراسة المنافسين</div>
+    <h1>ذكاء تسويقي يفهم مشروعك، يحلل منافسيك، ويرسم لك طريق المبيعات</h1>
+    <p>منصة <strong>مِرآة برو</strong> بإشراف الخبير <strong>محمد الشرقاوي</strong> تجمع بين منهجية الفحص السداسي <strong>MIRAA 6D</strong> ودراسة تحليلية دقيقة للمنافسين في نفس سوقك وقطاعك، مدعومة بتبديل تلقائي بين أقوى نماذج الذكاء الاصطناعي لضمان السرعة والدقة دون توقف.</p>
+    <div class="hero-stats">
+      <div class="stat-box"><b>📊 فحص 6D + رادار بصري</b><span>تشخيص دقيق بالأدلة والتوصيات العملية</span></div>
+      <div class="stat-box"><b>⚔️ دراسة تحليلية للمنافسين</b><span>كشف نقاط قوتهم وضعفهم وفجوة السوق الذهبية</span></div>
+      <div class="stat-box"><b>🧠 ذكاء متعدد النماذج</b><span>Gemini + Groq + OpenAI بتبديل تلقائي ذكي</span></div>
+      <div class="stat-box"><b>⚡ شات بوت عربي خفيف</b><span>إجابات فورية بالكتابة والصوت مرتبطة بتقريرك</span></div>
     </div>
   </section>
 
-  <!-- مساحة إعلانية -->
-  <div class="ad-slot no-print">
-    <div>
-      <span class="ad-tag">مساحة إعلانية • النسخة المجانية</span>
-      <div style="font-weight:800;margin-top:4px;">هل تريد خطة محتوى وتصاميم سوشيال ميديا جاهزة للنشر لمشروعك؟</div>
-      <div style="font-size:13px;color:var(--muted);">باقات مرنة بإشراف مباشر من الخبير محمد الشرقاوي — واتساب: 00201005535574</div>
-    </div>
-    <a class="btn btn-primary" href="https://wa.me/201005535574?text=مرحباً%20أستاذ%20محمد،%20أرغب%20في%20طلب%20خطة%20محتوى%20وتصاميم%20لمشروعي" target="_blank">اطلبها الآن</a>
-  </div>
-
-  <!-- قسم الفحص -->
+  <!-- Scan Form -->
   <section id="section-scan">
     <div class="card no-print">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px;">
-        <h2 class="section-title" style="margin:0;">أدخل بيانات مشروعك للفحص الاحترافي</h2>
-        <button class="btn btn-light-outline" type="button" onclick="fillDemo()">تعبئة مثال تجريبي</button>
+        <h2 class="section-title" style="margin:0;">أدخل بيانات مشروعك لبدء الفحص ودراسة المنافسين</h2>
+        <button class="btn btn-outline" type="button" onclick="fillDemo()">✨ تعبئة مثال تجريبي</button>
       </div>
       <form id="scanForm" onsubmit="runScan(event)">
         <div class="grid-2">
@@ -221,8 +198,8 @@
             </select>
           </div>
           <div>
-            <label>المدينة / المناطق المستهدفة *</label>
-            <input id="bizCity" required placeholder="مثال: مكة، الطائف، الباحة / الرياض / القاهرة" />
+            <label>المدينة / السوق المستهدف *</label>
+            <input id="bizCity" required placeholder="مثال: الرياض / جدة / مكة / القاهرة" />
           </div>
           <div>
             <label>شريحة الأسعار *</label>
@@ -237,62 +214,78 @@
             <select id="bizGoal">
               <option value="زيادة المبيعات والطلبات المباشرة">زيادة المبيعات والطلبات المباشرة</option>
               <option value="تحويل المتابعين لزيارات ميدانية للفروع">تحويل المتابعين لزيارات ميدانية للفروع</option>
+              <option value="التفوق على المنافسين واقتناص حصة سوقية">التفوق على المنافسين واقتناص حصة سوقية</option>
               <option value="جذب عملاء محتملين (Leads) بجودة أعلى">جذب عملاء محتملين (Leads) بجودة أعلى</option>
-              <option value="رفع التفاعل وبناء الثقة في العلامة التجارية">رفع التفاعل وبناء الثقة في العلامة التجارية</option>
             </select>
           </div>
           <div>
-            <label>الفئة المستهدفة / القنوات الحالية</label>
-            <input id="bizChannels" placeholder="مثال: العائلات والمقبلين على الزواج — إنستغرام وتيك توك" />
-          </div>
-        </div>
-        <div class="grid-2" style="margin-top:12px;">
-          <div>
-            <label>رابط الحساب أو الموقع (اختياري)</label>
-            <input id="bizUrl" placeholder="https://instagram.com/yourbusiness" />
-          </div>
-          <div>
-            <label>ما الذي يميزك حالياً أو من أبرز منافسك؟</label>
-            <input id="bizEdge" placeholder="مثال: جودة التصنيع والضمان / توصيل سريع" />
+            <label>أبرز المنافسين أو الميزة التنافسية</label>
+            <input id="bizEdge" placeholder="مثال: جودة التصنيع والضمان / توصيل خلال 30 دقيقة" />
           </div>
         </div>
         <div style="margin-top:12px;">
-          <label>صف مشروعك وأبرز المشكلة التي تواجهها بالتفصيل *</label>
-          <textarea id="bizDesc" rows="3" required placeholder="كلما كان الوصف أدق، كان الفحص أعمق وأقرب للواقع..."></textarea>
+          <label>صف مشروعك وأبرز تحدياتك التسويقية بالتفصيل *</label>
+          <textarea id="bizDesc" rows="3" required placeholder="اشرح وضعك الحالي والمشكلة التي تريد حلها..."></textarea>
         </div>
+
+        <!-- Multi-AI Engine Selector -->
+        <div class="engine-bar">
+          <div>
+            <div style="font-weight:800;font-size:13.5px;">🧠 محرك الذكاء الاصطناعي (Multi-AI Engine)</div>
+            <div style="font-size:12px;color:var(--muted);">يدعم التبديل التلقائي بين النماذج المتاحة لضمان أقصى سرعة واستقرار</div>
+          </div>
+          <select id="aiEngine" style="width:auto;min-width:210px;">
+            <option value="auto" selected>⚡ تلقائي ذكي (الأفضل والأسرع)</option>
+            <option value="gemini">✨ Google Gemini 3.8 Flash</option>
+            <option value="gemini-lite">🚀 Google Gemini Flash Lite (خفيف)</option>
+            <option value="groq">⚡ Groq Llama 3.3 70B (فائق السرعة)</option>
+            <option value="openai">🤖 OpenAI GPT-4o Mini</option>
+          </select>
+        </div>
+
         <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
-          <button id="submitBtn" class="btn btn-primary" style="padding:12px 24px;font-size:15px;" type="submit">ابدأ فحص مِرآة 6D الآن</button>
+          <button id="submitBtn" class="btn btn-primary" style="padding:13px 26px;font-size:15px;" type="submit">🚀 ابدأ الفحص الشامل ودراسة المنافسين</button>
           <span id="statusMsg" style="font-size:13px;color:var(--muted);"></span>
         </div>
       </form>
     </div>
 
-    <!-- التقرير الكامل -->
+    <!-- Report Area -->
     <div id="reportArea" class="hidden">
       <div id="aiStatusBanner" class="status-banner status-ai"></div>
 
       <div class="report-banner">
         <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
-          <div class="score-circle" id="scoreCircle" style="--p:70"><span id="scoreNum">70</span></div>
+          <div class="score-ring" id="scoreCircle" style="--p:70"><span id="scoreNum">70</span></div>
           <div>
-            <div style="font-size:12px;color:#34d399;font-weight:800;">تقرير مِرآة برو التشخيصي (MIRAA 6D)</div>
-            <h2 id="repTitle" style="margin:2px 0;font-size:22px;">اسم المشروع</h2>
-            <div style="font-size:12px;color:#94a3b8;">إشراف: محمد الشرقاوي — خبير كتابة المحتوى والتسويق الرقمي | واتساب: 00201005535574</div>
+            <div style="font-size:12px;color:#34d399;font-weight:800;">تقرير مِرآة برو V5 التشخيصي + دراسة المنافسين</div>
+            <h2 id="repTitle" style="margin:2px 0;font-size:23px;">اسم المشروع</h2>
+            <div style="font-size:12px;color:#94a3b8;">إشراف: محمد الشرقاوي | واتساب: 00201005535574</div>
           </div>
         </div>
         <div class="no-print" style="display:flex;gap:8px;flex-wrap:wrap;">
-          <button class="btn btn-dark-outline" onclick="window.print()">طباعة / حفظ PDF</button>
-          <a id="repWaBtn" class="btn btn-wa" href="#" target="_blank">ناقش التقرير مع الخبير</a>
+          <button class="btn btn-glass" onclick="window.print()">🖨️ طباعة / PDF</button>
+          <a id="repWaBtn" class="btn btn-wa" href="#" target="_blank">💬 ناقش التقرير مع الخبير</a>
         </div>
       </div>
 
-      <!-- 1. الملخص التنفيذي -->
+      <!-- 1. Executive Summary -->
       <div class="card">
         <h3 class="section-title">الملخص التنفيذي — أين يقف المشروع؟</h3>
         <p id="repSummary" style="font-size:15px;color:#334155;margin:0;"></p>
       </div>
 
-      <!-- 2. خريطة الأبعاد الستة + توزيع الدرجات -->
+      <!-- 2. Competitor Analysis (NEW in V5) -->
+      <div class="card">
+        <h3 class="section-title">⚔️ الدراسة التحليلية للمنافسين في نفس السوق والقطاع</h3>
+        <div id="compGrid" class="grid-3"></div>
+        <div class="market-gap-box">
+          <div style="font-weight:900;color:#065f46;margin-bottom:4px;">💎 فجوة السوق الذهبية (فرصتك للتفوق السريع):</div>
+          <div id="marketGapText" style="font-size:14.5px;color:#0f172a;"></div>
+        </div>
+      </div>
+
+      <!-- 3. 6D Radar + Bars -->
       <div class="grid-2">
         <div class="card" style="text-align:center;">
           <h3 class="section-title" style="justify-content:center;">خريطة الأبعاد الستة (MIRAA 6D)</h3>
@@ -304,61 +297,58 @@
         </div>
       </div>
 
-      <!-- 3. تفاصيل المحاور الستة (الدليل المرصود + التشخيص + التوصية العملية) -->
+      <!-- 4. Detailed 6D Dimensions -->
       <div class="card" style="background:transparent;border:none;padding:0;box-shadow:none;">
         <h3 class="section-title">التشخيص التفصيلي للمحاور الستة</h3>
         <div id="dimsList"></div>
       </div>
 
-      <!-- 4. أوجه القصور الحرجة والمعالجة الاحترافية -->
+      <!-- 5. Critical Gaps -->
       <div class="card">
-        <h3 class="section-title">أوجه القصور الحرجة وكيفية معالجتها باحتراف</h3>
+        <h3 class="section-title">أوجه القصور الحرجة والمعالجة بأمثلة جاهزة</h3>
         <div id="gapsList"></div>
       </div>
 
-      <!-- 5. قبل وبعد -->
+      <!-- 6. Before & After -->
       <div class="card">
-        <h3 class="section-title">إعادة صياغة الرسالة البيعية والعرض (قبل وبعد)</h3>
+        <h3 class="section-title">إعادة صياغة الرسالة البيعية (قبل وبعد)</h3>
         <div class="grid-2">
           <div class="ba-before">
             <div style="font-weight:800;color:#b91c1c;margin-bottom:6px;">❌ الأسلوب التقليدي الحالي</div>
             <div id="baBeforeText" style="font-size:14px;"></div>
           </div>
           <div class="ba-after">
-            <div style="font-weight:800;color:#065f46;margin-bottom:6px;">✅ الصياغة الاحترافية المقترحة لمشروعك</div>
+            <div style="font-weight:800;color:#065f46;margin-bottom:6px;">✅ الصياغة الاحترافية المقترحة</div>
             <div id="baAfterText" style="font-size:14px;"></div>
           </div>
         </div>
       </div>
 
-      <!-- 6. خطة 30 يوماً -->
+      <!-- 7. 30-Day Plan -->
       <div class="card">
         <h3 class="section-title">خارطة طريق النمو خلال 30 يوماً</h3>
         <div id="planList" class="grid-2"></div>
       </div>
 
-      <!-- دعوة احترافية للتواصل مع الخبير -->
-      <div class="report-banner no-print" style="margin-top:20px;">
+      <!-- CTA -->
+      <div class="report-banner no-print">
         <div>
-          <div style="font-weight:900;font-size:18px;color:#34d399;">هل تريد تحويل هذا التقرير إلى مبيعات فعلية لمشروعك؟</div>
-          <div style="font-size:13px;color:#cbd5e1;">تواصل مباشرة مع الخبير <strong>محمد الشرقاوي</strong> لتنفيذ خطة المحتوى والتصاميم والحملات الإعلانية بباقات مرنة.</div>
+          <div style="font-weight:900;font-size:18px;color:#34d399;">جاهز لتطبيق هذا التقرير والتفوق على منافسيك؟</div>
+          <div style="font-size:13px;color:#cbd5e1;">تواصل مباشرة مع الخبير <strong>محمد الشرقاوي</strong> لتنفيذ خطة المحتوى والتصاميم والحملات الإعلانية.</div>
         </div>
         <a id="repWaBtn2" class="btn btn-wa" style="padding:12px 20px;font-size:15px;" href="#" target="_blank">تواصل عبر واتساب الآن</a>
       </div>
     </div>
   </section>
 
-  <!-- قسم الباقات -->
+  <!-- Pricing -->
   <section id="section-pricing" class="hidden">
     <div class="card">
       <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:18px;">
-        <div>
-          <h2 class="section-title" style="margin:0;">باقات الاشتراك والخدمات التسويقية المرنة</h2>
-          <div style="font-size:13px;color:var(--muted);">اختر العملة المناسبة وتواصل مباشرة عبر واتساب</div>
-        </div>
+        <h2 class="section-title" style="margin:0;">باقات الاشتراك والخدمات التسويقية</h2>
         <select id="currencySel" onchange="renderPrices()" style="width:auto;">
-          <option value="EGP">جنيه مصري (EGP)</option>
           <option value="SAR">ريال سعودي (SAR)</option>
+          <option value="EGP">جنيه مصري (EGP)</option>
           <option value="USD">دولار أمريكي (USD)</option>
         </select>
       </div>
@@ -367,102 +357,64 @@
   </section>
 </main>
 
-<a class="wa-float no-print" href="https://wa.me/201005535574?text=مرحباً%20أستاذ%20محمد%20الشرقاوي،%20أحتاج%20استشارة%20تسويقية%20لمشروعي" target="_blank">
-  💬 تواصل واتساب مباشر
-</a>
+<a class="wa-float no-print" href="https://wa.me/201005535574?text=مرحباً%20أستاذ%20محمد%20الشرقاوي،%20أحتاج%20استشارة%20تسويقية" target="_blank">💬 واتساب مباشر</a>
 
-<footer class="container">
-  <div><strong>مِرآة برو | MIRAA Pro</strong> — جميع الحقوق محفوظة © 2026 <strong>محمد الشرقاوي</strong> (خبير كتابة المحتوى والتسويق الرقمي)</div>
-  <div style="margin-top:8px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
-    <a href="javascript:void(0)" onclick="openModal('privacyModal')">سياسة الخصوصية</a>
-    <a href="javascript:void(0)" onclick="openModal('termsModal')">شروط الاستخدام</a>
-    <a href="https://wa.me/201005535574" target="_blank">واتساب: 00201005535574</a>
-  </div>
-</footer>
-
-<div id="privacyModal" class="modal-bg hidden" onclick="if(event.target===this)closeModal('privacyModal')">
-  <div class="modal">
-    <h3 style="margin-top:0;">سياسة الخصوصية — مِرآة برو</h3>
-    <p>نحترم خصوصية زوارنا وأصحاب المشاريع. البيانات التي تدخلها تُستخدم فقط لتوليد التقرير التسويقي الخاص بك ولا يتم بيعها أو مشاركتها مع أي طرف ثالث.</p>
-    <button class="btn btn-primary" onclick="closeModal('privacyModal')">إغلاق</button>
-  </div>
-</div>
-
-<div id="termsModal" class="modal-bg hidden" onclick="if(event.target===this)closeModal('termsModal')">
-  <div class="modal">
-    <h3 style="margin-top:0;">شروط الاستخدام — مِرآة برو</h3>
-    <p>جميع حقوق الملكية الفكرية ومنهجية MIRAA 6D محفوظة للأستاذ محمد الشرقاوي.</p>
-    <button class="btn btn-primary" onclick="closeModal('termsModal')">إغلاق</button>
-  </div>
-</div>
-
-
-<!-- زر ونافذة الشات بوت الذكي مِرآة برو (كتابي + صوتي) -->
-<button class="chat-fab no-print" onclick="toggleChat()" id="chatFab">
-  <span>🤖</span>
-  <span>تحدث مع مِرآة برو</span>
-</button>
-
-<div id="chatWindow" class="chat-window hidden no-print" aria-label="محادثة مِرآة برو">
+<!-- Ultra-Light Fast Chatbot -->
+<button class="chat-fab no-print" onclick="toggleChat()" id="chatFab">🤖 تحدث مع مِرآة برو</button>
+<div id="chatWindow" class="chat-window hidden no-print">
   <div class="chat-header">
     <div>
-      <div style="font-weight:900;font-size:15px;">🤖 مِرآة برو | المساعد الذكي</div>
-      <div style="font-size:11px;color:#94a3b8;">محادثة مكتوبة وصوتية باللغة العربية</div>
+      <div style="font-weight:900;font-size:14.5px;">🤖 مِرآة برو | المساعد السريع</div>
+      <div id="chatModelBadge" style="font-size:11px;color:#94a3b8;">كتابي وصوتي بالعربية • Multi-AI</div>
     </div>
-    <div style="display:flex;gap:6px;align-items:center;">
-      <button id="autoVoiceBtn" class="btn btn-dark-outline" style="padding:4px 8px;font-size:11px;" onclick="toggleAutoVoice()" title="تشغيل أو إيقاف القراءة الصوتية التلقائية">🔊 الصوت: شغال</button>
-      <button class="btn btn-dark-outline" style="padding:4px 9px;font-size:13px;" onclick="toggleChat(false)">✕</button>
+    <div style="display:flex;gap:6px;">
+      <button id="autoVoiceBtn" class="btn btn-glass" style="padding:3px 8px;font-size:11px;" onclick="toggleAutoVoice()">🔇 صوت: إيقاف</button>
+      <button class="btn btn-glass" style="padding:3px 9px;font-size:13px;" onclick="toggleChat(false)">✕</button>
     </div>
   </div>
-
   <div id="chatMessages" class="chat-messages">
-    <div class="msg msg-bot">أهلاً بك في <strong>مِرآة برو</strong>! 👋
-أنا مساعدك التسويقي الذكي بإشراف الخبير <strong>محمد الشرقاوي</strong>.
-يمكنك الكتابة لي أو الضغط على زر الميكروفون 🎤 للتحدث معي صوتياً باللغة العربية وسأجيبك بدقة عن مشروعك أو تقريرك أو أي سؤال تسويقي.</div>
+    <div class="msg msg-bot">أهلاً بك في <strong>مِرآة برو V5</strong> 👋
+اسألني أي سؤال عن مشروعك، منافسيك، أو تقريرك وسأجيبك فوراً بدقة واختصار.</div>
   </div>
-
   <div class="chat-suggestions">
-    <button class="chip" onclick="sendQuick('كيف أزيد مبيعات مشروعي بسرعة؟')">كيف أزيد مبيعاتي؟</button>
-    <button class="chip" onclick="sendQuick('اشرح لي كيف أستفيد من تقرير مِرآة 6D')">شرح تقرير 6D</button>
-    <button class="chip" onclick="sendQuick('ما هي باقات وخدمات الأستاذ محمد الشرقاوي؟')">الباقات والخدمات</button>
+    <button class="chip" onclick="sendQuick('كيف أتفوق على منافسيّ في السوق؟')">كيف أتفوق على المنافسين؟</button>
+    <button class="chip" onclick="sendQuick('كيف أزيد مبيعاتي هذا الشهر؟')">زيادة المبيعات</button>
+    <button class="chip" onclick="sendQuick('ما هي باقات الأستاذ محمد الشرقاوي؟')">الباقات</button>
   </div>
-
   <form class="chat-input-bar" onsubmit="sendChatMessage(event)">
-    <button type="button" id="micBtn" class="icon-btn" onclick="toggleVoiceInput()" title="تحدث بالصوت (عربي)">🎤</button>
-    <input id="chatInput" type="text" placeholder="اكتب سؤالك أو اضغط الميكروفون..." autocomplete="off" />
-    <button type="submit" id="chatSendBtn" class="icon-btn send-btn" title="إرسال">➤</button>
+    <button type="button" id="micBtn" class="icon-btn" onclick="toggleVoiceInput()" title="تحدث بالعربية">🎤</button>
+    <input id="chatInput" type="text" placeholder="اكتب سؤالك هنا..." autocomplete="off" />
+    <button type="submit" id="chatSendBtn" class="icon-btn send-btn">➤</button>
   </form>
 </div>
 
+<footer class="container">
+  <strong>مِرآة برو V5 | MIRAA Pro</strong> — جميع الحقوق محفوظة © 2026 <strong>محمد الشرقاوي</strong> | واتساب: 00201005535574
+</footer>
+
 <script>
-  function scrollToAbout() {
-    showSection('scan');
-    setTimeout(() => document.getElementById('about-program').scrollIntoView({ behavior: 'smooth' }), 50);
-  }
   function showSection(sec) {
     document.getElementById('section-scan').classList.toggle('hidden', sec !== 'scan');
     document.getElementById('section-pricing').classList.toggle('hidden', sec !== 'pricing');
     if (sec === 'pricing') renderPrices();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-  function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
-  function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
 
   function fillDemo() {
-    document.getElementById('bizName').value = 'عنوان الخزائن';
-    document.getElementById('bizSector').value = 'أثاث وديكور وخزائن';
-    document.getElementById('bizCity').value = 'مكة، الطائف، الباحة';
+    document.getElementById('bizName').value = 'سماش هاوس برجر';
+    document.getElementById('bizSector').value = 'مطاعم وكافيهات';
+    document.getElementById('bizCity').value = 'الرياض';
     document.getElementById('bizPrice').value = 'متوسطة (قيمة مقابل سعر)';
-    document.getElementById('bizGoal').value = 'تحويل المتابعين لزيارات ميدانية للفروع';
-    document.getElementById('bizChannels').value = 'العائلات والمقبلين على الزواج — إنستغرام وتيك توك';
-    document.getElementById('bizUrl').value = 'https://instagram.com/enwan_closets';
-    document.getElementById('bizEdge').value = 'معارض فعلية في 3 مدن وتفصيل حسب الطلب بجودة عالية';
-    document.getElementById('bizDesc').value = 'لدينا معارض ومنتجات عالية الجودة لكن التفاعل على السوشيال ميديا ضعيف ولا يتحول إلى زيارات ميدانية كافية للفروع.';
+    document.getElementById('bizGoal').value = 'التفوق على المنافسين واقتناص حصة سوقية';
+    document.getElementById('bizEdge').value = 'لحم طازج يومياً وصوصات خاصة لكن المنافسة شرسة في تطبيقات التوصيل';
+    document.getElementById('bizDesc').value = 'المطعم يقدم جودة ممتازة وتقييمات عالية من الزوار، لكن الطلبات الرقمية ضعيفة والمنافسون يسيطرون على تيك توك وإنستغرام بعروض قوية.';
   }
 
   function cleanJsonText(text) {
     return text.replace(/```json/gi, '').replace(/```/g, '').trim();
   }
+
+  let lastReportContext = null;
 
   async function runScan(e) {
     e.preventDefault();
@@ -473,46 +425,51 @@
     const city = document.getElementById('bizCity').value.trim();
     const priceTier = document.getElementById('bizPrice').value;
     const goal = document.getElementById('bizGoal').value;
-    const channels = document.getElementById('bizChannels').value.trim();
-    const url = document.getElementById('bizUrl').value.trim();
     const edge = document.getElementById('bizEdge').value.trim();
     const desc = document.getElementById('bizDesc').value.trim();
+    const engine = document.getElementById('aiEngine').value;
 
     btn.disabled = true;
-    btn.innerHTML = '<span class="loader"></span> جاري الفحص العميق عبر Gemini AI...';
-    status.textContent = 'يتم الآن تحليل المحاور الستة وبناء التقرير التفصيلي...';
+    btn.innerHTML = '<span class="loader"></span> جاري الفحص العميق ودراسة المنافسين...';
+    status.textContent = 'يتم التحليل الآن عبر محرك مِرآة متعدد النماذج...';
 
-    const prompt = `حلل النشاط التالي وفق منهجية MIRAA 6D بدقة استشارية عالية:
+    const prompt = `حلل النشاط التالي وفق منهجية MIRAA 6D مع دراسة تحليلية دقيقة للمنافسين في نفس السوق والقطاع:
 - اسم النشاط: ${name}
 - القطاع: ${sector}
-- المدن/السوق: ${city}
+- المدينة/السوق: ${city}
 - شريحة الأسعار: ${priceTier}
 - الهدف: ${goal}
-- الجمهور والقنوات: ${channels || 'غير محددة'}
-- الرابط: ${url || 'غير محدد'}
-- الميزة التنافسية: ${edge || 'غير محددة'}
-- الوصف والمشكلة: ${desc}
+- الميزة/المنافسة: ${edge || 'غير محددة'}
+- الوصف والتحدي: ${desc}
 
-أرجع JSON فقط بهذه البنية بالضبط:
+أرجع JSON فقط بهذه البنية الدقيقة:
 {
-  "overallScore": 64,
-  "summary": "ملخص تنفيذي غني ومفصل في 4 إلى 5 أسطر يذكر اسم النشاط ومدنه ويشرح الفجوة الرقمية الحقيقية واستراتيجية مِرآة لمعالجتها",
+  "overallScore": 65,
+  "summary": "ملخص تنفيذي غني في 4 أسطر يربط بين وضع ${name} في ${city} وفرصة النمو الحقيقية",
+  "competitorAnalysis": {
+    "competitors": [
+      {"name": "اسم أو فئة المنافس الأول في ${city}", "strength": "نقطة قوته الأساسية", "weakness": "ثغرته الواضحة", "howToBeat": "كيف يتفوق عليه ${name} عملياً"},
+      {"name": "اسم أو فئة المنافس الثاني في ${city}", "strength": "نقطة قوته الأساسية", "weakness": "ثغرته الواضحة", "howToBeat": "كيف يتفوق عليه ${name} عملياً"},
+      {"name": "اسم أو فئة المنافس الثالث في ${city}", "strength": "نقطة قوته الأساسية", "weakness": "ثغرته الواضحة", "howToBeat": "كيف يتفوق عليه ${name} عملياً"}
+    ],
+    "marketGap": "الفجوة السوقية الذهبية التي يغفل عنها المنافسون في ${city} ويمكن لـ ${name} استغلالها فوراً"
+  },
   "dimensions": [
-    {"name": "الانطباع الأول", "score": 60, "status": "متوسط", "evidence": "الدليل المرصود بدقة", "recommendation": "التوصية العملية المحددة"},
-    {"name": "وضوح الرسالة", "score": 55, "status": "متوسط", "evidence": "الدليل المرصود بدقة", "recommendation": "التوصية العملية المحددة"},
-    {"name": "التواصل", "score": 45, "status": "ضعيف", "evidence": "الدليل المرصود بدقة", "recommendation": "التوصية العملية المحددة"},
-    {"name": "الجمهور", "score": 72, "status": "جيد", "evidence": "الدليل المرصود بدقة", "recommendation": "التوصية العملية المحددة"},
-    {"name": "المنافسة", "score": 52, "status": "متوسط", "evidence": "الدليل المرصود بدقة", "recommendation": "التوصية العملية المحددة"},
-    {"name": "النمو", "score": 65, "status": "جيد", "evidence": "الدليل المرصود بدقة", "recommendation": "التوصية العملية المحددة"}
+    {"name": "الانطباع الأول", "score": 62, "status": "متوسط", "evidence": "الدليل المرصود", "recommendation": "التوصية العملية"},
+    {"name": "وضوح الرسالة", "score": 55, "status": "متوسط", "evidence": "الدليل المرصود", "recommendation": "التوصية العملية"},
+    {"name": "التواصل", "score": 48, "status": "ضعيف", "evidence": "الدليل المرصود", "recommendation": "التوصية العملية"},
+    {"name": "الجمهور", "score": 74, "status": "جيد", "evidence": "الدليل المرصود", "recommendation": "التوصية العملية"},
+    {"name": "المنافسة", "score": 50, "status": "متوسط", "evidence": "الدليل المرصود", "recommendation": "التوصية العملية"},
+    {"name": "النمو", "score": 66, "status": "جيد", "evidence": "الدليل المرصود", "recommendation": "التوصية العملية"}
   ],
   "criticalGaps": [
-    {"gap": "عنوان وجه القصور 1", "impact": "كيف يضيّع المبيعات", "fix": "خطوات المعالجة", "example": "مثال تطبيقي مكتوب وجاهز باسم ${name}"},
-    {"gap": "عنوان وجه القصور 2", "impact": "كيف يضيّع المبيعات", "fix": "خطوات المعالجة", "example": "مثال تطبيقي مكتوب وجاهز باسم ${name}"},
-    {"gap": "عنوان وجه القصور 3", "impact": "كيف يضيّع المبيعات", "fix": "خطوات المعالجة", "example": "مثال تطبيقي مكتوب وجاهز باسم ${name}"}
+    {"gap": "وجه القصور 1", "impact": "أثره على المبيعات", "fix": "المعالجة العملية", "example": "مثال مكتوب وجاهز باسم ${name}"},
+    {"gap": "وجه القصور 2", "impact": "أثره على المبيعات", "fix": "المعالجة العملية", "example": "مثال مكتوب وجاهز باسم ${name}"},
+    {"gap": "وجه القصور 3", "impact": "أثره على المبيعات", "fix": "المعالجة العملية", "example": "مثال مكتوب وجاهز باسم ${name}"}
   ],
   "beforeAfter": {
-    "before": "الرسالة التقليدية الضعيفة الحالية",
-    "after": "الصياغة الاحترافية المقترحة باسم ${name}"
+    "before": "الرسالة التقليدية الحالية",
+    "after": "الرسالة البيعية الاحترافية المقترحة باسم ${name}"
   },
   "plan30": [
     {"week": "الأسبوع 1", "focus": "الإجراءات العملية", "kpi": "مؤشر القياس"},
@@ -522,112 +479,113 @@
   ]
 }`;
 
-    let reportData = null;
-    let usedAI = false;
-    let apiErrorMsg = '';
-
     try {
       const res = await fetch('/api/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt, meta: { name, sector, city, goal, url, desc } })
+        body: JSON.stringify({ prompt, engine, meta: { name, sector, city, goal, desc } })
       });
       const json = await res.json().catch(() => ({}));
-      if (res.ok) {
-        const rawText = json?.candidates?.[0]?.content?.parts?.[0]?.text || '';
-        reportData = JSON.parse(cleanJsonText(rawText));
-        usedAI = true;
+      if (res.ok && json.text) {
+        const parsed = JSON.parse(cleanJsonText(json.text));
+        renderReport(name, parsed, true, json.usedModel || 'Multi-AI');
+        status.textContent = 'تم توليد التقرير بنجاح!';
       } else {
-        apiErrorMsg = json?.error || `HTTP ${res.status} — تأكد من وجود ملف api/analyze.js ومفتاح GEMINI_API_KEY في Vercel`;
+        throw new Error(json.error || 'تعذر الاتصال بمحرك التحليل');
       }
     } catch (err) {
-      apiErrorMsg = 'تعذر الاتصال بمحرك الذكاء الاصطناعي (/api/analyze). تأكد من رفع مجلد api وإضافة GEMINI_API_KEY في Vercel.';
+      renderReport(name, buildFallback(name, sector, city, edge), false, err.message);
+      status.textContent = 'راجع التنبيه أعلى التقرير.';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '🚀 ابدأ الفحص الشامل ودراسة المنافسين';
     }
+  }
 
-    if (!reportData) {
-      reportData = {
-        overallScore: 60,
-        summary: `يعاني "${name}" في قطاع (${sector}) بـ (${city}) من فجوة رقمية واضحة بين جودة ما يقدمه على أرض الواقع وبين طريقة عرضه على المنصات الرقمية، مما يضعف تحويل المتابعين إلى عملاء فعليين. تتركز استراتيجية مِرآة على تحويل المحتوى من العرض التقليدي إلى محتوى إقناعي يعزز الثقة ويعالج مخاوف العميل قبل اتخاذ قرار الشراء.`,
-        dimensions: [
-          { name: 'الانطباع الأول', score: 60, status: 'متوسط', evidence: 'المنتج واضح لكن الهوية والميزة التنافسية لا تظهران في أول 5 ثوانٍ.', recommendation: 'تحديث البايو وتثبيت 3 منشورات: قصتك، ميزتك، وتجارب عملاء حقيقيين.' },
-          { name: 'وضوح الرسالة', score: 52, status: 'متوسط', evidence: 'المحتوى يركز على وصف الخدمة أكثر من توضيح سبب اختيار العميل لك.', recommendation: 'صياغة عرض دخول واضح يربط ميزتك بنتيجة ملموسة للعميل.' },
-          { name: 'التواصل', score: 42, status: 'ضعيف', evidence: 'ضعف التفاعل على التعليقات وغياب دعوات واضحة لاتخاذ إجراء (Call to Action).', recommendation: 'تفعيل الرد السريع المخصص وتخصيص فقرة أسبوعية للإجابة عن أسئلة العملاء.' },
-          { name: 'الجمهور', score: 70, status: 'جيد', evidence: `استهداف جغرافي واضح في (${city}) لشريحة ذات قدرة شرائية جيدة.`, recommendation: `إطلاق محتوى مخصص يخاطب اهتمامات عملاء (${city}) بشكل مباشر.` },
-          { name: 'المنافسة', score: 50, status: 'متوسط', evidence: 'تشابه أسلوب العرض مع المنافسين يجعل العميل يقارن بالسعر فقط.', recommendation: 'إبراز الكواليس والجودة والضمان كعناصر تميز لا يمكن تقليدها بسهولة.' },
-          { name: 'النمو', score: 64, status: 'جيد', evidence: 'توجد فرص قوية غير مستغلة في الفيديو القصير وإعادة الاستهداف.', recommendation: 'اختبار حملة إعلانية مصغرة على أفضل 2 فيديو حققا أعلى تفاعل.' }
+  function buildFallback(name, sector, city, edge) {
+    return {
+      overallScore: 61,
+      summary: `يمتلك "${name}" في قطاع (${sector}) بـ (${city}) مقومات نجاح قوية، لكنه يواجه فجوة بين جودة الخدمة الفعلية وبين الحضور الرقمي التنافسي.`,
+      competitorAnalysis: {
+        competitors: [
+          { name: `المنافسون الكبار في ${city}`, strength: 'ميزانيات إعلانية ضخمة وانتشار واسع', weakness: 'بطء الاستجابة وضعف التجربة الشخصية', howToBeat: `التركيز في ${name} على السرعة والتجربة المخصصة وتوثيق رضا العملاء` },
+          { name: 'المنافسون الاقتصاديون (حرب الأسعار)', strength: 'عروض سعرية منخفضة لجذب الباحثين عن الأرخص', weakness: 'تذبذب الجودة وضعف الولاء', howToBeat: 'إبراز القيمة والجودة والضمان في فيديوهات قصيرة واضحة' },
+          { name: 'الحسابات النشطة على تيك توك وإنستغرام', strength: 'محتوى مرئي يومي يجذب الانتباه', weakness: 'اعتمادهم على الترند أكثر من بناء الثقة البيعية', howToBeat: 'دمج المحتوى القصصي والكواليس مع دعوة واضحة للطلب عبر واتساب' }
         ],
-        criticalGaps: [
-          { gap: 'غياب الميزة التنافسية الواضحة', impact: 'يجعل العميل يقارنك بالسعر فقط ويغادر للمنافس الأرخص.', fix: 'إبراز ميزتك الأساسية في أول سطر من كل منشور وأول 3 ثوانٍ من كل فيديو.', example: `في ${name} (${city})، نضمن لك (${edge || 'جودة استثنائية'}) مع متابعة كاملة حتى استلام طلبك.` },
-          { gap: 'ضعف الدعوة لاتخاذ إجراء (CTA)', impact: 'يشاهد العميل المحتوى ويعجب به ثم يغادر دون تواصل.', fix: 'إنهاء كل منشور بخطوة واحدة واضحة ومغرية عبر واتساب.', example: 'تواصل معنا الآن عبر واتساب واحصل على استشارة/عرض مخصص خلال دقائق.' }
-        ],
-        beforeAfter: {
-          before: `نقدم أفضل خدمات ${sector} في ${city} بجودة عالية وأسعار مناسبة.`,
-          after: `في ${name} (${city}) نصنع لك تجربة ${sector} مختلفة بفضل ${edge || 'اهتمامنا بالتفاصيل'}. تواصل معنا اليوم واكتشف الفرق بنفسك.`
-        },
-        plan30: [
-          { week: 'الأسبوع 1', focus: 'إصلاح واجهة الحساب وتثبيت الرسالة البيعية ورابط واتساب المباشر.', kpi: 'رفع النقرات على رابط التواصل' },
-          { week: 'الأسبوع 2', focus: 'نشر محتوى الكواليس وتجارب العملاء والإجابة على الأسئلة الشائعة.', kpi: 'زيادة الرسائل الجادة' },
-          { week: 'الأسبوع 3', focus: 'إطلاق عرض تجريبي وحملة ممولة مصغرة على أفضل محتوى.', kpi: 'خفض تكلفة العميل المحتمل' },
-          { week: 'الأسبوع 4', focus: 'قياس النتائج ومضاعفة الإعلان الرابح وبناء عرض لإعادة الشراء.', kpi: 'نمو فعلي في المبيعات' }
-        ]
-      };
-    }
-
-    renderReport(name, reportData, usedAI, apiErrorMsg);
-    btn.disabled = false;
-    btn.textContent = 'ابدأ فحص مِرآة 6D الآن';
-    status.textContent = usedAI ? 'تم توليد التقرير بنجاح عبر Gemini AI!' : 'تم عرض التقرير الاحتياطي (راجع التنبيه أعلى التقرير).';
+        marketGap: `العميل في ${city} يبحث عن جهة موثوقة في (${sector}) تثبت جودتها بالواقع والكواليس قبل الشراء، وهي المساحة الذهبية التي يمكن لـ ${name} احتلالها.`
+      },
+      dimensions: [
+        { name: 'الانطباع الأول', score: 60, status: 'متوسط', evidence: 'الميزة التنافسية لا تظهر خلال أول 5 ثوانٍ.', recommendation: 'تحديث البايو وتثبيت 3 منشورات بيعية واضحة.' },
+        { name: 'وضوح الرسالة', score: 54, status: 'متوسط', evidence: 'الرسالة وصفية أكثر منها إقناعية.', recommendation: 'ربط ميزتك بنتيجة ملموسة للعميل.' },
+        { name: 'التواصل', score: 45, status: 'ضعيف', evidence: 'غياب دعوة واضحة لاتخاذ إجراء.', recommendation: 'إضافة رابط واتساب مباشر وعرض استشارة/طلب سريع.' },
+        { name: 'الجمهور', score: 70, status: 'جيد', evidence: `السوق في ${city} نشط وذو قدرة شرائية جيدة.`, recommendation: 'تخصيص محتوى يخاطب احتياجات عملاء المدينة.' },
+        { name: 'المنافسة', score: 52, status: 'متوسط', evidence: 'تشابه أسلوب العرض مع المنافسين.', recommendation: 'إبراز الكواليس والضمان كعناصر تميز.' },
+        { name: 'النمو', score: 64, status: 'جيد', evidence: 'فرص غير مستغلة في الفيديو القصير.', recommendation: 'إطلاق حملة اختبارية على أفضل فيديوهين.' }
+      ],
+      criticalGaps: [
+        { gap: 'ضعف التمايز أمام المنافسين', impact: 'دفع العميل للمقارنة بالسعر فقط.', fix: 'إبراز الميزة التنافسية في أول 3 ثوانٍ.', example: `في ${name} (${city})، نقدم لك ${edge || 'جودة استثنائية'} تضمن لك تجربة لا تتكرر.` }
+      ],
+      beforeAfter: {
+        before: `نقدم أفضل خدمات ${sector} في ${city}.`,
+        after: `في ${name} (${city}) نصنع لك الفرق بفضل ${edge || 'اهتمامنا بأدق التفاصيل'}. اطلب الآن عبر واتساب.`
+      },
+      plan30: [
+        { week: 'الأسبوع 1', focus: 'إصلاح واجهة الحساب والرسالة البيعية.', kpi: 'زيادة النقرات' },
+        { week: 'الأسبوع 2', focus: 'نشر محتوى الكواليس وتجارب العملاء.', kpi: 'رفع التفاعل' },
+        { week: 'الأسبوع 3', focus: 'حملة ممولة مصغرة على أفضل عرض.', kpi: 'خفض تكلفة العميل' },
+        { week: 'الأسبوع 4', focus: 'تحليل النتائج ومضاعفة الإعلان الرابح.', kpi: 'نمو المبيعات' }
+      ]
+    };
   }
 
   function buildRadarSVG(dims) {
-    const size = 280, cx = 140, cy = 140, r = 95;
-    const n = dims.length || 6;
-    const getPt = (i, val) => {
-      const angle = (Math.PI * 2 * i) / n - Math.PI / 2;
-      const dist = (val / 100) * r;
-      return [cx + dist * Math.cos(angle), cy + dist * Math.sin(angle)];
+    const size = 270, cx = 135, cy = 135, r = 90, n = dims.length || 6;
+    const pt = (i, v) => {
+      const a = (Math.PI * 2 * i) / n - Math.PI / 2;
+      return [cx + (v / 100) * r * Math.cos(a), cy + (v / 100) * r * Math.sin(a)];
     };
-    let grid = '';
-    [25, 50, 75, 100].forEach(lvl => {
-      const pts = dims.map((_, i) => getPt(i, lvl).join(',')).join(' ');
-      grid += `<polygon points="${pts}" fill="none" stroke="#e2e8f0" stroke-width="1"/>`;
-    });
-    let axes = '', labels = '';
+    let grid = '', axes = '', labels = '';
+    [25, 50, 75, 100].forEach(l => grid += `<polygon points="${dims.map((_, i) => pt(i, l).join(',')).join(' ')}" fill="none" stroke="#e2e8f0" stroke-width="1"/>`);
     dims.forEach((d, i) => {
-      const [x, y] = getPt(i, 100);
+      const [x, y] = pt(i, 100), [lx, ly] = pt(i, 122);
       axes += `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#e2e8f0" stroke-width="1"/>`;
-      const [lx, ly] = getPt(i, 122);
       labels += `<text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="#334155">${d.name}</text>`;
     });
-    const dataPts = dims.map((d, i) => getPt(i, d.score || 50));
-    const poly = dataPts.map(p => p.join(',')).join(' ');
-    const dots = dataPts.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="4" fill="#10b981" stroke="#fff" stroke-width="1.5"/>`).join('');
-    return `<svg viewBox="0 0 ${size} ${size}" width="280" height="280">${grid}${axes}<polygon points="${poly}" fill="rgba(16,185,129,0.22)" stroke="#10b981" stroke-width="2.5"/>${dots}${labels}</svg>`;
+    const dPts = dims.map((d, i) => pt(i, d.score || 50));
+    return `<svg viewBox="0 0 ${size} ${size}" width="270" height="270">${grid}${axes}<polygon points="${dPts.map(p => p.join(',')).join(' ')}" fill="rgba(16,185,129,0.22)" stroke="#10b981" stroke-width="2.5"/>${dPts.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="4" fill="#10b981" stroke="#fff" stroke-width="1.5"/>`).join('')}${labels}</svg>`;
   }
 
-  let lastReportContext = null;
-
-  function renderReport(name, d, usedAI, errMsg) {
+  function renderReport(name, d, usedAI, info) {
     lastReportContext = { name, sector: document.getElementById('bizSector').value, city: document.getElementById('bizCity').value, overallScore: d.overallScore, summary: d.summary };
     document.getElementById('reportArea').classList.remove('hidden');
+
     const banner = document.getElementById('aiStatusBanner');
-    if (usedAI) {
-      banner.className = 'status-banner status-ai';
-      banner.innerHTML = '<span>✅ تم توليد هذا التقرير بتحليل ذكي مباشر ومخصص عبر <strong>Gemini AI</strong>.</span>';
-    } else {
-      banner.className = 'status-banner status-warn';
-      banner.innerHTML = `<span>⚠️ يعمل الآن على الوضع الاحتياطي (تقرير عام) بسبب: <strong>${errMsg}</strong></span>`;
-    }
+    banner.className = 'status-banner ' + (usedAI ? 'status-ai' : 'status-warn');
+    banner.innerHTML = usedAI
+      ? `<span>✅ تم توليد التقرير ودراسة المنافسين بنجاح عبر النموذج: <strong>${info}</strong></span>`
+      : `<span>⚠️ تم عرض التقرير الاحتياطي بسبب: <strong>${info}</strong></span>`;
 
     document.getElementById('repTitle').textContent = name;
-    document.getElementById('scoreNum').textContent = d.overallScore || 64;
-    document.getElementById('scoreCircle').style.setProperty('--p', d.overallScore || 64);
+    document.getElementById('scoreNum').textContent = d.overallScore || 65;
+    document.getElementById('scoreCircle').style.setProperty('--p', d.overallScore || 65);
     document.getElementById('repSummary').textContent = d.summary || '';
 
-    const waText = encodeURIComponent(`مرحباً أستاذ محمد الشرقاوي، أجريت فحص "مِرآة برو 6D" لمشروعي (${name}) وحصلت على ${d.overallScore}/100، وأرغب في مناقشة خطة التطوير.`);
-    const waLink = `https://wa.me/201005535574?text=${waText}`;
+    const waLink = `https://wa.me/201005535574?text=${encodeURIComponent(`مرحباً أستاذ محمد الشرقاوي، أجريت فحص مِرآة برو V5 لمشروعي (${name}) وحصلت على ${d.overallScore}/100 وأرغب في مناقشة خطة التفوق على المنافسين.`)}`;
     document.getElementById('repWaBtn').href = waLink;
     document.getElementById('repWaBtn2').href = waLink;
+
+    // Competitors
+    const comps = d.competitorAnalysis?.competitors || [];
+    document.getElementById('compGrid').innerHTML = comps.map((c, idx) => `
+      <div class="comp-card">
+        <span class="comp-tag">منافس #${idx + 1}</span>
+        <div style="font-weight:900;font-size:15px;">${c.name}</div>
+        <div style="font-size:13px;"><strong>💪 نقطة القوة:</strong> ${c.strength}</div>
+        <div style="font-size:13px;color:#b91c1c;"><strong>🎯 نقطة الضعف:</strong> ${c.weakness}</div>
+        <div style="font-size:13px;color:#065f46;background:#ecfdf5;padding:8px;border-radius:10px;"><strong>🏆 كيف تتفوق عليه:</strong> ${c.howToBeat}</div>
+      </div>
+    `).join('');
+    document.getElementById('marketGapText').textContent = d.competitorAnalysis?.marketGap || '';
 
     const dims = d.dimensions || [];
     document.getElementById('radarContainer').innerHTML = buildRadarSVG(dims);
@@ -638,27 +596,23 @@
       </div>
     `).join('');
 
-    document.getElementById('dimsList').innerHTML = dims.map((dim, i) => {
-      const pillClass = dim.score >= 70 ? 'pill-high' : (dim.score >= 50 ? 'pill-mid' : 'pill-low');
-      return `
-        <div class="dim-card">
-          <div class="dim-head">
-            <div style="font-weight:900;font-size:17px;"><span class="dim-num">${i + 1}</span>${dim.name}</div>
-            <span class="score-pill ${pillClass}">${dim.score} / 100</span>
-          </div>
-          <div class="evidence-box"><strong>الدليل المرصود:</strong><br>${dim.evidence || ''}</div>
-          <div style="font-size:13px;font-weight:800;margin-bottom:8px;color:#b45309;">التشخيص: ${dim.status || ''}</div>
-          <div class="rec-box"><strong>التوصية العملية:</strong><br>${dim.recommendation || ''}</div>
+    document.getElementById('dimsList').innerHTML = dims.map((dim, i) => `
+      <div class="dim-card">
+        <div class="dim-head">
+          <div style="font-weight:900;font-size:16px;"><span class="dim-num">${i + 1}</span>${dim.name}</div>
+          <span class="score-pill ${dim.score >= 70 ? 'pill-high' : dim.score >= 50 ? 'pill-mid' : 'pill-low'}">${dim.score} / 100</span>
         </div>
-      `;
-    }).join('');
+        <div class="evidence-box"><strong>الدليل المرصود:</strong> ${dim.evidence}</div>
+        <div class="rec-box"><strong>التوصية العملية:</strong> ${dim.recommendation}</div>
+      </div>
+    `).join('');
 
     document.getElementById('gapsList').innerHTML = (d.criticalGaps || []).map((g, idx) => `
       <div class="gap-card">
-        <div style="font-weight:800;font-size:16px;color:#b91c1c;margin-bottom:6px;">${idx + 1}. ${g.gap}</div>
-        <div style="font-size:14px;margin-bottom:6px;"><strong>⚠️ كيف يضيّع المبيعات:</strong> ${g.impact}</div>
-        <div style="font-size:14px;margin-bottom:6px;"><strong>🛠️ المعالجة الاحترافية:</strong> ${g.fix}</div>
-        <div class="example-box"><strong>✨ مثال تطبيقي جاهز لمشروعك:</strong><br>${g.example}</div>
+        <div style="font-weight:800;font-size:15.5px;color:#b91c1c;margin-bottom:5px;">${idx + 1}. ${g.gap}</div>
+        <div style="font-size:13.5px;margin-bottom:5px;"><strong>⚠️ الأثر:</strong> ${g.impact}</div>
+        <div style="font-size:13.5px;margin-bottom:5px;"><strong>🛠️ المعالجة:</strong> ${g.fix}</div>
+        <div class="example-box"><strong>✨ مثال جاهز لمشروعك:</strong> ${g.example}</div>
       </div>
     `).join('');
 
@@ -666,9 +620,9 @@
     document.getElementById('baAfterText').textContent = d.beforeAfter?.after || '';
 
     document.getElementById('planList').innerHTML = (d.plan30 || []).map(p => `
-      <div style="background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:15px;">
+      <div style="background:#f8fafc;border:1px solid var(--border);border-radius:14px;padding:15px;">
         <div style="font-weight:800;color:#2563eb;margin-bottom:4px;">${p.week}</div>
-        <div style="font-size:14px;margin-bottom:6px;">${p.focus}</div>
+        <div style="font-size:13.5px;margin-bottom:6px;">${p.focus}</div>
         ${p.kpi ? `<div style="font-size:12px;color:#059669;font-weight:700;">🎯 مؤشر القياس: ${p.kpi}</div>` : ''}
       </div>
     `).join('');
@@ -676,174 +630,117 @@
     document.getElementById('reportArea').scrollIntoView({ behavior: 'smooth' });
   }
 
+  // Pricing
   const packages = [
-    { name: 'الباقة المجانية', prices: { EGP: '0 ج.م', SAR: '0 ر.س', USD: '$0' }, desc: 'فحص سريع عبر منهجية MIRAA 6D.', features: ['خريطة الرادار 6D', 'كشف أهم أوجه القصور', 'تتضمن إعلانات داعمة للمنصة'], featured: false },
-    { name: 'باقة الانطلاقة التسويقية', prices: { EGP: '1,900 ج.م', SAR: '299 ر.س', USD: '$79' }, desc: 'مراجعة بشرية كاملة من الخبير محمد الشرقاوي + خطة محتوى.', features: ['تقرير متكامل ومراجع بشرياً', 'خطة محتوى 30 يوماً جاهزة', 'جلسة استشارية عبر واتساب/زوم'], featured: true },
-    { name: 'باقة الشريك التسويقي الشامل', prices: { EGP: '5,500 ج.م / شهر', SAR: '999 ر.س / شهر', USD: '$249 / شهر' }, desc: 'إدارة كاملة للمحتوى والتصاميم والخطط التسويقية.', features: ['كتابة المحتوى + 12 تصميماً احترافياً', 'خطة حملات وإعلانات شهرية', 'متابعة وتواصل مباشر مع الخبير'], featured: false }
+    { name: 'الباقة المجانية', prices: { SAR: '0 ر.س', EGP: '0 ج.م', USD: '$0' }, desc: 'فحص سريع 6D + دراسة منافسين.', features: ['خريطة الرادار 6D', 'دراسة تحليلية للمنافسين', 'مساعد ذكي عربي'], featured: false },
+    { name: 'باقة الانطلاقة التسويقية', prices: { SAR: '299 ر.س', EGP: '1,900 ج.م', USD: '$79' }, desc: 'مراجعة بشرية من الخبير محمد الشرقاوي + خطة 30 يوماً.', features: ['تقرير متكامل ومراجع بشرياً', 'خطة محتوى 30 يوماً جاهزة', 'جلسة استشارية عبر واتساب/زوم'], featured: true },
+    { name: 'باقة الشريك التسويقي الشامل', prices: { SAR: '999 ر.س / شهر', EGP: '5,500 ج.م / شهر', USD: '$249 / شهر' }, desc: 'إدارة كاملة للمحتوى والتصاميم والحملات.', features: ['كتابة المحتوى + 12 تصميماً', 'إدارة الحملات وتحليل المنافسين', 'متابعة مباشرة مع الخبير'], featured: false }
   ];
 
   function renderPrices() {
     const cur = document.getElementById('currencySel').value;
-    document.getElementById('pricingGrid').innerHTML = packages.map(p => {
-      const msg = encodeURIComponent(`مرحباً أستاذ محمد الشرقاوي، أرغب في الاشتراك في (${p.name}) بسعر ${p.prices[cur]}.`);
-      return `
-        <div class="price-card ${p.featured ? 'featured' : ''}">
-          <div>
-            <div style="font-weight:800;font-size:18px;">${p.name}</div>
-            <div class="price">${p.prices[cur]}</div>
-            <div style="font-size:13px;color:var(--muted);margin-bottom:12px;">${p.desc}</div>
-            <ul style="padding-right:18px;font-size:13px;margin:0 0 18px;">
-              ${p.features.map(f => `<li style="margin-bottom:6px;">${f}</li>`).join('')}
-            </ul>
-          </div>
-          <a class="btn ${p.featured ? 'btn-primary' : 'btn-light-outline'}" style="justify-content:center;" href="https://wa.me/201005535574?text=${msg}" target="_blank">اطلب الباقة عبر واتساب</a>
+    document.getElementById('pricingGrid').innerHTML = packages.map(p => `
+      <div class="price-card ${p.featured ? 'featured' : ''}">
+        <div>
+          <div style="font-weight:800;font-size:17px;">${p.name}</div>
+          <div class="price">${p.prices[cur]}</div>
+          <div style="font-size:13px;color:var(--muted);margin-bottom:12px;">${p.desc}</div>
+          <ul style="padding-right:18px;font-size:13px;margin:0 0 18px;">${p.features.map(f => `<li style="margin-bottom:5px;">${f}</li>`).join('')}</ul>
         </div>
-      `;
-    }).join('');
+        <a class="btn ${p.featured ? 'btn-primary' : 'btn-outline'}" style="justify-content:center;" href="https://wa.me/201005535574?text=${encodeURIComponent(`مرحباً أستاذ محمد، أرغب في الاشتراك في (${p.name}) بسعر ${p.prices[cur]}`)}" target="_blank">اطلب عبر واتساب</a>
+      </div>
+    `).join('');
   }
 
-  // ====== منطق الشات بوت الذكي مِرآة برو (نصي + صوتي عربي) ======
-  let chatHistory = [];
-  let autoVoice = true;
-  let recognition = null;
-  let isRecording = false;
+  // Ultra-Light Fast Chatbot
+  let chatHistory = [], autoVoice = false, recognition = null, isRecording = false;
 
-  function toggleChat(forceState) {
+  function toggleChat(force) {
     const win = document.getElementById('chatWindow');
-    const shouldOpen = typeof forceState === 'boolean' ? forceState : win.classList.contains('hidden');
-    win.classList.toggle('hidden', !shouldOpen);
-    if (shouldOpen) {
-      document.getElementById('chatInput').focus();
-    } else if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-    }
+    const open = typeof force === 'boolean' ? force : win.classList.contains('hidden');
+    win.classList.toggle('hidden', !open);
+    if (open) document.getElementById('chatInput').focus();
+    else if ('speechSynthesis' in window) window.speechSynthesis.cancel();
   }
 
   function toggleAutoVoice() {
     autoVoice = !autoVoice;
-    const btn = document.getElementById('autoVoiceBtn');
-    btn.textContent = autoVoice ? '🔊 الصوت: شغال' : '🔇 الصوت: صامت';
-    if (!autoVoice && 'speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-    }
+    document.getElementById('autoVoiceBtn').textContent = autoVoice ? '🔊 صوت: شغال' : '🔇 صوت: إيقاف';
+    if (!autoVoice && 'speechSynthesis' in window) window.speechSynthesis.cancel();
   }
 
   function speakArabic(text) {
     if (!('speechSynthesis' in window)) return;
     window.speechSynthesis.cancel();
-    const clean = text.replace(/[*#_`]/g, '').trim();
-    const utter = new SpeechSynthesisUtterance(clean);
-    utter.lang = 'ar-SA';
-    utter.rate = 1.02;
-    const voices = window.speechSynthesis.getVoices();
-    const arVoice = voices.find(v => v.lang && v.lang.toLowerCase().startsWith('ar'));
-    if (arVoice) utter.voice = arVoice;
-    window.speechSynthesis.speak(utter);
+    const u = new SpeechSynthesisUtterance(text.replace(/[*#_`]/g, '').trim());
+    u.lang = 'ar-SA'; u.rate = 1.05;
+    window.speechSynthesis.speak(u);
   }
 
   function toggleVoiceInput() {
-    const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SpeechRec) {
-      alert('عذراً، متصفحك لا يدعم الإدخال الصوتي المباشر. يمكنك استخدام متصفح Chrome أو الكتابة مباشرة.');
-      return;
-    }
-    const micBtn = document.getElementById('micBtn');
-    if (isRecording && recognition) {
-      recognition.stop();
-      return;
-    }
-    recognition = new SpeechRec();
-    recognition.lang = 'ar-EG';
-    recognition.interimResults = false;
-    recognition.maxAlternatives = 1;
-
-    recognition.onstart = () => {
-      isRecording = true;
-      micBtn.classList.add('recording');
-      document.getElementById('chatInput').placeholder = 'جاري الاستماع... تحدث الآن باللغة العربية';
-    };
-    recognition.onresult = (event) => {
-      const transcript = event.results[0][0].transcript;
-      document.getElementById('chatInput').value = transcript;
-      sendChatMessage(new Event('submit'));
-    };
-    recognition.onerror = () => {
-      isRecording = false;
-      micBtn.classList.remove('recording');
-      document.getElementById('chatInput').placeholder = 'اكتب سؤالك أو اضغط الميكروفون...';
-    };
-    recognition.onend = () => {
-      isRecording = false;
-      micBtn.classList.remove('recording');
-      document.getElementById('chatInput').placeholder = 'اكتب سؤالك أو اضغط الميكروفون...';
-    };
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) return alert('استخدم متصفح Chrome للتحدث الصوتي.');
+    const btn = document.getElementById('micBtn');
+    if (isRecording && recognition) return recognition.stop();
+    recognition = new SR(); recognition.lang = 'ar-EG';
+    recognition.onstart = () => { isRecording = true; btn.classList.add('recording'); };
+    recognition.onresult = (e) => { document.getElementById('chatInput').value = e.results[0][0].transcript; sendChatMessage(new Event('submit')); };
+    recognition.onend = () => { isRecording = false; btn.classList.remove('recording'); };
     recognition.start();
   }
 
-  function appendMessage(role, text) {
+  function appendMsg(role, text) {
     const box = document.getElementById('chatMessages');
     const div = document.createElement('div');
     div.className = 'msg ' + (role === 'user' ? 'msg-user' : 'msg-bot');
     div.textContent = text;
     if (role === 'bot') {
-      const br = document.createElement('br');
-      const spk = document.createElement('button');
-      spk.type = 'button';
-      spk.className = 'msg-speak-btn';
-      spk.textContent = '🔊 استمع للرد';
-      spk.onclick = () => speakArabic(text);
-      div.appendChild(br);
-      div.appendChild(spk);
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'msg-speak-btn'; b.textContent = '🔊 استمع';
+      b.onclick = () => speakArabic(text);
+      div.appendChild(document.createElement('br'));
+      div.appendChild(b);
     }
     box.appendChild(div);
     box.scrollTop = box.scrollHeight;
     return div;
   }
 
-  function sendQuick(text) {
-    document.getElementById('chatInput').value = text;
-    sendChatMessage(new Event('submit'));
-  }
+  function sendQuick(t) { document.getElementById('chatInput').value = t; sendChatMessage(new Event('submit')); }
 
   async function sendChatMessage(e) {
     if (e) e.preventDefault();
-    const input = document.getElementById('chatInput');
-    const text = input.value.trim();
+    const inp = document.getElementById('chatInput');
+    const text = inp.value.trim();
     if (!text) return;
-    input.value = '';
-
-    appendMessage('user', text);
+    inp.value = '';
+    appendMsg('user', text);
     chatHistory.push({ role: 'user', text });
 
-    const typingDiv = appendMessage('bot', 'جاري التفكير وكتابة الرد...');
-    const sendBtn = document.getElementById('chatSendBtn');
-    sendBtn.disabled = true;
+    const loading = appendMsg('bot', '...');
+    const engine = document.getElementById('aiEngine')?.value || 'auto';
 
     try {
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: chatHistory, reportContext: lastReportContext })
+        body: JSON.stringify({ messages: chatHistory, reportContext: lastReportContext, engine })
       });
       const data = await res.json().catch(() => ({}));
-      typingDiv.remove();
-
+      loading.remove();
       if (res.ok && data.reply) {
-        appendMessage('bot', data.reply);
+        appendMsg('bot', data.reply);
         chatHistory.push({ role: 'model', text: data.reply });
+        if (data.usedModel) document.getElementById('chatModelBadge').textContent = `متصل بـ ${data.usedModel}`;
         if (autoVoice) speakArabic(data.reply);
       } else {
-        const errText = data.error || 'تعذر الاتصال بـ /api/chat. تأكد من رفع مجلد api بالكامل ومفتاح GEMINI_API_KEY في Vercel.';
-        appendMessage('bot', '⚠️ ' + errText);
+        appendMsg('bot', '⚠️ ' + (data.error || 'حاول مرة أخرى بعد ثوانٍ.'));
       }
-    } catch (err) {
-      typingDiv.remove();
-      appendMessage('bot', '⚠️ تعذر الاتصال بالخادم حالياً. يمكنك التواصل مباشرة مع الخبير محمد الشرقاوي عبر واتساب: 00201005535574');
-    } finally {
-      sendBtn.disabled = false;
+    } catch {
+      loading.remove();
+      appendMsg('bot', '⚠️ تعذر الاتصال الآن، تواصل عبر واتساب: 00201005535574');
     }
   }
-
 </script>
 </body>
 </html>
