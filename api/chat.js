@@ -13,36 +13,33 @@ export default async function handler(req, res) {
     if (reportContext && reportContext.name) {
       contextText = `
 بيانات تقرير العميل الحالي:
-- النشاط: ${reportContext.name} (${reportContext.sector || ''} - ${reportContext.city || ''})
+- النشاط/الرابط: ${reportContext.name}
 - التقييم: ${reportContext.overallScore || ''}/100
 - الملخص: ${reportContext.summary || ''}`;
     }
 
     const systemInstruction = `أنت "مِرآة برو"، المساعد التسويقي الذكي السريع بإشراف الخبير محمد الشرقاوي.
 أجب باللغة العربية الواضحة والمباشرة بإيجاز ذكي (3 إلى 5 أسطر) لتكون الإجابة سريعة القراءة والاستماع الصوتي.
-ساعد العميل في فهم تقريره، تحليل منافسيه، وزيادة مبيعاته، ووجهه لواتساب الخبير (00201005535574) عند طلب تنفيذ أو باقات.${contextText}`;
+ساعد العميل في فهم تقريره، تحليل SWOT، تحليل منافسيه، وزيادة مبيعاته، ووجهه لواتساب الخبير (00201005535574) عند طلب تنفيذ أو باقات.${contextText}`;
 
     const providers = buildChatQueue(engine);
     if (providers.length === 0) {
       return res.status(500).json({ error: 'لم يتم إضافة أي مفتاح API في Vercel.' });
     }
 
-    let lastError = 'ضغط مؤقت على الخادم';
     for (const p of providers) {
       try {
         const reply = await callChatProvider(p, systemInstruction, messages.slice(-8));
         if (reply) {
           return res.status(200).json({ reply, usedModel: p.label });
         }
-      } catch (err) {
-        lastError = err.message || lastError;
-      }
+      } catch {}
     }
 
     return res.status(503).json({
       error: 'يوجد ضغط مؤقت على خوادم الذكاء الاصطناعي، أعد إرسال سؤالك بعد ثوانٍ.'
     });
-  } catch (err) {
+  } catch {
     return res.status(500).json({ error: 'تعذر الاتصال بالمساعد الذكي حالياً.' });
   }
 }
@@ -53,11 +50,10 @@ function buildChatQueue(engine) {
   const openaiKey = process.env.OPENAI_API_KEY;
 
   const all = [];
-  // For ultra-fast chat, prioritize Groq if available, then Gemini
   if (groqKey) all.push({ type: 'groq', model: 'llama-3.3-70b-versatile', key: groqKey, label: 'Groq Fast' });
   if (geminiKey) {
     all.push({ type: 'gemini', model: 'gemini-3.8-flash', key: geminiKey, label: 'Gemini 3.8 Flash' });
-    all.push({ type: 'gemini', model: 'gemini-3.5-flash-lite', key: geminiKey, label: 'Gemini Lite' });
+    all.push({ type: 'gemini', model: 'gemini-3.5-flash-lite', key: geminiKey, label: 'Gemini 3.5 Lite' });
   }
   if (openaiKey) all.push({ type: 'openai', model: 'gpt-4o-mini', key: openaiKey, label: 'GPT-4o Mini' });
 
@@ -65,7 +61,7 @@ function buildChatQueue(engine) {
     return [{ type: 'openai', model: 'gpt-4o-mini', key: openaiKey, label: 'GPT-4o Mini' }, ...all.filter(x => x.type !== 'openai')];
   }
   if (engine === 'gemini-lite' && geminiKey) {
-    return [{ type: 'gemini', model: 'gemini-2.5-flash-lite', key: geminiKey, label: 'Gemini Lite' }, ...all.filter(x => x.model !== 'gemini-2.5-flash-lite')];
+    return [{ type: 'gemini', model: 'gemini-3.5-flash-lite', key: geminiKey, label: 'Gemini 3.5 Lite' }, ...all.filter(x => x.model !== 'gemini-3.5-flash-lite')];
   }
   return all;
 }
