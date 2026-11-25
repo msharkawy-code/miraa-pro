@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://miraa-pro.vercel.app/sitemap.xml
