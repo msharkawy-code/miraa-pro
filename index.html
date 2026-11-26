@@ -196,6 +196,106 @@
     </div>
   </section>
 
+    <!-- فيديو موشن تفاعلي لشرح طريقة استخدام مِرآة برو (خفيف جداً وسريع) -->
+  <section class="card no-print" style="padding:18px;background:#091122;color:#fff;border:1px solid #1e293b;">
+    <style>
+      .mv-wrap { position:relative; border-radius:16px; overflow:hidden; background:radial-gradient(circle at top right,#173357,#091122 70%); border:1px solid rgba(255,255,255,0.12); min-height:250px; display:flex; flex-direction:column; justify-content:space-between; }
+      .mv-stage { position:relative; flex:1; min-height:205px; display:grid; place-items:center; padding:22px 18px; text-align:center; }
+      .mv-scene { position:absolute; inset:0; padding:22px 18px; display:flex; flex-direction:column; align-items:center; justify-content:center; opacity:0; transform:translateY(14px) scale(0.98); transition:all .55s ease; pointer-events:none; }
+      .mv-scene.active { opacity:1; transform:translateY(0) scale(1); pointer-events:auto; }
+      .mv-badge { background:rgba(16,185,129,0.18); border:1px solid rgba(16,185,129,0.5); color:#6ee7b7; padding:3px 12px; border-radius:999px; font-size:12px; font-weight:800; margin-bottom:10px; }
+      .mv-title { font-size:20px; font-weight:900; margin:0 0 8px; line-height:1.4; }
+      .mv-sub { font-size:13.5px; color:#cbd5e1; max-width:540px; margin:0; }
+      .mv-mock-bar { margin-top:12px; background:#fff; color:#0f172a; border-radius:12px; padding:8px 12px; display:flex; align-items:center; gap:8px; width:100%; max-width:420px; box-shadow:0 10px 25px rgba(0,0,0,0.3); }
+      .mv-mock-url { flex:1; text-align:left; direction:ltr; font-size:13px; color:#334155; font-weight:700; overflow:hidden; white-space:nowrap; border-right:2px solid #10b981; animation:mvType 2.2s steps(24) infinite alternate; }
+      .mv-mock-btn { background:#10b981; color:#fff; font-size:12px; font-weight:800; padding:5px 10px; border-radius:8px; animation:mvPulse 1.4s infinite; }
+      .mv-chips { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-top:12px; }
+      .mv-chip { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16); padding:6px 12px; border-radius:10px; font-size:12.5px; font-weight:800; color:#fff; }
+      .mv-controls { background:rgba(0,0,0,0.45); padding:10px 14px; display:flex; align-items:center; gap:10px; border-top:1px solid rgba(255,255,255,0.08); }
+      .mv-prog-track { flex:1; height:6px; background:rgba(255,255,255,0.18); border-radius:999px; overflow:hidden; cursor:pointer; }
+      .mv-prog-fill { height:100%; width:0%; background:linear-gradient(90deg,#10b981,#38bdf8); transition:width .2s linear; }
+      .mv-btn { background:rgba(255,255,255,0.12); color:#fff; border:none; border-radius:8px; padding:5px 11px; font-size:12px; font-weight:800; cursor:pointer; }
+      @keyframes mvType { from { width:45%; } to { width:100%; } }
+      @keyframes mvPulse { 0%,100% { transform:scale(1); } 50% { transform:scale(1.06); } }
+    </style>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px;">
+      <div style="font-weight:900;font-size:15px;">🎬 شاهد طريقة استخدام المنصة في 20 ثانية</div>
+      <span id="mvStepLabel" style="font-size:12px;color:#6ee7b7;font-weight:800;">المشهد 1 من 4</span>
+    </div>
+
+    <div class="mv-wrap">
+      <div class="mv-stage">
+        <!-- المشهد 1 -->
+        <div class="mv-scene active" data-mv="0">
+          <span class="mv-badge">⚡ مِرآة برو V6</span>
+          <h3 class="mv-title">كيف تكتشف أسباب ضعف مبيعاتك في 3 خطوات فقط؟</h3>
+          <p class="mv-sub">بدون تعقيد أو نماذج طويلة.. أداة ذكاء تسويقي تفحص حسابك أو موقعك وتمنحك خطة علاج فورية.</p>
+        </div>
+        <!-- المشهد 2 -->
+        <div class="mv-scene" data-mv="1">
+          <span class="mv-badge">الخطوة 1️⃣</span>
+          <h3 class="mv-title">الصق رابط موقعك أو حسابك السوشيال فقط</h3>
+          <div class="mv-mock-bar">
+            <div class="mv-mock-url">instagram.com/yourbrand</div>
+            <div class="mv-mock-btn">🔍 حلّل الآن</div>
+          </div>
+        </div>
+        <!-- المشهد 3 -->
+        <div class="mv-scene" data-mv="2">
+          <span class="mv-badge">الخطوة 2️⃣</span>
+          <h3 class="mv-title">احصل على تقرير احترافي متكامل خلال ثوانٍ</h3>
+          <div class="mv-chips">
+            <div class="mv-chip" style="border-color:#10b981;">📊 تحليل SWOT كامل</div>
+            <div class="mv-chip" style="border-color:#38bdf8;">✍️ تحليل عميق للمحتوى</div>
+            <div class="mv-chip" style="border-color:#f59e0b;">🛠️ خطة علاج 30 يوماً</div>
+          </div>
+        </div>
+        <!-- المشهد 4 -->
+        <div class="mv-scene" data-mv="3">
+          <span class="mv-badge">الخطوة 3️⃣</span>
+          <h3 class="mv-title">حوّل التشخيص إلى مبيعات حقيقية عبر واتساب</h3>
+          <p class="mv-sub">تواصل مباشرة مع الخبير محمد الشرقاوي لتنفيذ الخطة، أو ابدأ الفحص المجاني الآن بالأسفل 👇</p>
+          <div style="margin-top:10px;">
+            <button class="btn btn-primary" type="button" onclick="document.getElementById('targetUrl').focus();document.getElementById('section-scan').scrollIntoView({behavior:'smooth'});">🚀 جرّب الفحص الآن</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mv-controls">
+        <button id="mvPlayBtn" class="mv-btn" type="button" onclick="mvToggle()">⏸ إيقاف</button>
+        <div class="mv-prog-track" onclick="mvNext()"><div id="mvProg" class="mv-prog-fill"></div></div>
+        <button class="mv-btn" type="button" onclick="mvNext()">التالي ⏭</button>
+      </div>
+    </div>
+
+    <script>
+      (function(){
+        const scenes = document.querySelectorAll('.mv-scene');
+        let idx = 0, playing = true, tick = 0;
+        const duration = 55; // ~5.5 ثوانٍ لكل مشهد
+        function show(i){
+          idx = (i + scenes.length) % scenes.length;
+          scenes.forEach((s, k) => s.classList.toggle('active', k === idx));
+          document.getElementById('mvStepLabel').textContent = `المشهد ${idx + 1} من ${scenes.length}`;
+          tick = 0;
+        }
+        window.mvNext = () => show(idx + 1);
+        window.mvToggle = () => {
+          playing = !playing;
+          document.getElementById('mvPlayBtn').textContent = playing ? '⏸ إيقاف' : '▶ تشغيل';
+        };
+        setInterval(() => {
+          if (!playing) return;
+          tick++;
+          const totalPct = ((idx * duration + tick) / (scenes.length * duration)) * 100;
+          document.getElementById('mvProg').style.width = Math.min(totalPct, 100) + '%';
+          if (tick >= duration) show(idx + 1);
+        }, 100);
+      })();
+    </script>
+  </section>
+
   <!-- MAIN SCAN SECTION -->
   <section id="section-scan">
     <div class="card no-print">
