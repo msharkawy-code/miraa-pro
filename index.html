@@ -752,7 +752,7 @@
     document.getElementById('artCat').textContent = p.category;
     document.getElementById('artTitle').textContent = p.title;
     document.getElementById('artMeta').textContent = `بقلم: محمد الشرقاوي • ${p.date} • وقت القراءة: ${p.readTime}`;
-    document.getElementById('artBody').textContent = p.content;
+    document.getElementById('artBody').innerHTML = (p.content || '').replace(/(https?:\/\/[^\s\)]+)/g, '<a href="$1" target="_blank" style="color:#059669;text-decoration:underline;font-weight:700;">$1</a>');
     r.scrollIntoView({ behavior: 'smooth' });
   }
   function closeArticle() { renderBlog(); }
